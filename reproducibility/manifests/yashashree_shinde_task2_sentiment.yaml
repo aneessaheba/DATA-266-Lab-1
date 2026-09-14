@@ -1,0 +1,34 @@
+# Manifest — yashashree_shinde — task2_sentiment
+# Brief Section 5: package/library versions, environment file, and which
+# checkpoint maps to which result in the report.
+# Fill this in AFTER the run, from the run itself — do not guess.
+
+member: yashashree_shinde
+task: task2_sentiment
+
+hardware:
+  machine: ""          # e.g. "SJSU GPU Lab, node XX"
+  cpu: ""
+  gpu: ""
+  gpu_memory_gb: ""
+  ram_gb: ""
+  os: ""
+  cuda_version: ""
+  driver_version: ""
+
+environment:
+  python: ""
+  env_file: "environment/requirements.txt"
+  pip_freeze: ""       # path to the exact freeze captured at run time
+  random_seed: ""
+
+runs:
+  - run_id: ""         # e.g. 20260914_143000
+    config: ""         # path to the YAML config used
+    command: ""        # the exact command you ran
+    raw_log: ""        # reproducibility/raw_logs/<file>
+    checkpoint: ""     # path under checkpoints/
+    maps_to_report_result: ""   # which table/figure in the report this produced
+    start_time: ""
+    end_time: ""
+    notes: ""
