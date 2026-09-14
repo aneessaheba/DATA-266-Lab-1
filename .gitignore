@@ -1,0 +1,41 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Raw datasets (shared, downloaded via scripts/ — not committed) ---
+task1_llm/data/*
+!task1_llm/data/.gitkeep
+task2_sentiment/data/*
+!task2_sentiment/data/.gitkeep
+task3_gan/data/monet_jpg/*
+!task3_gan/data/monet_jpg/.gitkeep
+task3_gan/data/photo_jpg/*
+!task3_gan/data/photo_jpg/.gitkeep
+
+# --- Per-member preprocessing output (never shared, regenerable) ---
+*/*/data_processed/*
+!*/*/data_processed/.gitkeep
+
+# --- Generated image dumps (keep a curated sample, ignore the full dump) ---
+task3_gan/*/outputs/pred_A2B/*
+!task3_gan/*/outputs/pred_A2B/.gitkeep
+task3_gan/*/outputs/pred_B2A/*
+!task3_gan/*/outputs/pred_B2A/.gitkeep
+
+# NOTE: checkpoints/ are intentionally NOT ignored — the brief requires them.
+# They are tracked via Git LFS (see .gitattributes). If a file exceeds LFS quota,
+# document its external location in reproducibility/manifests/ instead.
+
+# --- Credentials (belt and braces; these must never be in the repo) ---
+kaggle.json
+*.pem
+.env.*
