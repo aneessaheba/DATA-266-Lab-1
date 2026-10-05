@@ -45,3 +45,9 @@ kaggle.json
 # Scoped to the root on purpose, so a report PDF under report/ can still
 # be committed.
 /*.pdf
+
+# Yashashree's Task 3 run folder, pasted in for reference.
+# It holds the dataset, a 2.2 GB zip and 1.2 GB of milestone checkpoints,
+# none of which belong in the repository. The files we do keep are copied
+# into task3_gan/yashashree_shinde/ by hand.
+TASK3 By yashsharee/
