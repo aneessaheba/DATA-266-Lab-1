@@ -1,0 +1,88 @@
+==============================================================================
+PROMPT: 'Once upon a time'  |  greedy
+==============================================================================
+Once upon a time, there was a little girl named Lily. She loved to play outside in the park with her friends. One day, she went to the park with her mommy and daddy. Lily was so excited to see the big tree and see what was inside. She was so excited to see what it was and she was so excited to see what it was. 
+
+Su
+
+==============================================================================
+PROMPT: 'The little girl'  |  greedy
+==============================================================================
+The little girl was so happy to have a new friend. She had a great day at the park and she was so excited to see the little girl and she started to cry.
+
+The little girl was so happy to have a new friend to play with her friends. She had a great time playing with her friends and they were happy to have a good day.
+
+==============================================================================
+PROMPT: 'One day, Tom'  |  greedy
+==============================================================================
+One day, Tom went to the park with his mom. Tom saw a big box of colorful boxes and a big box. Tom was scared and scared. He did not know what to do. He did not want to share. He did not know how to share his toys. He did not like the boy to play with. He was happy.
+
+The boy said, "Thank you, Tom. I love you. Y
+
+==============================================================================
+PROMPT: 'Once upon a time'  |  temperature=0.5
+==============================================================================
+Once upon a time, there was a little girl named Lily. She loved to play with her toys and books. One day, she went to her room with her mommy and daddy. Lily was not sad because she was still getting very sad and angry. She said, "I love you, mommy. You are sorry. I didn't understand why you did not know what to do
+
+==============================================================================
+PROMPT: 'Once upon a time'  |  temperature=0.8
+==============================================================================
+Once upon a time, there was a little girl named Lily. She loved to play with her toys and books. One day, her mom asked her to play with her toys in the room when she came to her mom and dad. They took her to the book and took a car. They put it and pushed their toys away from the other. They made a plan.
+
+"Maybe t
+
+==============================================================================
+PROMPT: 'Once upon a time'  |  temperature=1.2
+==============================================================================
+Once upon a time there was a kind boy. He loved to race and play pretend on a small faucet voice. One day, he heard aunt. Anna was black and ran away.
+
+She looked on the basket and then saw a girl playing all day. She felt yummy and smelled "Mommy".
+
+Grandma came out of the pool, and then she made a plank lion. She
+
+==============================================================================
+PROMPT: 'The little girl'  |  temperature=0.5
+==============================================================================
+The little girl was so happy that she had made her mom and dad. She had a big bag of colorful story and a small boat. The boat was very grateful and always listened to her mom. She said, "Thank you, mom. You are a good friend. I am sorry. I will help you."
+
+The moral of the story is that it's important to be caref
+
+==============================================================================
+PROMPT: 'The little girl'  |  temperature=0.8
+==============================================================================
+The little girl was so happy that she gave her a big hug.
+<|endofstory|>
+Once upon a time, there was a little girl named Lily. She loved to play with her toys and sing on the swings. One day, they found a big, swing high in the sky. They were curious at the park and heavy. They ran to the seemed like a rock.
+
+"Let
+
+==============================================================================
+PROMPT: 'The little girl'  |  temperature=1.2
+==============================================================================
+The little girl was so happy!
+
+Sanky followed her having legs and gave her a small haust behind her her. She had a wupgy soap to splash and ran away and perfectly.
+
+Max backed home. As she was walking back, he splashed patiently and he ran into a box. It was very worth the pillow of trees and poprople brilliantly 
+
+==============================================================================
+PROMPT: 'One day, Tom'  |  temperature=0.5
+==============================================================================
+One day, Tom was playing with his friends who was playing with him. He had a great time playing with his friends. He looked up at the store and saw that it was so cool and shiny. The stars was still angry and sad.
+
+"Wow, look at the beautiful spoon!" Lily said. "We want to see the bear for the beach."
+
+"OK, but
+
+==============================================================================
+PROMPT: 'One day, Tom'  |  temperature=0.8
+==============================================================================
+One day, Tom was playing with his friends who was playing with him. One day, Sue decided to play with her toys all day long. She saw an orange sparkle girl named Lily. She was worried.
+
+"It was the best! You were hurt. I like to share with your owner. It is my friend. You are not mean. You can't play with it. Y
+
+==============================================================================
+PROMPT: 'One day, Tom'  |  temperature=1.2
+==============================================================================
+One day, Tommy saw a driver with the war. He looked and saw a big fish. He was thrumping for him. He was excited up to have a magic party for Spider. He liked to laugh and run with his finger. He found some new soft paper and a shiny cookie garden. He was very hungry, but he never completement again. His mom wa
+
