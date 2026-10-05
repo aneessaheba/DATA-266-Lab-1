@@ -39,3 +39,9 @@ task3_gan/*/outputs/pred_B2A/*
 kaggle.json
 *.pem
 .env.*
+
+# Assignment brief and any other PDF dropped at the repo root.
+# The brief is course material, not our work, so it stays out of the repo.
+# Scoped to the root on purpose, so a report PDF under report/ can still
+# be committed.
+/*.pdf
