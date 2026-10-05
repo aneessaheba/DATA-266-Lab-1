@@ -1,0 +1,69 @@
+# Task 1 character level GPT, configuration for the reported run.
+# Mirrors the configuration cell in src/char_gpt_tinystories.ipynb.
+# Values here are the ones that produced metrics_report.csv.
+
+run:
+  member: anees_saheba
+  seed: 5330                  # last four digits of my student ID
+  device_preference: [cuda, mps, cpu]
+
+data:
+  source_file: task1_llm/data/TinyStories-sample.txt
+  repair_mojibake: true       # see notebook section 1.1
+  train_sequences: 100000
+  validation_sequences: 10000
+  block_size: 128             # characters of context
+  window: 129                 # block_size plus one, input and target overlap by 128
+  split: non_overlapping_windows_shuffled_by_seed
+
+model:
+  n_layers: 4
+  d_model: 256
+  n_heads: 4
+  head_dim: 64                # d_model divided by n_heads
+  d_ff: 1024                  # 4 times d_model
+  dropout: 0.10
+  activation: gelu
+  normalisation: pre_layer_norm
+  positional_embedding: learned
+  weight_init: normal_std_0.02
+  lm_head_bias: false
+  vocab_size: 91              # determined from the data, after the mojibake repair
+  parameter_count: 3238912
+
+optimisation:
+  optimiser: adamw
+  betas: [0.9, 0.95]
+  eps: 1.0e-8
+  learning_rate: 3.0e-4
+  weight_decay: 0.01          # applied to matmul weights only
+  warmup_steps: 1000
+  schedule: cosine
+  min_lr_ratio: 0.10
+  gradient_clip: 1.0
+  batch_size: 64
+  epochs: 10
+  steps_per_epoch: 1562
+  total_steps: 15620
+
+generation:
+  temperature: 0.8            # reported setting
+  compared_temperatures: [0.5, 0.8, 1.2]
+  greedy: true
+  length: 300
+  prompts:
+    - "Once upon a time"
+    - "The little girl"
+    - "One day, Tom"
+
+outputs:
+  checkpoint: task1_llm/anees_saheba/checkpoints/best_model.pt
+  metrics: task1_llm/anees_saheba/metrics_report.csv
+  curves: task1_llm/anees_saheba/outputs/loss_curves.png
+  samples: task1_llm/anees_saheba/outputs/generated_samples.txt
+  raw_log: reproducibility/raw_logs/task1_gpt_20261004_212529.log
+
+environment_overrides:
+  # Read by the notebook if set, so a run can be changed without editing code.
+  DATA266_EPOCHS: "number of epochs, defaults to 10"
+  DATA266_TINYSTORIES: "path to the TinyStories text file"
