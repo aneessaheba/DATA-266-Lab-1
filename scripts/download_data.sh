@@ -14,6 +14,17 @@
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Interpreter used for the download helpers. Defaults to the repository virtual
+# environment when it exists, because the dataset libraries are installed there
+# and not in the system python. Override with PYTHON=/path/to/python
+if [[ -z "${PYTHON:-}" ]]; then
+  if [[ -x "${REPO_ROOT}/.venv/bin/python" ]]; then
+    PYTHON="${REPO_ROOT}/.venv/bin/python"
+  else
+    PYTHON="python3"
+  fi
+fi
 TARGET="${1:-all}"
 
 log() { printf '[download_data] %s\n' "$*"; }
@@ -34,7 +45,7 @@ download_task1() {
     return
   fi
   log "Task 1: streaming $n_stories TinyStories examples..."
-  python3 - "$out_dir" "$n_stories" <<'PYSTREAM'
+  "${PYTHON}" - "$out_dir" "$n_stories" <<'PYSTREAM'
 import sys, pathlib, itertools
 from datasets import load_dataset
 
@@ -55,6 +66,15 @@ with path.open("w", encoding="utf-8") as fh:
 
 print(f"  wrote {path}")
 print(f"  {n_stories} stories, {n_chars:,} characters, {path.stat().st_size / 1e6:.1f} MB")
+
+# The streaming reader leaves worker processes and a shared memory manager
+# behind that do not always terminate, which leaves this script hanging
+# indefinitely after the file is already complete. The file is closed and
+# flushed by this point, so exit immediately rather than waiting on cleanup
+# that may never finish.
+import sys, os
+sys.stdout.flush()
+os._exit(0)
 PYSTREAM
 }
 
@@ -68,7 +88,7 @@ download_task2() {
     return
   fi
   log "Task 2: downloading Yelp Polarity (fancyzhx/yelp_polarity)..."
-  python3 - "$out_dir" <<'PY'
+  "${PYTHON}" - "$out_dir" <<'PY'
 import sys, pathlib
 from datasets import load_dataset
 
