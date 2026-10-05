@@ -1,0 +1,37 @@
+2026-10-04 22:55:11 run_id=20261004_225511 device=mps (Apple Silicon GPU (MPS)) seed=5330
+2026-10-04 22:55:11 config validation_fraction=0.1 vocab_size=25000 min_frequency=3 max_length=320 batch_size=256 epochs=8 learning_rate=0.0002 weight_decay=0.0005 gradient_clip=1.0 seed=5330
+2026-10-04 22:55:13 cleaning_train={'missing_text': 0, 'missing_label': 0, 'blank_text': 0, 'bad_label': 0, 'duplicate_text': 0, 'rows_before': 560000, 'rows_after': 560000}
+2026-10-04 22:55:13 cleaning_test={'missing_text': 0, 'missing_label': 0, 'blank_text': 0, 'bad_label': 0, 'duplicate_text': 0, 'rows_before': 38000, 'rows_after': 38000}
+2026-10-04 22:55:13 class_distribution_train neg=280000 pos=280000 ratio=1.0000
+2026-10-04 22:55:13 class_distribution_test neg=19000 pos=19000 ratio=1.0000
+2026-10-04 22:55:18 length_mean=133.0 length_median=97 max_length=320 untruncated_fraction=0.9265
+2026-10-04 22:55:43 tokenised train=560000 test=38000 seconds=24.4
+2026-10-04 22:55:43 split train=504000 validation=56000 test=38000
+2026-10-04 22:55:45 vocab_size=25000 coverage=0.9829 distinct=198238
+2026-10-04 22:55:58 model=baseline_max_pool parameters=2412545
+2026-10-04 22:55:58 model=experiment_lstm parameters=4297217
+2026-10-04 22:55:58 model=experiment_attention_pool parameters=3224962
+2026-10-04 22:55:58 TRAIN START model=baseline_max_pool parameters=2412545
+2026-10-04 22:56:38 model=baseline_max_pool epoch 1/8 train_loss=0.6304 val_loss=0.4990 val_acc=0.7846 grad=0.4755 seconds=40.1
+2026-10-04 22:57:27 model=baseline_max_pool epoch 2/8 train_loss=0.5131 val_loss=0.3839 val_acc=0.8414 grad=0.5129 seconds=48.6
+2026-10-04 22:58:20 model=baseline_max_pool epoch 3/8 train_loss=0.4274 val_loss=0.3407 val_acc=0.8615 grad=0.5504 seconds=52.7
+2026-10-04 22:59:08 model=baseline_max_pool epoch 4/8 train_loss=0.3688 val_loss=0.3150 val_acc=0.8741 grad=0.6127 seconds=48.7
+2026-10-04 22:59:59 model=baseline_max_pool epoch 5/8 train_loss=0.3315 val_loss=0.2971 val_acc=0.8806 grad=0.6684 seconds=50.5
+2026-10-04 23:00:51 model=baseline_max_pool epoch 6/8 train_loss=0.3060 val_loss=0.2819 val_acc=0.8893 grad=0.7053 seconds=52.6
+2026-10-04 23:01:32 model=baseline_max_pool epoch 7/8 train_loss=0.2865 val_loss=0.2584 val_acc=0.8968 grad=0.7429 seconds=40.2
+2026-10-04 23:02:25 model=baseline_max_pool epoch 8/8 train_loss=0.2728 val_loss=0.2656 val_acc=0.8970 grad=0.7584 seconds=53.3
+2026-10-04 23:02:25 TRAIN DONE model=baseline_max_pool seconds=386.8 best_epoch=7 examples_per_sec=10423 peak_gb=1.048
+2026-10-04 23:02:25 TRAIN START model=experiment_lstm parameters=4297217
+2026-10-04 23:21:07 model=experiment_lstm epoch 1/8 train_loss=0.2583 val_loss=0.1889 val_acc=0.9287 grad=1.2917 seconds=1122.1
+2026-10-04 23:42:15 model=experiment_lstm epoch 2/8 train_loss=0.1679 val_loss=0.1697 val_acc=0.9383 grad=1.3104 seconds=1267.5
+2026-10-05 00:03:47 model=experiment_lstm epoch 3/8 train_loss=0.1451 val_loss=0.1573 val_acc=0.9418 grad=1.2273 seconds=1292.4
+2026-10-05 00:25:59 model=experiment_lstm epoch 4/8 train_loss=0.1297 val_loss=0.1530 val_acc=0.9424 grad=1.1663 seconds=1332.1
+2026-10-05 00:47:59 model=experiment_lstm epoch 5/8 train_loss=0.1171 val_loss=0.1404 val_acc=0.9471 grad=1.1071 seconds=1319.7
+2026-10-05 01:34:07 model=experiment_lstm epoch 6/8 train_loss=0.1070 val_loss=0.1411 val_acc=0.9478 grad=1.0713 seconds=2767.8
+2026-10-05 02:39:15 model=experiment_lstm epoch 7/8 train_loss=0.0980 val_loss=0.1405 val_acc=0.9475 grad=1.0591 seconds=3908.7
+2026-10-05 03:03:09 model=experiment_lstm epoch 8/8 train_loss=0.0897 val_loss=0.1448 val_acc=0.9468 grad=1.0578 seconds=1433.8
+2026-10-05 03:03:09 TRAIN DONE model=experiment_lstm seconds=14444.1 best_epoch=5 examples_per_sec=279 peak_gb=1.243
+2026-10-05 03:03:09 TRAIN START model=experiment_attention_pool parameters=3224962
+2026-10-05 03:04:30 TEST model=baseline_max_pool acc=0.8991 f1_macro=0.8991 roc_auc=0.9643 mcc=0.7981 brier=0.0756 ece=0.0392
+2026-10-05 03:04:36 TEST model=experiment_lstm acc=0.9504 f1_macro=0.9504 roc_auc=0.9895 mcc=0.9009 brier=0.0372 ece=0.0078
+2026-10-05 03:04:37 error_review best_model=experiment_lstm total_errors=1883 exported=20
