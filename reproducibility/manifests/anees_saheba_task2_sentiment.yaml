@@ -1,34 +1,115 @@
-# Manifest — anees_saheba — task2_sentiment
-# Brief Section 5: package/library versions, environment file, and which
+# Manifest for anees_saheba, Task 2
+# Brief section 5: package and library versions, environment file, and which
 # checkpoint maps to which result in the report.
-# Fill this in AFTER the run, from the run itself — do not guess.
+# Filled in from the run itself, using the raw log and the recorded metrics.
 
 member: anees_saheba
 task: task2_sentiment
 
 hardware:
-  machine: ""          # e.g. "SJSU GPU Lab, node XX"
-  cpu: ""
-  gpu: ""
-  gpu_memory_gb: ""
-  ram_gb: ""
-  os: ""
-  cuda_version: ""
-  driver_version: ""
+  machine: "Apple Mac16,12"
+  cpu: "Apple M4, 10 cores, 4 performance and 6 efficiency"
+  gpu: "Apple M4 integrated, 10 cores, used through PyTorch MPS"
+  gpu_memory_gb: "unified with system memory, 32 GB total"
+  ram_gb: "32"
+  os: "macOS 26.6.2, build 25G83"
+  cuda_version: "not applicable, trained on Apple MPS"
+  driver_version: "not applicable, trained on Apple MPS"
 
 environment:
-  python: ""
+  python: "3.11.8"
   env_file: "environment/requirements.txt"
-  pip_freeze: ""       # path to the exact freeze captured at run time
-  random_seed: ""
+  pip_freeze: "environment/requirements.txt, captured from the working virtual environment"
+  key_versions:
+    torch: "2.14.0"
+    numpy: "2.4.6"
+    matplotlib: "3.11.2"
+  random_seed: "5330"
+  seeded: "python random, numpy, torch, and the DataLoader generator"
 
 runs:
-  - run_id: ""         # e.g. 20260914_143000
-    config: ""         # path to the YAML config used
-    command: ""        # the exact command you ran
-    raw_log: ""        # reproducibility/raw_logs/<file>
-    checkpoint: ""     # path under checkpoints/
-    maps_to_report_result: ""   # which table/figure in the report this produced
-    start_time: ""
-    end_time: ""
-    notes: ""
+  - run_id: "20261005_030918"
+    status: "reported run, all numbers in results.md and metrics_report.csv come from this"
+    config: "task2_sentiment/anees_saheba/src/configs/sentiment_config.yaml"
+    command: >
+      jupyter nbconvert --to notebook --execute
+      task2_sentiment/anees_saheba/src/yelp_sentiment_models.ipynb
+      --output run_task2_full.ipynb
+      --ExecutePreprocessor.timeout=86400
+      --ExecutePreprocessor.kernel_name=data266-venv
+    raw_log: "reproducibility/raw_logs/task2_sentiment_20261005_030918.log"
+    checkpoint: >
+      Three, one per model: task2_sentiment/anees_saheba/checkpoints/baseline_max_pool.pt
+      (epoch 7), experiment_lstm.pt (epoch 6), experiment_attention_pool.pt (epoch 8).
+      Each is the lowest validation loss epoch for that model.
+    maps_to_report_result: >
+      Every row of task2_sentiment/anees_saheba/metrics_report.csv, the results
+      tables in section 5 of results.md, the plots in outputs/plots, the
+      confusion matrices, and all twenty cases in failure_analysis.md.
+    start_time: "2026-10-05 03:09:18"
+    end_time: "2026-10-05 06:06:09"
+    epochs_completed: "8 per model, 24 in total"
+    headline_metrics:
+      baseline_max_pool:
+        test_accuracy: 0.8991
+        macro_f1: 0.8991
+        roc_auc: 0.9643
+        mcc: 0.7981
+        expected_calibration_error: 0.0392
+        parameters: 2412545
+        training_time_sec: 408.3
+      experiment_lstm:
+        test_accuracy: 0.9502
+        macro_f1: 0.9502
+        roc_auc: 0.9896
+        mcc: 0.9005
+        expected_calibration_error: 0.0104
+        parameters: 4297217
+        training_time_sec: 9685.5
+      experiment_attention_pool:
+        test_accuracy: 0.9341
+        macro_f1: 0.9341
+        roc_auc: 0.9819
+        mcc: 0.8683
+        expected_calibration_error: 0.0024
+        parameters: 3224962
+        training_time_sec: 437.0
+    notes: >
+      Total 10,531 seconds for all three models, peak memory 1.267 GB. Both
+      experiments beat the baseline on McNemar at p below 1e-136. Attention
+      pooling was still improving at the final epoch, so its accuracy is a lower
+      bound. The LSTM is not bit reproducible on MPS: across two runs its best
+      epoch moved from 5 to 6 while the other two models reproduced exactly.
+
+  - run_id: "20261004_225511"
+    status: "failed, kept as evidence"
+    config: "same as the reported run, before the attention pooling fix"
+    command: "same as the reported run"
+    raw_log: "reproducibility/raw_logs/task2_sentiment_20261004_225511_FAILED_attention_nan.log"
+    checkpoint: "not retained, overwritten by the reported run"
+    maps_to_report_result: "none, no number in the report comes from this run"
+    start_time: "2026-10-04 22:55:11"
+    end_time: "2026-10-05 03:04:37"
+    epochs_completed: "8 for the baseline, 8 for the LSTM, 0 for attention pooling"
+    notes: >
+      Attention pooling returned NaN on reviews that stopword removal had
+      emptied, because masking every position and taking a softmax is zero
+      divided by zero. The run died at the first validation pass of the third
+      model after the first two had already trained for four hours. The log is
+      kept unedited and renamed to mark it failed, because section 5 asks for
+      raw logs to be preserved rather than removed. It is also the evidence for
+      how far epoch times stretched while another job shared the machine, from
+      22 minutes to 65.
+
+reproduction:
+  one_command: >
+    jupyter nbconvert --to notebook --execute
+    task2_sentiment/anees_saheba/src/yelp_sentiment_models.ipynb
+    --output run.ipynb --ExecutePreprocessor.timeout=86400
+  data_prerequisite: "bash scripts/download_data.sh task2"
+  expected_runtime: "about 2 hours 56 minutes on Apple M4 MPS with the machine otherwise idle"
+  notes: >
+    No path in the notebook is hard coded. DATA266_EPOCHS, DATA266_TRAIN_SUBSET
+    and DATA266_TEST_SUBSET allow a shortened pass without editing the file.
+    Expect the LSTM to land within about 0.1 accuracy points rather than exactly
+    on 95.02, because its kernels are not deterministic on MPS.
