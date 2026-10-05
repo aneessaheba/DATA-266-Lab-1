@@ -1,0 +1,91 @@
+# Task 2 Yelp Polarity sentiment, configuration for the reported run.
+# Mirrors the configuration cell in src/yelp_sentiment_models.ipynb.
+# Values here are the ones that produced metrics_report.csv.
+
+run:
+  member: anees_saheba
+  seed: 5330                  # last four digits of my student ID
+  run_id: "20261005_030918"
+  device_preference: [cuda, mps, cpu]
+
+data:
+  dataset: yelp_polarity
+  train_rows_raw: 560000
+  test_rows_raw: 38000
+  validation_fraction: 0.10
+  train_after_split: 504000
+  validation_after_split: 56000
+  test: 38000
+  class_balance: "50 percent positive in every split"
+  cleaning_removed: 0         # no missing, blank, duplicate or bad label rows
+
+preprocessing:
+  lowercase: true
+  tokeniser: regex word split
+  stopwords: removed, except the negation words below
+  negations_kept: [not, no, never, nor, none, cannot, dont, doesnt, didnt, wont, wouldnt, cant, couldnt, shouldnt, isnt, arent, wasnt, werent]
+  min_frequency: 3
+  vocab_size: 25000           # including PAD and UNK
+  distinct_words_in_train: 198238
+  token_coverage: 0.9829      # the rest map to UNK
+  max_length: 320             # keeps 92.65 percent of reviews whole
+  padding: post, index 0
+
+models:
+  baseline_max_pool:
+    pooling: masked maximum over positions
+    embedding_dim: 96
+    hidden_dim: 128
+    dropout: 0.10
+    parameters: 2412545
+  experiment_lstm:
+    pooling: final hidden state of the top layer
+    embedding_dim: 160
+    hidden_dim: 128
+    num_layers: 2
+    bidirectional: false
+    dropout: 0.30
+    parameters: 4297217
+  experiment_attention_pool:
+    pooling: learned scalar attention, tanh projection then one score
+    embedding_dim: 128
+    attention_dim: 64
+    hidden_dim: 128
+    dropout: 0.20
+    parameters: 3224962
+
+optimisation:
+  optimiser: adam
+  learning_rate: 2.0e-4
+  weight_decay: 5.0e-4
+  gradient_clip: 1.0
+  batch_size: 256
+  epochs: 8
+  loss: binary cross entropy with logits
+  model_selection: lowest validation loss
+  best_epoch:
+    baseline_max_pool: 7
+    experiment_lstm: 6
+    experiment_attention_pool: 8
+
+evaluation:
+  split: test
+  threshold: 0.5              # not tuned on test
+  bootstrap_resamples_for_ci: "95 percent intervals on accuracy, macro F1 and MCC"
+  significance_test: mcnemar against the baseline on paired predictions
+  slices: [short, medium, long, truncated]
+
+outputs:
+  checkpoints: task2_sentiment/anees_saheba/checkpoints/
+  metrics: task2_sentiment/anees_saheba/metrics_report.csv
+  metrics_json: task2_sentiment/anees_saheba/outputs/metrics.json
+  history: task2_sentiment/anees_saheba/outputs/training_records.json
+  plots: task2_sentiment/anees_saheba/outputs/plots/
+  error_review: task2_sentiment/anees_saheba/outputs/error_review_20.csv
+  raw_log: reproducibility/raw_logs/task2_sentiment_20261005_030918.log
+
+environment_overrides:
+  # Read by the notebook if set, so a run can be changed without editing code.
+  DATA266_EPOCHS: "number of epochs, defaults to 8"
+  DATA266_TRAIN_SUBSET: "limit training rows for a quick pass, 0 means all"
+  DATA266_TEST_SUBSET: "limit test rows for a quick pass, 0 means all"
