@@ -46,8 +46,9 @@ kaggle.json
 # be committed.
 /*.pdf
 
-# Yashashree's Task 3 run folder, pasted in for reference.
-# It holds the dataset, a 2.2 GB zip and 1.2 GB of milestone checkpoints,
-# none of which belong in the repository. The files we do keep are copied
-# into task3_gan/yashashree_shinde/ by hand.
+# Yashashree's Task 3 run folder, copied onto my machine so I could see what
+# her run produced before setting up my own. Reference only. She commits her
+# own Task 3 results from her own branch, so nothing in here is ever ours to
+# add. It is also 4.3 GB of dataset, zip and milestone checkpoints, which is
+# reason enough on its own.
 TASK3 By yashsharee/
