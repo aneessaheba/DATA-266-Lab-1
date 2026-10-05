@@ -88,9 +88,23 @@ Raw datasets are gitignored; the download script is the reproducible source of t
 
 ## One-command smoke test
 
-> **Not yet available.** `scripts/smoke_test.sh` is added alongside the first
-> trained model (Task 1). It must run end-to-end from a fresh clone in a few
-> minutes on CPU, proving one member's pipeline works without a GPU.
+```bash
+bash scripts/smoke_test.sh
+```
+
+That single command reproduces a shortened version of anees_saheba's Task 1 run
+from a clean checkout. It fetches a small slice of TinyStories if the data is
+not already present, trains the character level GPT for one epoch on 2,000
+sequences, and then checks that the run produced what it should.
+
+It takes a few minutes and does not need a GPU. It passes only if every code
+cell ran without an exception, the causal masking check reported that no future
+information reaches any position, training completed, and the metrics file,
+loss curves and generated samples were all written.
+
+The test runs in a temporary directory outside the repository and modifies
+nothing that is tracked, so it is safe to run on a checkout that already holds
+real results.
 
 ## Reproducing a specific member's full run
 
