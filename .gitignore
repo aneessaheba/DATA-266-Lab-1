@@ -52,3 +52,8 @@ kaggle.json
 # add. It is also 4.3 GB of dataset, zip and milestone checkpoints, which is
 # reason enough on its own.
 TASK3 By yashsharee/
+
+# Console capture from a detached nbconvert run. The real evidence trail is
+# the raw log under reproducibility/raw_logs/, which the notebook writes and
+# flushes itself.
+*_console.log
