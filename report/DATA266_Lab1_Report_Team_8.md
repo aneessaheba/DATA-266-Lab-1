@@ -1,7 +1,11 @@
 # DATA266 Lab 1, Team 8
 
+## Repository
+
+### https://github.com/aneessaheba/DATA-266-Lab-1
+
 **Members:** Anees Saheba Guddi (SID4 5330), Yashashree Shinde (SID4 4349)
-**Repository:** https://github.com/aneessaheba/DATA-266-Lab-1
+
 **Date:** 6 October 2026
 
 ## 1. Team ownership statement
