@@ -1,0 +1,16 @@
+{
+  "assignment": "DATA266 Lab Task 1",
+  "student_identifier": "Yashashree",
+  "SID4": 4349,
+  "seed": 4349,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "python_version": "3.13.3",
+  "pytorch_version": "2.14.0+cu132",
+  "dataset": "roneneldan/TinyStories",
+  "checkpoint": "task1_checkpoints/task1_best_model.pt",
+  "results_file": "results.md",
+  "metrics_file": "metrics_report.csv",
+  "failure_analysis_file": "task1_failure_analysis.md",
+  "loss_curve_file": "task1_loss_curves.svg"
+}

@@ -1,0 +1,46 @@
+Sample 1
+================================================================================
+Prompt: Once upon a time
+
+Once upon a time, there was a little girl named Lily. She had a big smile on her house and a special wind. She loved to play in the woods, especially adventures. One day, she went by a race to the water. Every day, she saw a big tree with lots of money. The pink was a big pretty girl with a playground beautiful pla
+
+Generation metrics:
+distinct_1: 0.0949367088607595
+distinct_2: 0.4793650793650794
+distinct_3: 0.7547770700636943
+repeated_4gram_rate: 0.14057507987220447
+generation_tokens_per_second: 348.90475888658256
+
+
+Sample 2
+================================================================================
+Prompt: One day,
+
+One day, a little girl named Lily went to the park with her mom. They saw a big tree with a big rock. The tree was filled with a tall green ball on the ground. Lily was so happy that she saw that she wanted to go off to the ground.
+
+As they walked, Lily saw her favourite tree and the little girl was so happ
+
+Generation metrics:
+distinct_1: 0.09740259740259741
+distinct_2: 0.38436482084690554
+distinct_3: 0.6078431372549019
+repeated_4gram_rate: 0.2819672131147541
+generation_tokens_per_second: 351.2443357459322
+
+
+Sample 3
+================================================================================
+Prompt: The little
+
+The little girl was sad because she had to take a nice but her favorite was still scared. She was scared, but the little girl was curious, so she couldn't wait to play. She felt bad of but Lucy was sad.
+
+So the little girl's favorite time, the little girl came to her and said, "That's a great still for you to
+
+Generation metrics:
+distinct_1: 0.1
+distinct_2: 0.4045307443365696
+distinct_3: 0.6363636363636364
+repeated_4gram_rate: 0.2703583061889251
+generation_tokens_per_second: 353.7210690063765
+
+

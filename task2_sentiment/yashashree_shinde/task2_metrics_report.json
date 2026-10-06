@@ -1,0 +1,152 @@
+{
+  "baseline_mean_pool": {
+    "accuracy": 0.9348157894736842,
+    "precision_macro": 0.9348186814394852,
+    "recall_macro": 0.9348157894736842,
+    "f1_macro": 0.9348156810889545,
+    "precision_micro": 0.9348157894736842,
+    "recall_micro": 0.9348157894736842,
+    "f1_micro": 0.9348157894736842,
+    "precision_weighted": 0.9348186814394851,
+    "recall_weighted": 0.9348157894736842,
+    "f1_weighted": 0.9348156810889545,
+    "confusion_matrix": [
+      [
+        17737,
+        1263
+      ],
+      [
+        1214,
+        17786
+      ]
+    ],
+    "roc_auc": 0.9822201869806094,
+    "pr_auc": 0.9824330262022711,
+    "mcc": 0.8696344709083607,
+    "brier_score": 0.04820229370570147,
+    "expected_calibration_error": 0.4364131167919918,
+    "parameter_count": 3856770,
+    "test_examples_per_second": 16086.120687654722,
+    "accuracy_ci_95": {
+      "lower_2_5_percent": 0.9324467105263158,
+      "upper_97_5_percent": 0.9372631578947368
+    },
+    "macro_f1_ci_95": {
+      "lower_2_5_percent": 0.932439921952528,
+      "upper_97_5_percent": 0.937259982014954
+    },
+    "mcc_ci_95": {
+      "lower_2_5_percent": 0.864884682647695,
+      "upper_97_5_percent": 0.8745224178979834
+    },
+    "training_time_seconds": 255.8260255999994,
+    "peak_memory_gb": 0.15985107421875,
+    "hardware": {
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "cuda_version": "13.2",
+      "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+      "operating_system": "Windows-11-10.0.26200-SP0"
+    }
+  },
+  "experiment_cnn": {
+    "accuracy": 0.9285,
+    "precision_macro": 0.9293613404768273,
+    "recall_macro": 0.9285,
+    "f1_macro": 0.9284641230237936,
+    "precision_micro": 0.9285,
+    "recall_micro": 0.9285,
+    "f1_micro": 0.9285,
+    "precision_weighted": 0.9293613404768273,
+    "recall_weighted": 0.9285,
+    "f1_weighted": 0.9284641230237936,
+    "confusion_matrix": [
+      [
+        18067,
+        933
+      ],
+      [
+        1784,
+        17216
+      ]
+    ],
+    "roc_auc": 0.9818269847645428,
+    "pr_auc": 0.9822599225418892,
+    "mcc": 0.8578609080598568,
+    "brier_score": 0.053344470512197546,
+    "expected_calibration_error": 0.45248758856507343,
+    "parameter_count": 5181890,
+    "test_examples_per_second": 9408.879937471034,
+    "accuracy_ci_95": {
+      "lower_2_5_percent": 0.9257618421052631,
+      "upper_97_5_percent": 0.930921052631579
+    },
+    "macro_f1_ci_95": {
+      "lower_2_5_percent": 0.9257044925821032,
+      "upper_97_5_percent": 0.9308725280449831
+    },
+    "mcc_ci_95": {
+      "lower_2_5_percent": 0.8524629789075829,
+      "upper_97_5_percent": 0.8626101898061729
+    },
+    "training_time_seconds": 292.5029641000001,
+    "peak_memory_gb": 0.4511299133300781,
+    "hardware": {
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "cuda_version": "13.2",
+      "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+      "operating_system": "Windows-11-10.0.26200-SP0"
+    }
+  },
+  "experiment_bigru": {
+    "accuracy": 0.9468947368421052,
+    "precision_macro": 0.9468991934545608,
+    "recall_macro": 0.9468947368421052,
+    "f1_macro": 0.9468946044463822,
+    "precision_micro": 0.9468947368421052,
+    "recall_micro": 0.9468947368421052,
+    "f1_micro": 0.9468947368421052,
+    "precision_weighted": 0.9468991934545609,
+    "recall_weighted": 0.9468947368421052,
+    "f1_weighted": 0.9468946044463822,
+    "confusion_matrix": [
+      [
+        18021,
+        979
+      ],
+      [
+        1039,
+        17961
+      ]
+    ],
+    "roc_auc": 0.9869025595567867,
+    "pr_auc": 0.9870654203830501,
+    "mcc": 0.8937939302855553,
+    "brier_score": 0.04117155155324907,
+    "expected_calibration_error": 0.4629022148170675,
+    "parameter_count": 6057026,
+    "test_examples_per_second": 12555.59111871799,
+    "accuracy_ci_95": {
+      "lower_2_5_percent": 0.9446046052631579,
+      "upper_97_5_percent": 0.9490796052631578
+    },
+    "macro_f1_ci_95": {
+      "lower_2_5_percent": 0.9446046025277628,
+      "upper_97_5_percent": 0.9490794320788569
+    },
+    "mcc_ci_95": {
+      "lower_2_5_percent": 0.8892254918716805,
+      "upper_97_5_percent": 0.8981594614522943
+    },
+    "training_time_seconds": 290.1351074000013,
+    "peak_memory_gb": 1.8029131889343262,
+    "hardware": {
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "cuda_version": "13.2",
+      "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+      "operating_system": "Windows-11-10.0.26200-SP0"
+    }
+  }
+}
