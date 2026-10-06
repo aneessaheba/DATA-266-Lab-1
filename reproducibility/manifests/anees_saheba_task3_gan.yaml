@@ -1,34 +1,106 @@
-# Manifest — anees_saheba — task3_gan
-# Brief Section 5: package/library versions, environment file, and which
+# Manifest for anees_saheba, Task 3
+# Brief section 5: package and library versions, environment file, and which
 # checkpoint maps to which result in the report.
-# Fill this in AFTER the run, from the run itself — do not guess.
+# Filled in from the run itself, using the raw log and the recorded metrics.
 
 member: anees_saheba
 task: task3_gan
 
 hardware:
-  machine: ""          # e.g. "SJSU GPU Lab, node XX"
-  cpu: ""
-  gpu: ""
-  gpu_memory_gb: ""
-  ram_gb: ""
-  os: ""
-  cuda_version: ""
-  driver_version: ""
+  machine: "GPU lab container"
+  cpu: "not recorded by the notebook"
+  gpu: "NVIDIA GeForce RTX 4090"
+  gpu_memory_gb: "peak allocated during the run was 1.568"
+  ram_gb: "not recorded"
+  os: "Linux container"
+  cuda_version: "bundled with torch 2.1.2"
+  driver_version: "not recorded"
 
 environment:
-  python: ""
+  python: "3.x in the lab container"
   env_file: "environment/requirements.txt"
-  pip_freeze: ""       # path to the exact freeze captured at run time
-  random_seed: ""
+  pip_freeze: "the lab container was preprovisioned, torch 2.1.2 rather than the 2.14.0 used on my laptop"
+  key_versions:
+    torch: "2.1.2"
+  random_seed: "5330"
+  seeded: "python random, numpy, torch, and the DataLoader generator"
+  note: >
+    The container shipped torch 2.1.2, where torch.amp.GradScaler does not
+    exist. The notebook created a disabled scaler that nothing used, so it was
+    removed rather than rewritten. Commit 8a19594.
 
 runs:
-  - run_id: ""         # e.g. 20260914_143000
-    config: ""         # path to the YAML config used
-    command: ""        # the exact command you ran
-    raw_log: ""        # reproducibility/raw_logs/<file>
-    checkpoint: ""     # path under checkpoints/
-    maps_to_report_result: ""   # which table/figure in the report this produced
-    start_time: ""
-    end_time: ""
-    notes: ""
+  - run_id: "20261005_201541"
+    status: "reported run, all numbers in results.md and metrics_report.csv come from this"
+    config: "task3_gan/anees_saheba/src/configs/cyclegan_config.yaml"
+    command: >
+      jupyter nbconvert --to notebook --execute
+      task3_gan/anees_saheba/src/cyclegan_monet_photo.ipynb
+      --output run_task3_full.ipynb
+      --ExecutePreprocessor.timeout=86400
+    raw_log: "reproducibility/raw_logs/task3_cyclegan_20261005_201541.log"
+    checkpoint: "task3_gan/anees_saheba/checkpoints/generators_epoch_050.pt"
+    maps_to_report_result: >
+      Every row of task3_gan/anees_saheba/metrics_report.csv, the results and
+      comparison tables in sections 5 and 6 of results.md, the training curves
+      in outputs/figures, all three cases in failure_analysis.md, and the 120
+      sample translations in outputs/validation_A2B, validation_B2A,
+      validation_cycle_A and validation_cycle_B.
+    start_time: "2026-10-05 20:15:41"
+    end_time: "2026-10-06 05:12:19"
+    epochs_completed: 50
+    headline_metrics:
+      a2b_fid: 178.9449
+      a2b_kid: 0.0328
+      b2a_fid: 86.5920
+      b2a_kid: 0.0075
+      b2a_coverage: 0.7267
+      cycle_reconstruction_l1_a: 0.1647
+      cycle_reconstruction_l1_b: 0.0949
+      parameter_count: 30008200
+      total_training_time_sec: 32198.45
+      peak_memory_gb: 1.568
+      images_per_sec: 19.76
+      nan_or_inf_total: 0
+    notes: >
+      Six residual blocks on 80 base filters and identity weight 2.5, against
+      my teammate's nine blocks on 64 and identity weight 5.0. Better on every
+      FID and KID number in both directions, worse on cycle reconstruction for
+      the Monet direction and on content similarity. No loss spikes and no non
+      finite step across 316,750 optimiser steps. Only the epoch 50 checkpoint
+      is kept; the milestones and the optimiser state, about 850 MB, are not in
+      the repository.
+
+kaggle:
+  submitted: "2026-10-06"
+  file: "task3_gan/anees_saheba/outputs/submission.csv"
+  produced_by: "task3_gan/anees_saheba/src/make_kaggle_submission.py"
+  submitted_fid: 105.2606
+  submitted_mifid: 0.4175
+  public_score: -52.8390
+  teammate_public_score: -54.6990
+  scoring: >
+    The competition takes a one row csv with ID, FID and MiFID, and the
+    leaderboard shows the negative mean of the two. The script embeds the
+    instructor's scoring logic unchanged. The run itself only translated 30 of
+    the 300 Monet paintings, so the remaining 270 were generated from the saved
+    epoch 50 checkpoint before scoring. No retraining.
+
+pending:
+  human_audit: >
+    outputs/metrics/human_audit_30_samples.csv is a 30 row template with empty
+    rater columns. It needs two people. The notebook does not generate ratings.
+
+reproduction:
+  one_command: >
+    jupyter nbconvert --to notebook --execute
+    task3_gan/anees_saheba/src/cyclegan_monet_photo.ipynb
+    --output run.ipynb --ExecutePreprocessor.timeout=86400
+  data_prerequisite: >
+    monet_jpg and photo_jpg under task3_gan/data/, 300 and 7,038 images. The
+    notebook also accepts DATA266_MONET_DIR and DATA266_PHOTO_DIR.
+  expected_runtime: "about 8.9 hours on an RTX 4090, about 5 hours on an RTX 5090"
+  notes: >
+    No path in the notebook is hard coded. DATA266_NUM_EPOCHS,
+    DATA266_IMAGE_SIZE and DATA266_CHECKPOINT_EVERY allow a shortened run
+    without editing the file. Time one epoch before committing to a GPU slot.
