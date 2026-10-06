@@ -1,0 +1,666 @@
+2026-10-02 23:31:39 run_id=20261002_233139 device=cuda gpu=NVIDIA GeForce RTX 5090 seed=4349
+2026-10-02 23:31:39 epochs=50 lr=0.0002 lambda_cycle=10.0 lambda_identity=5.0 image_size=256 batch_size=1
+2026-10-02 23:31:39 FRESH RUN from epoch 1
+2026-10-02 23:32:07 epoch 1 step 500/6335 G=10.3646 D=0.4929 cycle_a=0.2485 cycle_b=0.4075 id_a=0.2279 id_b=0.3651 gnorm_G=74.6495 gnorm_D=15.2886
+2026-10-02 23:32:35 epoch 1 step 1000/6335 G=8.8335 D=0.5587 cycle_a=0.2797 cycle_b=0.2683 id_a=0.2994 id_b=0.2830 gnorm_G=49.3903 gnorm_D=7.3247
+2026-10-02 23:33:02 epoch 1 step 1500/6335 G=7.5317 D=0.2408 cycle_a=0.2074 cycle_b=0.2617 id_a=0.2158 id_b=0.1885 gnorm_G=50.4819 gnorm_D=14.4464
+2026-10-02 23:33:29 epoch 1 step 2000/6335 G=6.1778 D=0.2465 cycle_a=0.1641 cycle_b=0.1675 id_a=0.1748 id_b=0.1760 gnorm_G=29.8782 gnorm_D=11.2238
+2026-10-02 23:33:56 epoch 1 step 2500/6335 G=7.4136 D=0.2575 cycle_a=0.2305 cycle_b=0.2027 id_a=0.1923 id_b=0.1722 gnorm_G=39.3597 gnorm_D=10.0503
+2026-10-02 23:34:24 epoch 1 step 3000/6335 G=9.2626 D=0.1867 cycle_a=0.2852 cycle_b=0.2295 id_a=0.2694 id_b=0.2775 gnorm_G=42.1088 gnorm_D=7.6412
+2026-10-02 23:34:51 epoch 1 step 3500/6335 G=6.7549 D=0.3621 cycle_a=0.2695 cycle_b=0.1429 id_a=0.2333 id_b=0.1191 gnorm_G=47.4346 gnorm_D=11.1851
+2026-10-02 23:35:18 epoch 1 step 4000/6335 G=8.2530 D=0.4760 cycle_a=0.2089 cycle_b=0.2520 id_a=0.1779 id_b=0.2952 gnorm_G=42.3471 gnorm_D=20.6075
+2026-10-02 23:35:46 epoch 1 step 4500/6335 G=6.0975 D=0.1195 cycle_a=0.1452 cycle_b=0.1604 id_a=0.1321 id_b=0.1429 gnorm_G=25.4856 gnorm_D=8.6147
+2026-10-02 23:36:14 epoch 1 step 5000/6335 G=8.2310 D=0.1208 cycle_a=0.1787 cycle_b=0.3072 id_a=0.1925 id_b=0.1343 gnorm_G=45.6749 gnorm_D=10.7031
+2026-10-02 23:36:41 epoch 1 step 5500/6335 G=9.8966 D=0.1376 cycle_a=0.2710 cycle_b=0.3083 id_a=0.2239 id_b=0.3292 gnorm_G=44.7833 gnorm_D=7.2311
+2026-10-02 23:37:09 epoch 1 step 6000/6335 G=8.4854 D=0.2914 cycle_a=0.1379 cycle_b=0.2958 id_a=0.1469 id_b=0.3053 gnorm_G=40.0752 gnorm_D=9.8476
+2026-10-02 23:37:40 EPOCH 1/50 train_G=7.7211 train_D=0.4264 val_G=6.8862 val_D=0.3567 cycle_a=0.2168 cycle_b=0.2362 gnorm_G=43.1693 gnorm_D=13.8312 seconds=360.82 images_per_sec=35.11 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-02 23:37:42 MILESTONE saved task3_outputs/checkpoints/generators_epoch_001.pt
+2026-10-02 23:38:10 epoch 2 step 500/6335 G=5.6922 D=0.4329 cycle_a=0.1709 cycle_b=0.1505 id_a=0.2039 id_b=0.1442 gnorm_G=33.8855 gnorm_D=7.8339
+2026-10-02 23:38:37 epoch 2 step 1000/6335 G=8.4305 D=0.4683 cycle_a=0.1604 cycle_b=0.2591 id_a=0.2023 id_b=0.2499 gnorm_G=34.8930 gnorm_D=23.9458
+2026-10-02 23:39:04 epoch 2 step 1500/6335 G=7.0728 D=0.1155 cycle_a=0.1278 cycle_b=0.2677 id_a=0.1155 id_b=0.2357 gnorm_G=42.1042 gnorm_D=6.3919
+2026-10-02 23:39:32 epoch 2 step 2000/6335 G=11.6031 D=0.0885 cycle_a=0.2058 cycle_b=0.4782 id_a=0.2074 id_b=0.4186 gnorm_G=40.5201 gnorm_D=9.1449
+2026-10-02 23:39:59 epoch 2 step 2500/6335 G=7.8857 D=0.4531 cycle_a=0.2290 cycle_b=0.2756 id_a=0.1910 id_b=0.2816 gnorm_G=48.9976 gnorm_D=13.6982
+2026-10-02 23:40:26 epoch 2 step 3000/6335 G=5.5252 D=0.1794 cycle_a=0.1288 cycle_b=0.1536 id_a=0.1234 id_b=0.1000 gnorm_G=39.8756 gnorm_D=13.5865
+2026-10-02 23:40:53 epoch 2 step 3500/6335 G=5.2214 D=0.2300 cycle_a=0.1343 cycle_b=0.1290 id_a=0.1128 id_b=0.0969 gnorm_G=26.0793 gnorm_D=14.8289
+2026-10-02 23:41:20 epoch 2 step 4000/6335 G=6.7698 D=0.0858 cycle_a=0.1489 cycle_b=0.2015 id_a=0.1231 id_b=0.1535 gnorm_G=58.3494 gnorm_D=6.3378
+2026-10-02 23:41:48 epoch 2 step 4500/6335 G=3.8450 D=0.4397 cycle_a=0.1153 cycle_b=0.0987 id_a=0.1102 id_b=0.0808 gnorm_G=33.8569 gnorm_D=14.5441
+2026-10-02 23:42:15 epoch 2 step 5000/6335 G=6.2807 D=0.2760 cycle_a=0.1908 cycle_b=0.1566 id_a=0.1753 id_b=0.1533 gnorm_G=44.0007 gnorm_D=14.7719
+2026-10-02 23:42:42 epoch 2 step 5500/6335 G=5.9186 D=0.3744 cycle_a=0.2253 cycle_b=0.1404 id_a=0.2037 id_b=0.1048 gnorm_G=39.3971 gnorm_D=10.5576
+2026-10-02 23:43:10 epoch 2 step 6000/6335 G=6.7459 D=0.3794 cycle_a=0.1374 cycle_b=0.1603 id_a=0.1337 id_b=0.1928 gnorm_G=39.4942 gnorm_D=19.7322
+2026-10-02 23:43:41 EPOCH 2/50 train_G=6.5622 train_D=0.3029 val_G=6.5136 val_D=0.2966 cycle_a=0.1698 cycle_b=0.1835 gnorm_G=45.4462 gnorm_D=12.6495 seconds=358.49 images_per_sec=35.34 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-02 23:44:10 epoch 3 step 500/6335 G=6.7254 D=0.1573 cycle_a=0.1211 cycle_b=0.2298 id_a=0.1226 id_b=0.2355 gnorm_G=58.1839 gnorm_D=8.9561
+2026-10-02 23:44:37 epoch 3 step 1000/6335 G=6.1016 D=0.1219 cycle_a=0.2000 cycle_b=0.1325 id_a=0.1844 id_b=0.0615 gnorm_G=64.0369 gnorm_D=10.6813
+2026-10-02 23:45:04 epoch 3 step 1500/6335 G=5.6010 D=0.1441 cycle_a=0.1136 cycle_b=0.1148 id_a=0.0983 id_b=0.1277 gnorm_G=70.4956 gnorm_D=12.1531
+2026-10-02 23:45:31 epoch 3 step 2000/6335 G=6.0553 D=0.2322 cycle_a=0.1328 cycle_b=0.1920 id_a=0.1058 id_b=0.1385 gnorm_G=67.7509 gnorm_D=16.1286
+2026-10-02 23:45:59 epoch 3 step 2500/6335 G=5.5366 D=0.0863 cycle_a=0.1626 cycle_b=0.1364 id_a=0.1255 id_b=0.1005 gnorm_G=47.9136 gnorm_D=8.2465
+2026-10-02 23:46:26 epoch 3 step 3000/6335 G=7.9472 D=0.3991 cycle_a=0.2161 cycle_b=0.1190 id_a=0.2131 id_b=0.0806 gnorm_G=54.1029 gnorm_D=17.0441
+2026-10-02 23:46:53 epoch 3 step 3500/6335 G=5.5817 D=0.0778 cycle_a=0.1295 cycle_b=0.0955 id_a=0.1084 id_b=0.0740 gnorm_G=40.7286 gnorm_D=7.4011
+2026-10-02 23:47:20 epoch 3 step 4000/6335 G=6.9833 D=0.0745 cycle_a=0.1594 cycle_b=0.1665 id_a=0.1590 id_b=0.2092 gnorm_G=59.9690 gnorm_D=4.9881
+2026-10-02 23:47:48 epoch 3 step 4500/6335 G=5.6394 D=0.1615 cycle_a=0.1358 cycle_b=0.1382 id_a=0.1087 id_b=0.1116 gnorm_G=36.2838 gnorm_D=12.8997
+2026-10-02 23:48:15 epoch 3 step 5000/6335 G=5.5043 D=0.0978 cycle_a=0.0830 cycle_b=0.1971 id_a=0.0681 id_b=0.1893 gnorm_G=31.2765 gnorm_D=9.4926
+2026-10-02 23:48:42 epoch 3 step 5500/6335 G=5.8018 D=0.2179 cycle_a=0.2287 cycle_b=0.1129 id_a=0.2332 id_b=0.0981 gnorm_G=42.0604 gnorm_D=10.3066
+2026-10-02 23:49:10 epoch 3 step 6000/6335 G=4.6250 D=0.1434 cycle_a=0.1274 cycle_b=0.1162 id_a=0.1216 id_b=0.1069 gnorm_G=27.6799 gnorm_D=8.6233
+2026-10-02 23:49:41 EPOCH 3/50 train_G=6.2891 train_D=0.1631 val_G=5.8188 val_D=0.1683 cycle_a=0.1495 cycle_b=0.1638 gnorm_G=49.4314 gnorm_D=10.0363 seconds=358.42 images_per_sec=35.35 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-02 23:50:10 epoch 4 step 500/6335 G=7.2332 D=0.2526 cycle_a=0.1637 cycle_b=0.1480 id_a=0.1667 id_b=0.1361 gnorm_G=86.3871 gnorm_D=19.2453
+2026-10-02 23:50:37 epoch 4 step 1000/6335 G=5.2966 D=0.1028 cycle_a=0.0963 cycle_b=0.1840 id_a=0.1013 id_b=0.1311 gnorm_G=30.5587 gnorm_D=6.5936
+2026-10-02 23:51:04 epoch 4 step 1500/6335 G=4.6339 D=0.3442 cycle_a=0.0996 cycle_b=0.1549 id_a=0.0904 id_b=0.0937 gnorm_G=39.6186 gnorm_D=16.3571
+2026-10-02 23:51:32 epoch 4 step 2000/6335 G=5.1051 D=0.2871 cycle_a=0.1588 cycle_b=0.1520 id_a=0.1308 id_b=0.1478 gnorm_G=46.8366 gnorm_D=16.0392
+2026-10-02 23:51:59 epoch 4 step 2500/6335 G=8.0031 D=0.4693 cycle_a=0.1419 cycle_b=0.2302 id_a=0.1773 id_b=0.3501 gnorm_G=42.2468 gnorm_D=17.4411
+2026-10-02 23:52:27 epoch 4 step 3000/6335 G=5.5838 D=0.1882 cycle_a=0.1347 cycle_b=0.1568 id_a=0.1348 id_b=0.1083 gnorm_G=55.8483 gnorm_D=11.9406
+2026-10-02 23:52:55 epoch 4 step 3500/6335 G=5.4785 D=0.1289 cycle_a=0.1507 cycle_b=0.1367 id_a=0.1280 id_b=0.0910 gnorm_G=67.6007 gnorm_D=4.2991
+2026-10-02 23:53:22 epoch 4 step 4000/6335 G=4.8150 D=0.1406 cycle_a=0.1375 cycle_b=0.1162 id_a=0.1091 id_b=0.0745 gnorm_G=58.8688 gnorm_D=9.3402
+2026-10-02 23:53:49 epoch 4 step 4500/6335 G=5.7004 D=0.1450 cycle_a=0.1234 cycle_b=0.1238 id_a=0.0854 id_b=0.1659 gnorm_G=90.4565 gnorm_D=10.4533
+2026-10-02 23:54:17 epoch 4 step 5000/6335 G=7.3279 D=0.0695 cycle_a=0.1942 cycle_b=0.2063 id_a=0.1627 id_b=0.1477 gnorm_G=59.5292 gnorm_D=4.1633
+2026-10-02 23:54:44 epoch 4 step 5500/6335 G=3.7154 D=0.2714 cycle_a=0.1147 cycle_b=0.0785 id_a=0.0997 id_b=0.0538 gnorm_G=58.8014 gnorm_D=18.6402
+2026-10-02 23:55:12 epoch 4 step 6000/6335 G=4.8485 D=0.3042 cycle_a=0.1011 cycle_b=0.1563 id_a=0.0849 id_b=0.1571 gnorm_G=56.4449 gnorm_D=14.3372
+2026-10-02 23:55:43 EPOCH 4/50 train_G=5.8057 train_D=0.2307 val_G=7.0041 val_D=0.2601 cycle_a=0.1361 cycle_b=0.1561 gnorm_G=54.4953 gnorm_D=12.0497 seconds=360.98 images_per_sec=35.10 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-02 23:56:13 epoch 5 step 500/6335 G=5.5316 D=0.2518 cycle_a=0.1861 cycle_b=0.1299 id_a=0.1580 id_b=0.1326 gnorm_G=29.0711 gnorm_D=6.8428
+2026-10-02 23:56:41 epoch 5 step 1000/6335 G=5.1603 D=0.2242 cycle_a=0.1397 cycle_b=0.1141 id_a=0.1252 id_b=0.0980 gnorm_G=61.1154 gnorm_D=11.6924
+2026-10-02 23:57:09 epoch 5 step 1500/6335 G=5.2860 D=0.1871 cycle_a=0.0965 cycle_b=0.1769 id_a=0.0994 id_b=0.1536 gnorm_G=41.1029 gnorm_D=13.7586
+2026-10-02 23:57:37 epoch 5 step 2000/6335 G=4.8100 D=0.1006 cycle_a=0.1161 cycle_b=0.1335 id_a=0.0800 id_b=0.1135 gnorm_G=54.3452 gnorm_D=8.8292
+2026-10-02 23:58:04 epoch 5 step 2500/6335 G=4.3292 D=0.1997 cycle_a=0.0802 cycle_b=0.1076 id_a=0.0777 id_b=0.1201 gnorm_G=36.8567 gnorm_D=8.9982
+2026-10-02 23:58:32 epoch 5 step 3000/6335 G=5.8799 D=0.3792 cycle_a=0.1089 cycle_b=0.1177 id_a=0.0988 id_b=0.1074 gnorm_G=86.0996 gnorm_D=18.1744
+2026-10-02 23:58:59 epoch 5 step 3500/6335 G=5.6143 D=0.0691 cycle_a=0.1233 cycle_b=0.1293 id_a=0.1122 id_b=0.1228 gnorm_G=62.1333 gnorm_D=6.9239
+2026-10-02 23:59:26 epoch 5 step 4000/6335 G=5.4797 D=0.0976 cycle_a=0.0970 cycle_b=0.1334 id_a=0.1890 id_b=0.1083 gnorm_G=63.9877 gnorm_D=8.5047
+2026-10-02 23:59:53 epoch 5 step 4500/6335 G=6.2932 D=0.1190 cycle_a=0.1119 cycle_b=0.2000 id_a=0.1370 id_b=0.1603 gnorm_G=44.6556 gnorm_D=11.6051
+2026-10-03 00:00:21 epoch 5 step 5000/6335 G=4.9395 D=0.2155 cycle_a=0.1268 cycle_b=0.1330 id_a=0.1282 id_b=0.1307 gnorm_G=40.4814 gnorm_D=10.2374
+2026-10-03 00:00:49 epoch 5 step 5500/6335 G=4.8494 D=0.2590 cycle_a=0.1235 cycle_b=0.0693 id_a=0.0977 id_b=0.0706 gnorm_G=32.9892 gnorm_D=14.1531
+2026-10-03 00:01:16 epoch 5 step 6000/6335 G=5.2617 D=0.0947 cycle_a=0.1012 cycle_b=0.0888 id_a=0.0876 id_b=0.1313 gnorm_G=46.2820 gnorm_D=10.8944
+2026-10-03 00:01:48 EPOCH 5/50 train_G=5.6319 train_D=0.2045 val_G=5.6531 val_D=0.3908 cycle_a=0.1283 cycle_b=0.1481 gnorm_G=55.1990 gnorm_D=11.8088 seconds=362.84 images_per_sec=34.92 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 00:01:50 MILESTONE saved task3_outputs/checkpoints/generators_epoch_005.pt
+2026-10-03 00:02:17 epoch 6 step 500/6335 G=5.8124 D=0.2874 cycle_a=0.1309 cycle_b=0.1516 id_a=0.1027 id_b=0.1527 gnorm_G=59.8383 gnorm_D=14.6193
+2026-10-03 00:02:45 epoch 6 step 1000/6335 G=4.4546 D=0.2791 cycle_a=0.1020 cycle_b=0.0811 id_a=0.0873 id_b=0.0574 gnorm_G=76.8268 gnorm_D=22.1558
+2026-10-03 00:03:12 epoch 6 step 1500/6335 G=5.6575 D=0.0466 cycle_a=0.1301 cycle_b=0.1262 id_a=0.1432 id_b=0.0812 gnorm_G=105.3292 gnorm_D=4.6565
+2026-10-03 00:03:40 epoch 6 step 2000/6335 G=4.9595 D=0.1395 cycle_a=0.1088 cycle_b=0.1175 id_a=0.1159 id_b=0.0999 gnorm_G=65.2481 gnorm_D=8.6970
+2026-10-03 00:04:07 epoch 6 step 2500/6335 G=4.7123 D=0.3331 cycle_a=0.0973 cycle_b=0.1586 id_a=0.0860 id_b=0.2034 gnorm_G=34.4731 gnorm_D=13.4375
+2026-10-03 00:04:34 epoch 6 step 3000/6335 G=4.3206 D=0.2748 cycle_a=0.0905 cycle_b=0.1468 id_a=0.0837 id_b=0.1451 gnorm_G=49.4574 gnorm_D=8.5396
+2026-10-03 00:05:02 epoch 6 step 3500/6335 G=5.5181 D=0.3948 cycle_a=0.1164 cycle_b=0.1374 id_a=0.1129 id_b=0.0933 gnorm_G=59.0834 gnorm_D=26.1237
+2026-10-03 00:05:29 epoch 6 step 4000/6335 G=5.0274 D=0.1938 cycle_a=0.1108 cycle_b=0.1293 id_a=0.1133 id_b=0.1456 gnorm_G=62.1102 gnorm_D=8.1149
+2026-10-03 00:05:56 epoch 6 step 4500/6335 G=4.5921 D=0.1880 cycle_a=0.0772 cycle_b=0.1152 id_a=0.0682 id_b=0.1133 gnorm_G=32.3273 gnorm_D=11.9598
+2026-10-03 00:06:24 epoch 6 step 5000/6335 G=5.0048 D=0.1041 cycle_a=0.1150 cycle_b=0.1210 id_a=0.0943 id_b=0.0871 gnorm_G=44.6254 gnorm_D=6.4807
+2026-10-03 00:06:51 epoch 6 step 5500/6335 G=5.7037 D=0.2248 cycle_a=0.1073 cycle_b=0.2144 id_a=0.1071 id_b=0.1856 gnorm_G=56.5264 gnorm_D=12.5811
+2026-10-03 00:07:18 epoch 6 step 6000/6335 G=5.3153 D=0.0342 cycle_a=0.1401 cycle_b=0.1017 id_a=0.1202 id_b=0.0885 gnorm_G=58.5294 gnorm_D=4.1614
+2026-10-03 00:07:49 EPOCH 6/50 train_G=5.4700 train_D=0.1921 val_G=6.1043 val_D=0.1804 cycle_a=0.1211 cycle_b=0.1432 gnorm_G=52.8332 gnorm_D=11.6691 seconds=358.86 images_per_sec=35.31 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 00:08:18 epoch 7 step 500/6335 G=4.8347 D=0.0805 cycle_a=0.0883 cycle_b=0.0843 id_a=0.0807 id_b=0.1600 gnorm_G=76.5225 gnorm_D=6.6724
+2026-10-03 00:08:45 epoch 7 step 1000/6335 G=6.2352 D=0.0865 cycle_a=0.1123 cycle_b=0.1950 id_a=0.0863 id_b=0.1294 gnorm_G=90.2692 gnorm_D=7.5411
+2026-10-03 00:09:12 epoch 7 step 1500/6335 G=4.8800 D=0.0994 cycle_a=0.0878 cycle_b=0.1249 id_a=0.0841 id_b=0.0866 gnorm_G=64.3018 gnorm_D=10.7910
+2026-10-03 00:09:39 epoch 7 step 2000/6335 G=5.0306 D=0.3327 cycle_a=0.1393 cycle_b=0.1140 id_a=0.1368 id_b=0.0987 gnorm_G=54.0768 gnorm_D=11.1736
+2026-10-03 00:10:06 epoch 7 step 2500/6335 G=4.0715 D=0.3515 cycle_a=0.1181 cycle_b=0.0976 id_a=0.1018 id_b=0.1111 gnorm_G=38.4594 gnorm_D=16.6299
+2026-10-03 00:10:33 epoch 7 step 3000/6335 G=5.4300 D=0.0678 cycle_a=0.1462 cycle_b=0.1082 id_a=0.1033 id_b=0.1235 gnorm_G=46.3269 gnorm_D=6.0336
+2026-10-03 00:11:00 epoch 7 step 3500/6335 G=4.0434 D=0.1901 cycle_a=0.1199 cycle_b=0.0914 id_a=0.1161 id_b=0.0691 gnorm_G=53.2194 gnorm_D=9.2738
+2026-10-03 00:11:28 epoch 7 step 4000/6335 G=5.1931 D=0.0863 cycle_a=0.1178 cycle_b=0.0884 id_a=0.1135 id_b=0.0779 gnorm_G=34.9335 gnorm_D=8.5521
+2026-10-03 00:11:55 epoch 7 step 4500/6335 G=4.8598 D=0.0702 cycle_a=0.1199 cycle_b=0.0942 id_a=0.0724 id_b=0.0937 gnorm_G=48.7238 gnorm_D=5.2766
+2026-10-03 00:12:22 epoch 7 step 5000/6335 G=6.1241 D=0.4511 cycle_a=0.1219 cycle_b=0.1492 id_a=0.1079 id_b=0.1856 gnorm_G=45.1919 gnorm_D=16.8140
+2026-10-03 00:12:49 epoch 7 step 5500/6335 G=4.9820 D=0.1079 cycle_a=0.0960 cycle_b=0.1426 id_a=0.0898 id_b=0.1088 gnorm_G=40.6689 gnorm_D=7.1427
+2026-10-03 00:13:16 epoch 7 step 6000/6335 G=4.8456 D=0.1750 cycle_a=0.1237 cycle_b=0.1114 id_a=0.1010 id_b=0.1073 gnorm_G=41.2789 gnorm_D=7.2104
+2026-10-03 00:13:47 EPOCH 7/50 train_G=5.3352 train_D=0.1811 val_G=5.6330 val_D=0.2719 cycle_a=0.1149 cycle_b=0.1392 gnorm_G=49.1648 gnorm_D=11.2740 seconds=356.77 images_per_sec=35.51 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 00:14:16 epoch 8 step 500/6335 G=3.9437 D=0.0476 cycle_a=0.0689 cycle_b=0.0803 id_a=0.0574 id_b=0.0599 gnorm_G=57.2026 gnorm_D=3.9301
+2026-10-03 00:14:43 epoch 8 step 1000/6335 G=5.4666 D=0.0955 cycle_a=0.1129 cycle_b=0.1493 id_a=0.1024 id_b=0.1817 gnorm_G=38.5622 gnorm_D=7.5769
+2026-10-03 00:15:10 epoch 8 step 1500/6335 G=5.5210 D=0.1238 cycle_a=0.1152 cycle_b=0.1396 id_a=0.1100 id_b=0.1365 gnorm_G=42.6395 gnorm_D=8.8337
+2026-10-03 00:15:37 epoch 8 step 2000/6335 G=6.2973 D=0.1469 cycle_a=0.1192 cycle_b=0.1416 id_a=0.1016 id_b=0.2758 gnorm_G=47.7525 gnorm_D=7.5411
+2026-10-03 00:16:04 epoch 8 step 2500/6335 G=5.3146 D=0.1303 cycle_a=0.0860 cycle_b=0.1374 id_a=0.1163 id_b=0.0876 gnorm_G=64.6637 gnorm_D=10.9050
+2026-10-03 00:16:32 epoch 8 step 3000/6335 G=5.2144 D=0.1643 cycle_a=0.1176 cycle_b=0.1156 id_a=0.1081 id_b=0.0848 gnorm_G=64.7942 gnorm_D=13.6027
+2026-10-03 00:16:59 epoch 8 step 3500/6335 G=4.1607 D=0.1918 cycle_a=0.1101 cycle_b=0.1051 id_a=0.1019 id_b=0.0865 gnorm_G=43.9913 gnorm_D=10.6667
+2026-10-03 00:17:26 epoch 8 step 4000/6335 G=4.4513 D=0.2459 cycle_a=0.0762 cycle_b=0.1411 id_a=0.0663 id_b=0.1160 gnorm_G=40.1832 gnorm_D=7.4384
+2026-10-03 00:17:53 epoch 8 step 4500/6335 G=5.9209 D=0.1648 cycle_a=0.1659 cycle_b=0.1314 id_a=0.1504 id_b=0.1039 gnorm_G=34.6248 gnorm_D=12.1129
+2026-10-03 00:18:20 epoch 8 step 5000/6335 G=5.1790 D=0.1889 cycle_a=0.1519 cycle_b=0.1163 id_a=0.1220 id_b=0.0992 gnorm_G=30.1481 gnorm_D=5.9450
+2026-10-03 00:18:48 epoch 8 step 5500/6335 G=4.5763 D=0.1529 cycle_a=0.0865 cycle_b=0.1487 id_a=0.0959 id_b=0.0569 gnorm_G=33.9876 gnorm_D=8.3170
+2026-10-03 00:19:15 epoch 8 step 6000/6335 G=5.6901 D=0.2409 cycle_a=0.0826 cycle_b=0.1868 id_a=0.0889 id_b=0.1817 gnorm_G=44.7528 gnorm_D=12.0172
+2026-10-03 00:19:46 EPOCH 8/50 train_G=5.2185 train_D=0.1719 val_G=5.7344 val_D=0.2695 cycle_a=0.1099 cycle_b=0.1355 gnorm_G=46.9413 gnorm_D=10.9913 seconds=357.31 images_per_sec=35.46 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 00:20:15 epoch 9 step 500/6335 G=6.3574 D=0.1312 cycle_a=0.0878 cycle_b=0.2704 id_a=0.0643 id_b=0.2518 gnorm_G=52.1569 gnorm_D=9.7521
+2026-10-03 00:20:42 epoch 9 step 1000/6335 G=4.5850 D=0.1019 cycle_a=0.0773 cycle_b=0.1388 id_a=0.0549 id_b=0.1450 gnorm_G=46.8820 gnorm_D=7.7838
+2026-10-03 00:21:09 epoch 9 step 1500/6335 G=5.4298 D=0.1652 cycle_a=0.1111 cycle_b=0.1470 id_a=0.0886 id_b=0.1767 gnorm_G=24.5784 gnorm_D=9.6894
+2026-10-03 00:21:36 epoch 9 step 2000/6335 G=4.4642 D=0.0542 cycle_a=0.0788 cycle_b=0.1180 id_a=0.0707 id_b=0.1063 gnorm_G=54.2049 gnorm_D=7.2420
+2026-10-03 00:22:04 epoch 9 step 2500/6335 G=5.6723 D=0.1549 cycle_a=0.0959 cycle_b=0.2006 id_a=0.0803 id_b=0.1957 gnorm_G=54.3055 gnorm_D=12.2324
+2026-10-03 00:22:31 epoch 9 step 3000/6335 G=4.8171 D=0.0905 cycle_a=0.0985 cycle_b=0.1380 id_a=0.0713 id_b=0.1089 gnorm_G=41.6985 gnorm_D=6.7508
+2026-10-03 00:22:59 epoch 9 step 3500/6335 G=5.4613 D=0.1615 cycle_a=0.1321 cycle_b=0.1274 id_a=0.1187 id_b=0.1133 gnorm_G=43.4247 gnorm_D=7.0551
+2026-10-03 00:23:26 epoch 9 step 4000/6335 G=4.6395 D=0.1611 cycle_a=0.0750 cycle_b=0.1092 id_a=0.0700 id_b=0.0804 gnorm_G=50.7607 gnorm_D=12.4763
+2026-10-03 00:23:53 epoch 9 step 4500/6335 G=6.4400 D=0.1163 cycle_a=0.1795 cycle_b=0.1797 id_a=0.1397 id_b=0.0736 gnorm_G=44.0783 gnorm_D=9.2041
+2026-10-03 00:24:20 epoch 9 step 5000/6335 G=4.9288 D=0.1325 cycle_a=0.1100 cycle_b=0.1148 id_a=0.1018 id_b=0.0994 gnorm_G=53.1412 gnorm_D=7.8593
+2026-10-03 00:24:47 epoch 9 step 5500/6335 G=3.9635 D=0.1943 cycle_a=0.0653 cycle_b=0.0918 id_a=0.0638 id_b=0.0853 gnorm_G=55.4589 gnorm_D=11.2838
+2026-10-03 00:25:15 epoch 9 step 6000/6335 G=6.7436 D=0.0734 cycle_a=0.1141 cycle_b=0.2344 id_a=0.0989 id_b=0.2571 gnorm_G=38.3209 gnorm_D=6.6671
+2026-10-03 00:25:45 EPOCH 9/50 train_G=5.1169 train_D=0.1649 val_G=5.6647 val_D=0.2275 cycle_a=0.1058 cycle_b=0.1324 gnorm_G=45.3344 gnorm_D=10.6868 seconds=357.96 images_per_sec=35.39 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 00:26:14 epoch 10 step 500/6335 G=5.6227 D=0.1196 cycle_a=0.1477 cycle_b=0.1389 id_a=0.1101 id_b=0.2034 gnorm_G=50.9964 gnorm_D=10.8855
+2026-10-03 00:26:41 epoch 10 step 1000/6335 G=5.3464 D=0.1102 cycle_a=0.1171 cycle_b=0.1800 id_a=0.0919 id_b=0.1495 gnorm_G=48.9236 gnorm_D=7.6087
+2026-10-03 00:27:10 epoch 10 step 1500/6335 G=5.7772 D=0.1021 cycle_a=0.1345 cycle_b=0.1149 id_a=0.1073 id_b=0.0983 gnorm_G=44.9897 gnorm_D=6.7390
+2026-10-03 00:27:38 epoch 10 step 2000/6335 G=6.5999 D=0.0831 cycle_a=0.1149 cycle_b=0.1503 id_a=0.1077 id_b=0.1377 gnorm_G=52.4424 gnorm_D=8.6274
+2026-10-03 00:28:06 epoch 10 step 2500/6335 G=6.6224 D=0.1309 cycle_a=0.0918 cycle_b=0.2044 id_a=0.0644 id_b=0.2034 gnorm_G=51.3431 gnorm_D=10.1347
+2026-10-03 00:28:33 epoch 10 step 3000/6335 G=6.4796 D=0.1547 cycle_a=0.1253 cycle_b=0.1839 id_a=0.0881 id_b=0.1782 gnorm_G=39.7417 gnorm_D=11.6355
+2026-10-03 00:29:00 epoch 10 step 3500/6335 G=4.7334 D=0.1133 cycle_a=0.1038 cycle_b=0.0971 id_a=0.0803 id_b=0.0723 gnorm_G=31.2505 gnorm_D=10.0072
+2026-10-03 00:29:28 epoch 10 step 4000/6335 G=4.0279 D=0.0798 cycle_a=0.0894 cycle_b=0.0774 id_a=0.0847 id_b=0.0780 gnorm_G=39.1664 gnorm_D=4.8980
+2026-10-03 00:29:56 epoch 10 step 4500/6335 G=5.2345 D=0.1826 cycle_a=0.1156 cycle_b=0.1001 id_a=0.1035 id_b=0.1359 gnorm_G=38.7446 gnorm_D=15.4987
+2026-10-03 00:30:23 epoch 10 step 5000/6335 G=4.4526 D=0.2343 cycle_a=0.0889 cycle_b=0.1160 id_a=0.0712 id_b=0.1434 gnorm_G=53.5037 gnorm_D=14.0045
+2026-10-03 00:30:51 epoch 10 step 5500/6335 G=4.4240 D=0.2275 cycle_a=0.0850 cycle_b=0.1491 id_a=0.0595 id_b=0.1332 gnorm_G=36.1265 gnorm_D=9.0148
+2026-10-03 00:31:18 epoch 10 step 6000/6335 G=3.9227 D=0.2276 cycle_a=0.0783 cycle_b=0.0964 id_a=0.0626 id_b=0.0764 gnorm_G=50.3573 gnorm_D=15.1818
+2026-10-03 00:31:49 EPOCH 10/50 train_G=5.0264 train_D=0.1614 val_G=5.5986 val_D=0.2250 cycle_a=0.1024 cycle_b=0.1299 gnorm_G=43.5892 gnorm_D=10.5386 seconds=362.34 images_per_sec=34.97 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 00:31:51 MILESTONE saved task3_outputs/checkpoints/generators_epoch_010.pt
+2026-10-03 00:32:19 epoch 11 step 500/6335 G=5.0737 D=0.1209 cycle_a=0.1114 cycle_b=0.1393 id_a=0.1102 id_b=0.1462 gnorm_G=40.0787 gnorm_D=9.7901
+2026-10-03 00:32:47 epoch 11 step 1000/6335 G=5.2774 D=0.1619 cycle_a=0.0748 cycle_b=0.1434 id_a=0.0730 id_b=0.2039 gnorm_G=35.7363 gnorm_D=13.7391
+2026-10-03 00:33:15 epoch 11 step 1500/6335 G=4.9592 D=0.0926 cycle_a=0.0877 cycle_b=0.0910 id_a=0.0676 id_b=0.0866 gnorm_G=39.6915 gnorm_D=6.6904
+2026-10-03 00:33:42 epoch 11 step 2000/6335 G=4.5392 D=0.1200 cycle_a=0.0850 cycle_b=0.0538 id_a=0.0734 id_b=0.0842 gnorm_G=40.3079 gnorm_D=10.6889
+2026-10-03 00:34:10 epoch 11 step 2500/6335 G=4.9460 D=0.1189 cycle_a=0.0816 cycle_b=0.1303 id_a=0.0753 id_b=0.1375 gnorm_G=39.9037 gnorm_D=8.2163
+2026-10-03 00:34:38 epoch 11 step 3000/6335 G=4.3050 D=0.0655 cycle_a=0.1002 cycle_b=0.0834 id_a=0.0930 id_b=0.0555 gnorm_G=57.0045 gnorm_D=7.9633
+2026-10-03 00:35:05 epoch 11 step 3500/6335 G=4.9726 D=0.1647 cycle_a=0.1027 cycle_b=0.1470 id_a=0.1426 id_b=0.1481 gnorm_G=46.4772 gnorm_D=12.2930
+2026-10-03 00:35:33 epoch 11 step 4000/6335 G=4.8769 D=0.1009 cycle_a=0.1309 cycle_b=0.1095 id_a=0.1257 id_b=0.0588 gnorm_G=38.4362 gnorm_D=9.1901
+2026-10-03 00:36:01 epoch 11 step 4500/6335 G=5.6853 D=0.0765 cycle_a=0.0907 cycle_b=0.1648 id_a=0.1259 id_b=0.1398 gnorm_G=39.0035 gnorm_D=7.0161
+2026-10-03 00:36:28 epoch 11 step 5000/6335 G=4.1508 D=0.1224 cycle_a=0.1011 cycle_b=0.0657 id_a=0.1461 id_b=0.0777 gnorm_G=38.3084 gnorm_D=10.7822
+2026-10-03 00:36:56 epoch 11 step 5500/6335 G=6.0963 D=0.1823 cycle_a=0.1118 cycle_b=0.2643 id_a=0.0626 id_b=0.1318 gnorm_G=91.5434 gnorm_D=10.9330
+2026-10-03 00:37:24 epoch 11 step 6000/6335 G=5.0510 D=0.1478 cycle_a=0.1063 cycle_b=0.0778 id_a=0.1095 id_b=0.1549 gnorm_G=30.5125 gnorm_D=11.1962
+2026-10-03 00:37:56 EPOCH 11/50 train_G=4.9663 train_D=0.1540 val_G=6.1920 val_D=0.2531 cycle_a=0.1000 cycle_b=0.1276 gnorm_G=42.2532 gnorm_D=10.2733 seconds=365.18 images_per_sec=34.70 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 00:38:27 epoch 12 step 500/6335 G=4.3673 D=0.2752 cycle_a=0.0885 cycle_b=0.1005 id_a=0.0895 id_b=0.0794 gnorm_G=32.4089 gnorm_D=18.1211
+2026-10-03 00:38:54 epoch 12 step 1000/6335 G=4.6657 D=0.1136 cycle_a=0.0965 cycle_b=0.1614 id_a=0.0756 id_b=0.1008 gnorm_G=33.8519 gnorm_D=10.2903
+2026-10-03 00:39:22 epoch 12 step 1500/6335 G=5.6643 D=0.1534 cycle_a=0.1030 cycle_b=0.1563 id_a=0.0742 id_b=0.1626 gnorm_G=39.6552 gnorm_D=7.9972
+2026-10-03 00:39:50 epoch 12 step 2000/6335 G=4.9125 D=0.1944 cycle_a=0.0518 cycle_b=0.0956 id_a=0.0429 id_b=0.0717 gnorm_G=38.9336 gnorm_D=13.3201
+2026-10-03 00:40:18 epoch 12 step 2500/6335 G=3.4912 D=0.2208 cycle_a=0.0887 cycle_b=0.0686 id_a=0.0661 id_b=0.0502 gnorm_G=23.0000 gnorm_D=9.5097
+2026-10-03 00:40:46 epoch 12 step 3000/6335 G=5.3234 D=0.0740 cycle_a=0.1063 cycle_b=0.1190 id_a=0.1043 id_b=0.1013 gnorm_G=36.7336 gnorm_D=7.8497
+2026-10-03 00:41:14 epoch 12 step 3500/6335 G=4.4701 D=0.0855 cycle_a=0.1020 cycle_b=0.0715 id_a=0.0931 id_b=0.0513 gnorm_G=20.9738 gnorm_D=7.0544
+2026-10-03 00:41:41 epoch 12 step 4000/6335 G=6.0132 D=0.1135 cycle_a=0.1086 cycle_b=0.0976 id_a=0.1275 id_b=0.0614 gnorm_G=43.4399 gnorm_D=10.8159
+2026-10-03 00:42:10 epoch 12 step 4500/6335 G=4.0600 D=0.1202 cycle_a=0.0770 cycle_b=0.1279 id_a=0.0665 id_b=0.0998 gnorm_G=33.6402 gnorm_D=11.3307
+2026-10-03 00:42:37 epoch 12 step 5000/6335 G=4.2379 D=0.1051 cycle_a=0.1018 cycle_b=0.1119 id_a=0.0726 id_b=0.0967 gnorm_G=29.3289 gnorm_D=6.3328
+2026-10-03 00:43:05 epoch 12 step 5500/6335 G=4.6235 D=0.2151 cycle_a=0.1137 cycle_b=0.1131 id_a=0.1077 id_b=0.1039 gnorm_G=33.9540 gnorm_D=10.4526
+2026-10-03 00:43:33 epoch 12 step 6000/6335 G=4.4875 D=0.1329 cycle_a=0.1209 cycle_b=0.1048 id_a=0.0818 id_b=0.0957 gnorm_G=20.7378 gnorm_D=7.4974
+2026-10-03 00:44:03 EPOCH 12/50 train_G=4.9136 train_D=0.1504 val_G=6.6771 val_D=0.3456 cycle_a=0.0983 cycle_b=0.1258 gnorm_G=40.5958 gnorm_D=10.1457 seconds=365.27 images_per_sec=34.69 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 00:44:32 epoch 13 step 500/6335 G=4.3728 D=0.1181 cycle_a=0.1098 cycle_b=0.0932 id_a=0.0894 id_b=0.0883 gnorm_G=36.7012 gnorm_D=8.3510
+2026-10-03 00:45:00 epoch 13 step 1000/6335 G=3.8891 D=0.0606 cycle_a=0.0971 cycle_b=0.0750 id_a=0.0825 id_b=0.0521 gnorm_G=39.3823 gnorm_D=5.2071
+2026-10-03 00:45:27 epoch 13 step 1500/6335 G=3.9480 D=0.1686 cycle_a=0.0874 cycle_b=0.0807 id_a=0.0804 id_b=0.0960 gnorm_G=47.7773 gnorm_D=8.2934
+2026-10-03 00:45:54 epoch 13 step 2000/6335 G=3.6526 D=0.0848 cycle_a=0.0713 cycle_b=0.0776 id_a=0.0506 id_b=0.0701 gnorm_G=34.1508 gnorm_D=4.8426
+2026-10-03 00:46:22 epoch 13 step 2500/6335 G=4.4720 D=0.1073 cycle_a=0.0874 cycle_b=0.0695 id_a=0.0930 id_b=0.0567 gnorm_G=23.5976 gnorm_D=7.0316
+2026-10-03 00:46:49 epoch 13 step 3000/6335 G=9.5216 D=0.0609 cycle_a=0.0535 cycle_b=0.4520 id_a=0.0483 id_b=0.4108 gnorm_G=40.0152 gnorm_D=7.5655
+2026-10-03 00:47:16 epoch 13 step 3500/6335 G=4.1714 D=0.1236 cycle_a=0.1106 cycle_b=0.0878 id_a=0.0940 id_b=0.0618 gnorm_G=50.8401 gnorm_D=7.4933
+2026-10-03 00:47:44 epoch 13 step 4000/6335 G=4.2151 D=0.0787 cycle_a=0.0870 cycle_b=0.1001 id_a=0.0617 id_b=0.0939 gnorm_G=31.9024 gnorm_D=8.4114
+2026-10-03 00:48:11 epoch 13 step 4500/6335 G=3.8194 D=0.2246 cycle_a=0.0908 cycle_b=0.1087 id_a=0.0731 id_b=0.0827 gnorm_G=29.2927 gnorm_D=10.6515
+2026-10-03 00:48:39 epoch 13 step 5000/6335 G=5.9087 D=0.0547 cycle_a=0.0983 cycle_b=0.2027 id_a=0.0815 id_b=0.1834 gnorm_G=41.3181 gnorm_D=5.8228
+2026-10-03 00:49:06 epoch 13 step 5500/6335 G=4.8647 D=0.2186 cycle_a=0.0893 cycle_b=0.1300 id_a=0.0596 id_b=0.0925 gnorm_G=34.1386 gnorm_D=9.8836
+2026-10-03 00:49:33 epoch 13 step 6000/6335 G=4.8604 D=0.0787 cycle_a=0.1121 cycle_b=0.0784 id_a=0.0879 id_b=0.0542 gnorm_G=39.9373 gnorm_D=5.9304
+2026-10-03 00:50:03 EPOCH 13/50 train_G=4.8322 train_D=0.1485 val_G=6.0422 val_D=0.2128 cycle_a=0.0957 cycle_b=0.1232 gnorm_G=40.2821 gnorm_D=10.1175 seconds=357.97 images_per_sec=35.39 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 00:50:32 epoch 14 step 500/6335 G=4.5124 D=0.0420 cycle_a=0.1024 cycle_b=0.0811 id_a=0.0831 id_b=0.0743 gnorm_G=31.0162 gnorm_D=4.9768
+2026-10-03 00:50:59 epoch 14 step 1000/6335 G=4.6798 D=0.1112 cycle_a=0.1042 cycle_b=0.1446 id_a=0.0746 id_b=0.1093 gnorm_G=38.5671 gnorm_D=7.0687
+2026-10-03 00:51:26 epoch 14 step 1500/6335 G=5.4288 D=0.2387 cycle_a=0.0926 cycle_b=0.1572 id_a=0.0853 id_b=0.2001 gnorm_G=45.9611 gnorm_D=16.5075
+2026-10-03 00:51:53 epoch 14 step 2000/6335 G=5.1983 D=0.1439 cycle_a=0.1243 cycle_b=0.1449 id_a=0.0903 id_b=0.1260 gnorm_G=35.3896 gnorm_D=5.3101
+2026-10-03 00:52:20 epoch 14 step 2500/6335 G=4.1136 D=0.1818 cycle_a=0.0991 cycle_b=0.1068 id_a=0.0827 id_b=0.1200 gnorm_G=28.0732 gnorm_D=13.2263
+2026-10-03 00:52:47 epoch 14 step 3000/6335 G=4.8932 D=0.1860 cycle_a=0.1052 cycle_b=0.1319 id_a=0.1226 id_b=0.1300 gnorm_G=38.0504 gnorm_D=7.2271
+2026-10-03 00:53:15 epoch 14 step 3500/6335 G=5.3715 D=0.1500 cycle_a=0.0967 cycle_b=0.1225 id_a=0.0999 id_b=0.1475 gnorm_G=31.2630 gnorm_D=10.9640
+2026-10-03 00:53:42 epoch 14 step 4000/6335 G=4.7992 D=0.1889 cycle_a=0.0920 cycle_b=0.0917 id_a=0.1413 id_b=0.0882 gnorm_G=40.2326 gnorm_D=15.2035
+2026-10-03 00:54:09 epoch 14 step 4500/6335 G=4.6927 D=0.0934 cycle_a=0.1018 cycle_b=0.1017 id_a=0.0840 id_b=0.1129 gnorm_G=46.4636 gnorm_D=6.5401
+2026-10-03 00:54:36 epoch 14 step 5000/6335 G=4.1567 D=0.0692 cycle_a=0.0927 cycle_b=0.0800 id_a=0.0696 id_b=0.0455 gnorm_G=30.5176 gnorm_D=8.3361
+2026-10-03 00:55:04 epoch 14 step 5500/6335 G=4.4468 D=0.1802 cycle_a=0.0902 cycle_b=0.1050 id_a=0.0919 id_b=0.0981 gnorm_G=37.0462 gnorm_D=9.4432
+2026-10-03 00:55:31 epoch 14 step 6000/6335 G=4.3007 D=0.1315 cycle_a=0.0931 cycle_b=0.1223 id_a=0.0819 id_b=0.0678 gnorm_G=41.6926 gnorm_D=11.2997
+2026-10-03 00:56:01 EPOCH 14/50 train_G=4.7895 train_D=0.1460 val_G=6.5361 val_D=0.6606 cycle_a=0.0942 cycle_b=0.1219 gnorm_G=39.3539 gnorm_D=9.9632 seconds=357.08 images_per_sec=35.48 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 00:56:31 epoch 15 step 500/6335 G=4.9440 D=0.1715 cycle_a=0.0930 cycle_b=0.0721 id_a=0.0698 id_b=0.0482 gnorm_G=46.3880 gnorm_D=14.0554
+2026-10-03 00:56:58 epoch 15 step 1000/6335 G=4.6891 D=0.1424 cycle_a=0.1445 cycle_b=0.0984 id_a=0.1158 id_b=0.0940 gnorm_G=28.4955 gnorm_D=11.1852
+2026-10-03 00:57:25 epoch 15 step 1500/6335 G=6.2687 D=0.3110 cycle_a=0.0763 cycle_b=0.1941 id_a=0.0525 id_b=0.2281 gnorm_G=50.9740 gnorm_D=21.4466
+2026-10-03 00:57:52 epoch 15 step 2000/6335 G=3.5106 D=0.1152 cycle_a=0.0857 cycle_b=0.0742 id_a=0.0591 id_b=0.0675 gnorm_G=28.1617 gnorm_D=9.7194
+2026-10-03 00:58:20 epoch 15 step 2500/6335 G=6.3267 D=0.1178 cycle_a=0.0727 cycle_b=0.2392 id_a=0.0845 id_b=0.1881 gnorm_G=46.5689 gnorm_D=9.1431
+2026-10-03 00:58:47 epoch 15 step 3000/6335 G=5.3231 D=0.1204 cycle_a=0.0957 cycle_b=0.1396 id_a=0.0881 id_b=0.1309 gnorm_G=43.0393 gnorm_D=12.6890
+2026-10-03 00:59:14 epoch 15 step 3500/6335 G=5.4438 D=0.1439 cycle_a=0.0887 cycle_b=0.1664 id_a=0.0852 id_b=0.1153 gnorm_G=43.6547 gnorm_D=10.5468
+2026-10-03 00:59:41 epoch 15 step 4000/6335 G=4.4968 D=0.1227 cycle_a=0.0864 cycle_b=0.1187 id_a=0.1425 id_b=0.0734 gnorm_G=32.7342 gnorm_D=9.6932
+2026-10-03 01:00:08 epoch 15 step 4500/6335 G=4.2371 D=0.0863 cycle_a=0.0848 cycle_b=0.1093 id_a=0.0599 id_b=0.0870 gnorm_G=41.5874 gnorm_D=7.2068
+2026-10-03 01:00:35 epoch 15 step 5000/6335 G=5.2167 D=0.2319 cycle_a=0.1396 cycle_b=0.1631 id_a=0.1139 id_b=0.1487 gnorm_G=35.1303 gnorm_D=8.9420
+2026-10-03 01:01:03 epoch 15 step 5500/6335 G=4.3454 D=0.2165 cycle_a=0.0751 cycle_b=0.1324 id_a=0.0607 id_b=0.0718 gnorm_G=38.2850 gnorm_D=15.4107
+2026-10-03 01:01:30 epoch 15 step 6000/6335 G=4.8294 D=0.0859 cycle_a=0.0963 cycle_b=0.1115 id_a=0.0770 id_b=0.1363 gnorm_G=51.0598 gnorm_D=5.7063
+2026-10-03 01:02:00 EPOCH 15/50 train_G=4.7385 train_D=0.1442 val_G=5.7631 val_D=0.2268 cycle_a=0.0927 cycle_b=0.1203 gnorm_G=38.3838 gnorm_D=9.8844 seconds=356.68 images_per_sec=35.52 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 01:02:02 MILESTONE saved task3_outputs/checkpoints/generators_epoch_015.pt
+2026-10-03 01:02:29 epoch 16 step 500/6335 G=4.1751 D=0.3335 cycle_a=0.1172 cycle_b=0.0993 id_a=0.0953 id_b=0.0717 gnorm_G=26.7605 gnorm_D=15.5206
+2026-10-03 01:02:56 epoch 16 step 1000/6335 G=5.4886 D=0.1302 cycle_a=0.1349 cycle_b=0.0927 id_a=0.1126 id_b=0.0681 gnorm_G=28.6108 gnorm_D=10.2632
+2026-10-03 01:03:23 epoch 16 step 1500/6335 G=3.8554 D=0.0826 cycle_a=0.1037 cycle_b=0.0746 id_a=0.0932 id_b=0.0467 gnorm_G=42.2971 gnorm_D=3.8008
+2026-10-03 01:03:50 epoch 16 step 2000/6335 G=5.6597 D=0.0802 cycle_a=0.1398 cycle_b=0.1298 id_a=0.1209 id_b=0.1842 gnorm_G=31.0946 gnorm_D=6.6726
+2026-10-03 01:04:17 epoch 16 step 2500/6335 G=4.4657 D=0.2143 cycle_a=0.0949 cycle_b=0.1871 id_a=0.0706 id_b=0.0760 gnorm_G=34.2012 gnorm_D=16.6182
+2026-10-03 01:04:44 epoch 16 step 3000/6335 G=5.0170 D=0.1201 cycle_a=0.1437 cycle_b=0.0984 id_a=0.1185 id_b=0.0811 gnorm_G=25.8229 gnorm_D=5.0820
+2026-10-03 01:05:11 epoch 16 step 3500/6335 G=5.0076 D=0.0901 cycle_a=0.1130 cycle_b=0.1116 id_a=0.0868 id_b=0.0905 gnorm_G=36.6459 gnorm_D=9.2898
+2026-10-03 01:05:38 epoch 16 step 4000/6335 G=4.0541 D=0.1602 cycle_a=0.0821 cycle_b=0.1111 id_a=0.0595 id_b=0.0862 gnorm_G=30.8535 gnorm_D=8.6441
+2026-10-03 01:06:05 epoch 16 step 4500/6335 G=4.0108 D=0.1237 cycle_a=0.0778 cycle_b=0.1049 id_a=0.0648 id_b=0.0829 gnorm_G=31.0520 gnorm_D=9.5873
+2026-10-03 01:06:32 epoch 16 step 5000/6335 G=5.6409 D=0.3185 cycle_a=0.1484 cycle_b=0.1086 id_a=0.1240 id_b=0.0922 gnorm_G=47.3652 gnorm_D=21.0203
+2026-10-03 01:06:59 epoch 16 step 5500/6335 G=4.8317 D=0.1251 cycle_a=0.1329 cycle_b=0.1069 id_a=0.1150 id_b=0.0732 gnorm_G=26.4202 gnorm_D=6.5365
+2026-10-03 01:07:26 epoch 16 step 6000/6335 G=3.9549 D=0.1179 cycle_a=0.0786 cycle_b=0.0869 id_a=0.0493 id_b=0.0739 gnorm_G=36.0424 gnorm_D=9.5440
+2026-10-03 01:07:57 EPOCH 16/50 train_G=4.6839 train_D=0.1432 val_G=5.3476 val_D=0.2506 cycle_a=0.0910 cycle_b=0.1184 gnorm_G=37.3509 gnorm_D=9.8305 seconds=354.82 images_per_sec=35.71 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 01:08:26 epoch 17 step 500/6335 G=3.1752 D=0.3066 cycle_a=0.0491 cycle_b=0.1047 id_a=0.0592 id_b=0.0733 gnorm_G=25.8319 gnorm_D=20.9401
+2026-10-03 01:08:53 epoch 17 step 1000/6335 G=3.9571 D=0.1310 cycle_a=0.0956 cycle_b=0.0788 id_a=0.0839 id_b=0.0474 gnorm_G=30.0304 gnorm_D=11.7194
+2026-10-03 01:09:20 epoch 17 step 1500/6335 G=4.8777 D=0.1864 cycle_a=0.1043 cycle_b=0.1389 id_a=0.0812 id_b=0.1200 gnorm_G=39.1614 gnorm_D=12.2543
+2026-10-03 01:09:47 epoch 17 step 2000/6335 G=4.0787 D=0.0647 cycle_a=0.0755 cycle_b=0.0689 id_a=0.0840 id_b=0.0621 gnorm_G=38.2149 gnorm_D=5.2954
+2026-10-03 01:10:14 epoch 17 step 2500/6335 G=4.5281 D=0.1325 cycle_a=0.0754 cycle_b=0.0711 id_a=0.0797 id_b=0.1564 gnorm_G=29.3666 gnorm_D=8.6990
+2026-10-03 01:10:41 epoch 17 step 3000/6335 G=4.9594 D=0.1760 cycle_a=0.0633 cycle_b=0.1333 id_a=0.0443 id_b=0.1273 gnorm_G=35.7631 gnorm_D=10.7031
+2026-10-03 01:11:08 epoch 17 step 3500/6335 G=6.9054 D=0.0819 cycle_a=0.1040 cycle_b=0.2634 id_a=0.0769 id_b=0.2345 gnorm_G=34.9403 gnorm_D=5.1842
+2026-10-03 01:11:35 epoch 17 step 4000/6335 G=4.7865 D=0.1278 cycle_a=0.1054 cycle_b=0.0898 id_a=0.0667 id_b=0.0746 gnorm_G=35.1150 gnorm_D=9.5679
+2026-10-03 01:12:02 epoch 17 step 4500/6335 G=4.6666 D=0.0566 cycle_a=0.1184 cycle_b=0.1103 id_a=0.0893 id_b=0.0441 gnorm_G=44.3880 gnorm_D=4.9586
+2026-10-03 01:12:29 epoch 17 step 5000/6335 G=3.8537 D=0.1551 cycle_a=0.0673 cycle_b=0.1117 id_a=0.0478 id_b=0.0701 gnorm_G=43.2652 gnorm_D=8.1717
+2026-10-03 01:12:56 epoch 17 step 5500/6335 G=4.4694 D=0.1118 cycle_a=0.0728 cycle_b=0.0834 id_a=0.0525 id_b=0.0668 gnorm_G=37.0645 gnorm_D=12.8187
+2026-10-03 01:13:22 epoch 17 step 6000/6335 G=3.9235 D=0.2302 cycle_a=0.1294 cycle_b=0.0838 id_a=0.1085 id_b=0.0634 gnorm_G=38.1908 gnorm_D=11.8524
+2026-10-03 01:13:53 EPOCH 17/50 train_G=4.6244 train_D=0.1439 val_G=5.5814 val_D=0.2814 cycle_a=0.0899 cycle_b=0.1160 gnorm_G=36.6288 gnorm_D=9.8127 seconds=355.10 images_per_sec=35.68 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 01:14:22 epoch 18 step 500/6335 G=4.6775 D=0.0570 cycle_a=0.0851 cycle_b=0.1146 id_a=0.0690 id_b=0.0853 gnorm_G=29.1048 gnorm_D=6.1080
+2026-10-03 01:14:50 epoch 18 step 1000/6335 G=4.3271 D=0.1259 cycle_a=0.1169 cycle_b=0.0688 id_a=0.0693 id_b=0.0583 gnorm_G=35.0307 gnorm_D=12.2518
+2026-10-03 01:15:17 epoch 18 step 1500/6335 G=4.6840 D=0.1258 cycle_a=0.0809 cycle_b=0.1241 id_a=0.0698 id_b=0.1175 gnorm_G=20.0921 gnorm_D=8.9644
+2026-10-03 01:15:44 epoch 18 step 2000/6335 G=4.5965 D=0.0730 cycle_a=0.1019 cycle_b=0.1015 id_a=0.0648 id_b=0.0732 gnorm_G=41.7880 gnorm_D=9.2366
+2026-10-03 01:16:11 epoch 18 step 2500/6335 G=3.4984 D=0.1483 cycle_a=0.0754 cycle_b=0.0685 id_a=0.0642 id_b=0.0400 gnorm_G=45.9843 gnorm_D=9.3285
+2026-10-03 01:16:39 epoch 18 step 3000/6335 G=3.9502 D=0.0948 cycle_a=0.0774 cycle_b=0.0977 id_a=0.0608 id_b=0.0880 gnorm_G=35.6447 gnorm_D=9.0287
+2026-10-03 01:17:06 epoch 18 step 3500/6335 G=4.1944 D=0.1026 cycle_a=0.1012 cycle_b=0.0724 id_a=0.0818 id_b=0.0506 gnorm_G=34.7401 gnorm_D=11.7170
+2026-10-03 01:17:33 epoch 18 step 4000/6335 G=5.3286 D=0.1105 cycle_a=0.1253 cycle_b=0.1545 id_a=0.0772 id_b=0.1432 gnorm_G=38.7986 gnorm_D=6.8327
+2026-10-03 01:18:00 epoch 18 step 4500/6335 G=4.2078 D=0.0904 cycle_a=0.0596 cycle_b=0.0854 id_a=0.0530 id_b=0.0896 gnorm_G=30.6778 gnorm_D=10.2947
+2026-10-03 01:18:27 epoch 18 step 5000/6335 G=3.6740 D=0.2251 cycle_a=0.0678 cycle_b=0.1075 id_a=0.0553 id_b=0.0542 gnorm_G=29.4896 gnorm_D=12.4306
+2026-10-03 01:18:54 epoch 18 step 5500/6335 G=4.0652 D=0.0512 cycle_a=0.1002 cycle_b=0.0754 id_a=0.0726 id_b=0.0470 gnorm_G=45.4038 gnorm_D=5.6262
+2026-10-03 01:19:22 epoch 18 step 6000/6335 G=4.0341 D=0.2497 cycle_a=0.0726 cycle_b=0.1088 id_a=0.0510 id_b=0.0861 gnorm_G=29.7023 gnorm_D=16.3821
+2026-10-03 01:19:53 EPOCH 18/50 train_G=4.6004 train_D=0.1456 val_G=5.6675 val_D=0.3239 cycle_a=0.0893 cycle_b=0.1159 gnorm_G=35.6364 gnorm_D=9.7676 seconds=358.18 images_per_sec=35.37 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 01:20:22 epoch 19 step 500/6335 G=4.2925 D=0.0586 cycle_a=0.0768 cycle_b=0.1078 id_a=0.0747 id_b=0.1089 gnorm_G=43.6608 gnorm_D=6.6221
+2026-10-03 01:20:49 epoch 19 step 1000/6335 G=4.8226 D=0.1284 cycle_a=0.0644 cycle_b=0.1469 id_a=0.0557 id_b=0.1203 gnorm_G=32.0676 gnorm_D=7.2729
+2026-10-03 01:21:16 epoch 19 step 1500/6335 G=5.7973 D=0.1490 cycle_a=0.0903 cycle_b=0.2350 id_a=0.0592 id_b=0.1250 gnorm_G=38.5893 gnorm_D=6.2005
+2026-10-03 01:21:43 epoch 19 step 2000/6335 G=4.9606 D=0.1419 cycle_a=0.0982 cycle_b=0.0771 id_a=0.0887 id_b=0.1184 gnorm_G=28.6754 gnorm_D=11.6125
+2026-10-03 01:22:10 epoch 19 step 2500/6335 G=5.5868 D=0.2532 cycle_a=0.0895 cycle_b=0.1554 id_a=0.0726 id_b=0.2250 gnorm_G=44.0790 gnorm_D=18.1174
+2026-10-03 01:22:38 epoch 19 step 3000/6335 G=4.5236 D=0.2052 cycle_a=0.0686 cycle_b=0.1168 id_a=0.0973 id_b=0.0847 gnorm_G=28.0710 gnorm_D=10.8903
+2026-10-03 01:23:05 epoch 19 step 3500/6335 G=4.3608 D=0.1526 cycle_a=0.0957 cycle_b=0.1270 id_a=0.0697 id_b=0.1255 gnorm_G=30.8030 gnorm_D=12.2896
+2026-10-03 01:23:32 epoch 19 step 4000/6335 G=3.6805 D=0.1625 cycle_a=0.0763 cycle_b=0.1172 id_a=0.0639 id_b=0.0910 gnorm_G=34.8918 gnorm_D=11.2830
+2026-10-03 01:24:00 epoch 19 step 4500/6335 G=5.2922 D=0.0929 cycle_a=0.0774 cycle_b=0.1917 id_a=0.0615 id_b=0.1320 gnorm_G=50.3751 gnorm_D=5.1972
+2026-10-03 01:24:27 epoch 19 step 5000/6335 G=3.5485 D=0.1632 cycle_a=0.1069 cycle_b=0.0730 id_a=0.0805 id_b=0.0544 gnorm_G=27.8757 gnorm_D=10.4422
+2026-10-03 01:24:54 epoch 19 step 5500/6335 G=4.2592 D=0.1205 cycle_a=0.1056 cycle_b=0.0938 id_a=0.0816 id_b=0.0624 gnorm_G=21.8832 gnorm_D=8.8303
+2026-10-03 01:25:21 epoch 19 step 6000/6335 G=4.8253 D=0.0987 cycle_a=0.1070 cycle_b=0.1476 id_a=0.0782 id_b=0.0747 gnorm_G=37.7528 gnorm_D=8.9195
+2026-10-03 01:25:51 EPOCH 19/50 train_G=4.5326 train_D=0.1488 val_G=6.9683 val_D=0.4534 cycle_a=0.0883 cycle_b=0.1134 gnorm_G=35.6551 gnorm_D=9.9134 seconds=356.52 images_per_sec=35.54 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 01:26:20 epoch 20 step 500/6335 G=4.5591 D=0.0562 cycle_a=0.1047 cycle_b=0.1030 id_a=0.0596 id_b=0.0622 gnorm_G=41.7529 gnorm_D=3.6467
+2026-10-03 01:26:47 epoch 20 step 1000/6335 G=3.9288 D=0.1034 cycle_a=0.1091 cycle_b=0.0681 id_a=0.0839 id_b=0.0709 gnorm_G=20.6826 gnorm_D=5.7688
+2026-10-03 01:27:14 epoch 20 step 1500/6335 G=5.7159 D=0.1805 cycle_a=0.1172 cycle_b=0.1394 id_a=0.1182 id_b=0.0800 gnorm_G=44.9526 gnorm_D=14.1295
+2026-10-03 01:27:42 epoch 20 step 2000/6335 G=5.2395 D=0.0749 cycle_a=0.0996 cycle_b=0.1612 id_a=0.0750 id_b=0.0655 gnorm_G=40.5332 gnorm_D=7.2953
+2026-10-03 01:28:09 epoch 20 step 2500/6335 G=4.2556 D=0.0866 cycle_a=0.1065 cycle_b=0.0751 id_a=0.0863 id_b=0.0768 gnorm_G=56.5218 gnorm_D=5.2972
+2026-10-03 01:28:36 epoch 20 step 3000/6335 G=5.7120 D=0.2713 cycle_a=0.1013 cycle_b=0.2298 id_a=0.0851 id_b=0.2063 gnorm_G=44.4555 gnorm_D=14.9095
+2026-10-03 01:29:04 epoch 20 step 3500/6335 G=4.6497 D=0.2737 cycle_a=0.1251 cycle_b=0.0793 id_a=0.0900 id_b=0.0723 gnorm_G=53.1454 gnorm_D=19.6466
+2026-10-03 01:29:31 epoch 20 step 4000/6335 G=3.9769 D=0.5058 cycle_a=0.0876 cycle_b=0.0847 id_a=0.0620 id_b=0.0523 gnorm_G=22.4351 gnorm_D=24.6049
+2026-10-03 01:29:58 epoch 20 step 4500/6335 G=4.6047 D=0.1189 cycle_a=0.1087 cycle_b=0.1076 id_a=0.0955 id_b=0.0823 gnorm_G=25.5595 gnorm_D=7.1602
+2026-10-03 01:30:25 epoch 20 step 5000/6335 G=3.9386 D=0.2980 cycle_a=0.1075 cycle_b=0.0627 id_a=0.0819 id_b=0.0584 gnorm_G=28.5272 gnorm_D=14.5868
+2026-10-03 01:30:52 epoch 20 step 5500/6335 G=4.9048 D=0.1620 cycle_a=0.0737 cycle_b=0.1186 id_a=0.0619 id_b=0.0743 gnorm_G=36.1522 gnorm_D=8.8450
+2026-10-03 01:31:19 epoch 20 step 6000/6335 G=4.0031 D=0.1526 cycle_a=0.0979 cycle_b=0.1057 id_a=0.0851 id_b=0.0863 gnorm_G=28.3135 gnorm_D=4.7018
+2026-10-03 01:31:51 EPOCH 20/50 train_G=4.4901 train_D=0.1527 val_G=5.2874 val_D=0.3399 cycle_a=0.0872 cycle_b=0.1123 gnorm_G=34.6981 gnorm_D=9.9837 seconds=358.03 images_per_sec=35.39 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 01:31:53 MILESTONE saved task3_outputs/checkpoints/generators_epoch_020.pt
+2026-10-03 01:32:21 epoch 21 step 500/6335 G=5.1601 D=0.1024 cycle_a=0.1009 cycle_b=0.1366 id_a=0.0844 id_b=0.1433 gnorm_G=48.4167 gnorm_D=6.1018
+2026-10-03 01:32:48 epoch 21 step 1000/6335 G=4.0478 D=0.2534 cycle_a=0.0860 cycle_b=0.1334 id_a=0.0535 id_b=0.0910 gnorm_G=31.4956 gnorm_D=8.2864
+2026-10-03 01:33:15 epoch 21 step 1500/6335 G=4.2547 D=0.1993 cycle_a=0.1147 cycle_b=0.1173 id_a=0.1050 id_b=0.0857 gnorm_G=24.8493 gnorm_D=7.0234
+2026-10-03 01:33:42 epoch 21 step 2000/6335 G=5.2126 D=0.2306 cycle_a=0.0883 cycle_b=0.1161 id_a=0.0612 id_b=0.1255 gnorm_G=35.0245 gnorm_D=14.6363
+2026-10-03 01:34:09 epoch 21 step 2500/6335 G=3.7895 D=0.1187 cycle_a=0.0714 cycle_b=0.0983 id_a=0.0609 id_b=0.0659 gnorm_G=31.6633 gnorm_D=8.9458
+2026-10-03 01:34:36 epoch 21 step 3000/6335 G=3.3019 D=0.2396 cycle_a=0.0610 cycle_b=0.0516 id_a=0.0446 id_b=0.0416 gnorm_G=18.3312 gnorm_D=18.1513
+2026-10-03 01:35:03 epoch 21 step 3500/6335 G=2.8986 D=0.3042 cycle_a=0.0686 cycle_b=0.0839 id_a=0.0513 id_b=0.0521 gnorm_G=28.1992 gnorm_D=17.7868
+2026-10-03 01:35:30 epoch 21 step 4000/6335 G=3.9299 D=0.1706 cycle_a=0.0641 cycle_b=0.1081 id_a=0.0426 id_b=0.0630 gnorm_G=35.1781 gnorm_D=11.0185
+2026-10-03 01:35:57 epoch 21 step 4500/6335 G=5.2533 D=0.0772 cycle_a=0.1072 cycle_b=0.1334 id_a=0.0817 id_b=0.1205 gnorm_G=50.5063 gnorm_D=5.6680
+2026-10-03 01:36:25 epoch 21 step 5000/6335 G=4.2268 D=0.1315 cycle_a=0.0858 cycle_b=0.1109 id_a=0.0591 id_b=0.0794 gnorm_G=30.3354 gnorm_D=8.4072
+2026-10-03 01:36:51 epoch 21 step 5500/6335 G=5.2033 D=0.1731 cycle_a=0.1450 cycle_b=0.1168 id_a=0.1270 id_b=0.1032 gnorm_G=18.3357 gnorm_D=11.3603
+2026-10-03 01:37:19 epoch 21 step 6000/6335 G=3.9575 D=0.0999 cycle_a=0.0746 cycle_b=0.0656 id_a=0.0535 id_b=0.0537 gnorm_G=30.5864 gnorm_D=10.2474
+2026-10-03 01:37:49 EPOCH 21/50 train_G=4.4340 train_D=0.1566 val_G=5.7712 val_D=0.3494 cycle_a=0.0866 cycle_b=0.1106 gnorm_G=33.9741 gnorm_D=9.9737 seconds=356.15 images_per_sec=35.58 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 01:38:17 epoch 22 step 500/6335 G=4.9494 D=0.1218 cycle_a=0.0703 cycle_b=0.1877 id_a=0.0539 id_b=0.1079 gnorm_G=39.7251 gnorm_D=10.6542
+2026-10-03 01:38:44 epoch 22 step 1000/6335 G=4.0670 D=0.1344 cycle_a=0.0952 cycle_b=0.0840 id_a=0.0819 id_b=0.0751 gnorm_G=25.2918 gnorm_D=11.3520
+2026-10-03 01:39:12 epoch 22 step 1500/6335 G=4.1155 D=0.0996 cycle_a=0.0922 cycle_b=0.0624 id_a=0.0705 id_b=0.0474 gnorm_G=39.6856 gnorm_D=8.4086
+2026-10-03 01:39:39 epoch 22 step 2000/6335 G=3.2387 D=0.2263 cycle_a=0.0832 cycle_b=0.0765 id_a=0.0590 id_b=0.0812 gnorm_G=33.7353 gnorm_D=16.6923
+2026-10-03 01:40:06 epoch 22 step 2500/6335 G=4.6409 D=0.1197 cycle_a=0.0919 cycle_b=0.1320 id_a=0.0764 id_b=0.1272 gnorm_G=24.6741 gnorm_D=9.3835
+2026-10-03 01:40:34 epoch 22 step 3000/6335 G=4.3947 D=0.0903 cycle_a=0.0671 cycle_b=0.1063 id_a=0.0509 id_b=0.0784 gnorm_G=31.0194 gnorm_D=6.5256
+2026-10-03 01:41:00 epoch 22 step 3500/6335 G=3.8708 D=0.1181 cycle_a=0.0831 cycle_b=0.1065 id_a=0.0493 id_b=0.0885 gnorm_G=27.0568 gnorm_D=9.2248
+2026-10-03 01:41:27 epoch 22 step 4000/6335 G=4.1193 D=0.2015 cycle_a=0.0911 cycle_b=0.1238 id_a=0.0798 id_b=0.0982 gnorm_G=30.3871 gnorm_D=14.1478
+2026-10-03 01:41:54 epoch 22 step 4500/6335 G=5.6408 D=0.1601 cycle_a=0.1505 cycle_b=0.1388 id_a=0.1405 id_b=0.0799 gnorm_G=69.1850 gnorm_D=11.0286
+2026-10-03 01:42:22 epoch 22 step 5000/6335 G=4.3269 D=0.1245 cycle_a=0.0804 cycle_b=0.1209 id_a=0.0642 id_b=0.0869 gnorm_G=43.0880 gnorm_D=9.6811
+2026-10-03 01:42:49 epoch 22 step 5500/6335 G=3.5906 D=0.1356 cycle_a=0.0785 cycle_b=0.0673 id_a=0.0665 id_b=0.0541 gnorm_G=28.2235 gnorm_D=12.3472
+2026-10-03 01:43:16 epoch 22 step 6000/6335 G=3.0891 D=0.2259 cycle_a=0.0711 cycle_b=0.0917 id_a=0.0618 id_b=0.0642 gnorm_G=31.6075 gnorm_D=13.7595
+2026-10-03 01:43:47 EPOCH 22/50 train_G=4.3948 train_D=0.1599 val_G=5.8965 val_D=0.2913 cycle_a=0.0852 cycle_b=0.1106 gnorm_G=33.7133 gnorm_D=10.0660 seconds=356.50 images_per_sec=35.54 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 01:44:16 epoch 23 step 500/6335 G=4.6131 D=0.0593 cycle_a=0.0790 cycle_b=0.0939 id_a=0.0782 id_b=0.0901 gnorm_G=37.2618 gnorm_D=4.8950
+2026-10-03 01:44:43 epoch 23 step 1000/6335 G=4.3073 D=0.0825 cycle_a=0.0697 cycle_b=0.1269 id_a=0.0507 id_b=0.0922 gnorm_G=29.9927 gnorm_D=8.8351
+2026-10-03 01:45:10 epoch 23 step 1500/6335 G=4.8357 D=0.2047 cycle_a=0.0724 cycle_b=0.1383 id_a=0.0518 id_b=0.1363 gnorm_G=27.8942 gnorm_D=11.5077
+2026-10-03 01:45:37 epoch 23 step 2000/6335 G=3.9929 D=0.1739 cycle_a=0.0745 cycle_b=0.0998 id_a=0.0485 id_b=0.0901 gnorm_G=27.8233 gnorm_D=8.4950
+2026-10-03 01:46:04 epoch 23 step 2500/6335 G=3.9187 D=0.1906 cycle_a=0.1061 cycle_b=0.1042 id_a=0.0839 id_b=0.0800 gnorm_G=23.7801 gnorm_D=9.0738
+2026-10-03 01:46:31 epoch 23 step 3000/6335 G=4.8667 D=0.0997 cycle_a=0.0981 cycle_b=0.1323 id_a=0.0798 id_b=0.1369 gnorm_G=33.2241 gnorm_D=7.5009
+2026-10-03 01:46:58 epoch 23 step 3500/6335 G=3.7290 D=0.1281 cycle_a=0.0821 cycle_b=0.0967 id_a=0.0590 id_b=0.0660 gnorm_G=18.0469 gnorm_D=6.2152
+2026-10-03 01:47:25 epoch 23 step 4000/6335 G=4.3349 D=0.1144 cycle_a=0.1013 cycle_b=0.0785 id_a=0.0681 id_b=0.0619 gnorm_G=34.9735 gnorm_D=6.6671
+2026-10-03 01:47:52 epoch 23 step 4500/6335 G=4.5195 D=0.1364 cycle_a=0.0862 cycle_b=0.1060 id_a=0.0966 id_b=0.0710 gnorm_G=40.4051 gnorm_D=9.1598
+2026-10-03 01:48:19 epoch 23 step 5000/6335 G=4.6125 D=0.0858 cycle_a=0.0657 cycle_b=0.1448 id_a=0.0434 id_b=0.1726 gnorm_G=26.3616 gnorm_D=8.4665
+2026-10-03 01:48:46 epoch 23 step 5500/6335 G=4.5057 D=0.1151 cycle_a=0.1052 cycle_b=0.1122 id_a=0.0751 id_b=0.0817 gnorm_G=23.6549 gnorm_D=6.8221
+2026-10-03 01:49:13 epoch 23 step 6000/6335 G=4.9104 D=0.1778 cycle_a=0.0702 cycle_b=0.1456 id_a=0.0585 id_b=0.1035 gnorm_G=43.1172 gnorm_D=11.7285
+2026-10-03 01:49:43 EPOCH 23/50 train_G=4.3504 train_D=0.1610 val_G=6.0680 val_D=0.3979 cycle_a=0.0849 cycle_b=0.1078 gnorm_G=33.1041 gnorm_D=10.0196 seconds=354.50 images_per_sec=35.74 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 01:50:12 epoch 24 step 500/6335 G=5.0056 D=0.2020 cycle_a=0.1043 cycle_b=0.1427 id_a=0.0874 id_b=0.1121 gnorm_G=19.2277 gnorm_D=9.5115
+2026-10-03 01:50:39 epoch 24 step 1000/6335 G=3.9875 D=0.1229 cycle_a=0.0729 cycle_b=0.0882 id_a=0.0536 id_b=0.1343 gnorm_G=45.5248 gnorm_D=9.3911
+2026-10-03 01:51:06 epoch 24 step 1500/6335 G=5.0425 D=0.1743 cycle_a=0.0815 cycle_b=0.1350 id_a=0.0573 id_b=0.0969 gnorm_G=14.0379 gnorm_D=11.9336
+2026-10-03 01:51:33 epoch 24 step 2000/6335 G=5.8018 D=0.2452 cycle_a=0.1031 cycle_b=0.1285 id_a=0.0727 id_b=0.1307 gnorm_G=48.3992 gnorm_D=13.9306
+2026-10-03 01:51:59 epoch 24 step 2500/6335 G=4.3009 D=0.2310 cycle_a=0.1374 cycle_b=0.1127 id_a=0.1067 id_b=0.0761 gnorm_G=22.9734 gnorm_D=10.4613
+2026-10-03 01:52:27 epoch 24 step 3000/6335 G=4.5777 D=0.1278 cycle_a=0.0824 cycle_b=0.1132 id_a=0.0597 id_b=0.0706 gnorm_G=52.1644 gnorm_D=10.6896
+2026-10-03 01:52:54 epoch 24 step 3500/6335 G=3.9492 D=0.1355 cycle_a=0.0505 cycle_b=0.0893 id_a=0.0534 id_b=0.0793 gnorm_G=25.3560 gnorm_D=9.1645
+2026-10-03 01:53:21 epoch 24 step 4000/6335 G=4.3138 D=0.1317 cycle_a=0.0933 cycle_b=0.0572 id_a=0.0645 id_b=0.0477 gnorm_G=38.6634 gnorm_D=12.8230
+2026-10-03 01:53:48 epoch 24 step 4500/6335 G=4.3563 D=0.1964 cycle_a=0.0720 cycle_b=0.0979 id_a=0.0575 id_b=0.0818 gnorm_G=28.6349 gnorm_D=11.7020
+2026-10-03 01:54:15 epoch 24 step 5000/6335 G=4.2722 D=0.1134 cycle_a=0.0652 cycle_b=0.1272 id_a=0.0552 id_b=0.1054 gnorm_G=39.2297 gnorm_D=6.8667
+2026-10-03 01:54:42 epoch 24 step 5500/6335 G=4.0869 D=0.2046 cycle_a=0.0560 cycle_b=0.1289 id_a=0.0550 id_b=0.0776 gnorm_G=33.3056 gnorm_D=12.1708
+2026-10-03 01:55:09 epoch 24 step 6000/6335 G=4.3195 D=0.1092 cycle_a=0.0698 cycle_b=0.0955 id_a=0.0487 id_b=0.0697 gnorm_G=28.7804 gnorm_D=8.5196
+2026-10-03 01:55:39 EPOCH 24/50 train_G=4.3332 train_D=0.1610 val_G=6.3773 val_D=0.4164 cycle_a=0.0844 cycle_b=0.1074 gnorm_G=32.3861 gnorm_D=9.9084 seconds=354.60 images_per_sec=35.73 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 01:56:08 epoch 25 step 500/6335 G=4.6200 D=0.1109 cycle_a=0.0621 cycle_b=0.1292 id_a=0.0573 id_b=0.0540 gnorm_G=50.6669 gnorm_D=7.8691
+2026-10-03 01:56:35 epoch 25 step 1000/6335 G=6.4915 D=0.1217 cycle_a=0.1010 cycle_b=0.1868 id_a=0.0919 id_b=0.1416 gnorm_G=47.9367 gnorm_D=12.1545
+2026-10-03 01:57:03 epoch 25 step 1500/6335 G=3.5514 D=0.1203 cycle_a=0.0900 cycle_b=0.0686 id_a=0.0694 id_b=0.0438 gnorm_G=24.9867 gnorm_D=4.9782
+2026-10-03 01:57:30 epoch 25 step 2000/6335 G=4.2108 D=0.0987 cycle_a=0.0718 cycle_b=0.0956 id_a=0.0488 id_b=0.0810 gnorm_G=66.8120 gnorm_D=7.8073
+2026-10-03 01:57:57 epoch 25 step 2500/6335 G=4.4453 D=0.0818 cycle_a=0.1389 cycle_b=0.0686 id_a=0.1049 id_b=0.0466 gnorm_G=15.9878 gnorm_D=4.6139
+2026-10-03 01:58:24 epoch 25 step 3000/6335 G=3.7645 D=0.2048 cycle_a=0.1178 cycle_b=0.0652 id_a=0.0829 id_b=0.0507 gnorm_G=23.7713 gnorm_D=12.1497
+2026-10-03 01:58:51 epoch 25 step 3500/6335 G=3.3946 D=0.1261 cycle_a=0.0808 cycle_b=0.0748 id_a=0.0542 id_b=0.0582 gnorm_G=29.1740 gnorm_D=10.6102
+2026-10-03 01:59:19 epoch 25 step 4000/6335 G=5.7434 D=0.1050 cycle_a=0.1093 cycle_b=0.1860 id_a=0.0973 id_b=0.1204 gnorm_G=39.0808 gnorm_D=5.3874
+2026-10-03 01:59:46 epoch 25 step 4500/6335 G=4.3499 D=0.1790 cycle_a=0.1060 cycle_b=0.1168 id_a=0.0876 id_b=0.0823 gnorm_G=28.7066 gnorm_D=10.0012
+2026-10-03 02:00:13 epoch 25 step 5000/6335 G=5.2641 D=0.0583 cycle_a=0.0886 cycle_b=0.1528 id_a=0.0660 id_b=0.1333 gnorm_G=43.5334 gnorm_D=4.5202
+2026-10-03 02:00:41 epoch 25 step 5500/6335 G=4.0002 D=0.1001 cycle_a=0.0540 cycle_b=0.1024 id_a=0.0431 id_b=0.1211 gnorm_G=39.9566 gnorm_D=7.0055
+2026-10-03 02:01:08 epoch 25 step 6000/6335 G=3.8890 D=0.1975 cycle_a=0.0952 cycle_b=0.0829 id_a=0.0686 id_b=0.0671 gnorm_G=16.6727 gnorm_D=9.5149
+2026-10-03 02:01:39 EPOCH 25/50 train_G=4.2943 train_D=0.1622 val_G=6.4716 val_D=0.4775 cycle_a=0.0840 cycle_b=0.1056 gnorm_G=31.8330 gnorm_D=9.8257 seconds=358.22 images_per_sec=35.37 peak_gb=1.563 nan_inf=0 lr=0.000200
+2026-10-03 02:01:41 MILESTONE saved task3_outputs/checkpoints/generators_epoch_025.pt
+2026-10-03 02:02:09 epoch 26 step 500/6335 G=4.1256 D=0.2067 cycle_a=0.0845 cycle_b=0.0880 id_a=0.0849 id_b=0.0666 gnorm_G=26.0444 gnorm_D=13.7775
+2026-10-03 02:02:36 epoch 26 step 1000/6335 G=3.4510 D=0.4157 cycle_a=0.1374 cycle_b=0.0753 id_a=0.0839 id_b=0.0664 gnorm_G=19.3780 gnorm_D=18.1342
+2026-10-03 02:03:03 epoch 26 step 1500/6335 G=3.3223 D=0.1748 cycle_a=0.0679 cycle_b=0.0526 id_a=0.0495 id_b=0.0343 gnorm_G=40.4090 gnorm_D=13.6235
+2026-10-03 02:03:30 epoch 26 step 2000/6335 G=4.8798 D=0.1209 cycle_a=0.1329 cycle_b=0.1003 id_a=0.0728 id_b=0.0458 gnorm_G=40.1686 gnorm_D=9.3567
+2026-10-03 02:03:57 epoch 26 step 2500/6335 G=5.0357 D=0.0635 cycle_a=0.1013 cycle_b=0.1215 id_a=0.0826 id_b=0.1138 gnorm_G=32.4772 gnorm_D=7.4137
+2026-10-03 02:04:25 epoch 26 step 3000/6335 G=3.5899 D=0.2408 cycle_a=0.0903 cycle_b=0.0845 id_a=0.0539 id_b=0.0515 gnorm_G=33.1191 gnorm_D=11.7165
+2026-10-03 02:04:52 epoch 26 step 3500/6335 G=3.9766 D=0.0835 cycle_a=0.1008 cycle_b=0.0742 id_a=0.0709 id_b=0.0488 gnorm_G=24.5958 gnorm_D=7.5139
+2026-10-03 02:05:19 epoch 26 step 4000/6335 G=3.6191 D=0.1560 cycle_a=0.0764 cycle_b=0.1016 id_a=0.0434 id_b=0.0574 gnorm_G=15.7714 gnorm_D=6.4488
+2026-10-03 02:05:46 epoch 26 step 4500/6335 G=3.6419 D=0.2229 cycle_a=0.0854 cycle_b=0.0959 id_a=0.0601 id_b=0.0690 gnorm_G=23.3720 gnorm_D=14.3194
+2026-10-03 02:06:13 epoch 26 step 5000/6335 G=4.4202 D=0.1417 cycle_a=0.0622 cycle_b=0.1332 id_a=0.0443 id_b=0.1049 gnorm_G=28.6211 gnorm_D=9.4670
+2026-10-03 02:06:41 epoch 26 step 5500/6335 G=3.1428 D=0.2333 cycle_a=0.0656 cycle_b=0.1044 id_a=0.0511 id_b=0.0784 gnorm_G=27.1155 gnorm_D=10.7962
+2026-10-03 02:07:07 epoch 26 step 6000/6335 G=4.4489 D=0.2209 cycle_a=0.0724 cycle_b=0.0969 id_a=0.0472 id_b=0.0601 gnorm_G=32.0697 gnorm_D=15.5691
+2026-10-03 02:07:38 EPOCH 26/50 train_G=4.2855 train_D=0.1597 val_G=5.9909 val_D=0.3962 cycle_a=0.0838 cycle_b=0.1054 gnorm_G=31.2942 gnorm_D=9.6564 seconds=356.81 images_per_sec=35.51 peak_gb=1.563 nan_inf=0 lr=0.000192
+2026-10-03 02:08:07 epoch 27 step 500/6335 G=3.9569 D=0.1639 cycle_a=0.0514 cycle_b=0.0746 id_a=0.0449 id_b=0.1377 gnorm_G=20.2439 gnorm_D=7.0683
+2026-10-03 02:08:34 epoch 27 step 1000/6335 G=4.4938 D=0.2240 cycle_a=0.0890 cycle_b=0.1144 id_a=0.0818 id_b=0.0935 gnorm_G=31.9944 gnorm_D=13.4205
+2026-10-03 02:09:01 epoch 27 step 1500/6335 G=3.9636 D=0.2224 cycle_a=0.0902 cycle_b=0.1078 id_a=0.0662 id_b=0.0819 gnorm_G=22.7778 gnorm_D=14.4621
+2026-10-03 02:09:28 epoch 27 step 2000/6335 G=4.2300 D=0.1399 cycle_a=0.0806 cycle_b=0.1152 id_a=0.0598 id_b=0.0823 gnorm_G=25.0071 gnorm_D=8.7743
+2026-10-03 02:09:55 epoch 27 step 2500/6335 G=4.9947 D=0.0800 cycle_a=0.1122 cycle_b=0.1168 id_a=0.0622 id_b=0.0666 gnorm_G=26.4530 gnorm_D=6.3475
+2026-10-03 02:10:22 epoch 27 step 3000/6335 G=3.4961 D=0.2850 cycle_a=0.0775 cycle_b=0.1155 id_a=0.0486 id_b=0.0884 gnorm_G=28.4622 gnorm_D=10.5656
+2026-10-03 02:10:49 epoch 27 step 3500/6335 G=4.1474 D=0.1689 cycle_a=0.0839 cycle_b=0.0713 id_a=0.0625 id_b=0.0547 gnorm_G=31.6326 gnorm_D=10.5233
+2026-10-03 02:11:17 epoch 27 step 4000/6335 G=4.7749 D=0.0561 cycle_a=0.1055 cycle_b=0.0806 id_a=0.0799 id_b=0.0889 gnorm_G=40.5062 gnorm_D=5.2268
+2026-10-03 02:11:44 epoch 27 step 4500/6335 G=4.1003 D=0.1634 cycle_a=0.0989 cycle_b=0.1027 id_a=0.0741 id_b=0.0829 gnorm_G=23.4311 gnorm_D=11.7169
+2026-10-03 02:12:11 epoch 27 step 5000/6335 G=4.2224 D=0.1382 cycle_a=0.0771 cycle_b=0.0931 id_a=0.0583 id_b=0.0616 gnorm_G=57.9973 gnorm_D=10.0579
+2026-10-03 02:12:38 epoch 27 step 5500/6335 G=3.9956 D=0.1458 cycle_a=0.0941 cycle_b=0.0932 id_a=0.0648 id_b=0.0688 gnorm_G=30.8456 gnorm_D=12.2285
+2026-10-03 02:13:06 epoch 27 step 6000/6335 G=4.9249 D=0.1001 cycle_a=0.0699 cycle_b=0.1301 id_a=0.0614 id_b=0.1181 gnorm_G=39.8480 gnorm_D=8.6172
+2026-10-03 02:13:36 EPOCH 27/50 train_G=4.2257 train_D=0.1610 val_G=6.0097 val_D=0.4098 cycle_a=0.0828 cycle_b=0.1035 gnorm_G=30.5423 gnorm_D=9.5974 seconds=356.97 images_per_sec=35.49 peak_gb=1.563 nan_inf=0 lr=0.000184
+2026-10-03 02:14:05 epoch 28 step 500/6335 G=3.8307 D=0.1119 cycle_a=0.0764 cycle_b=0.0922 id_a=0.0831 id_b=0.0565 gnorm_G=31.1124 gnorm_D=8.4801
+2026-10-03 02:14:32 epoch 28 step 1000/6335 G=4.0859 D=0.1616 cycle_a=0.0892 cycle_b=0.1111 id_a=0.0726 id_b=0.0601 gnorm_G=30.9791 gnorm_D=6.7531
+2026-10-03 02:14:59 epoch 28 step 1500/6335 G=3.5593 D=0.2636 cycle_a=0.0799 cycle_b=0.1049 id_a=0.0501 id_b=0.1025 gnorm_G=23.3420 gnorm_D=8.3019
+2026-10-03 02:15:26 epoch 28 step 2000/6335 G=3.8657 D=0.1322 cycle_a=0.0735 cycle_b=0.0911 id_a=0.0646 id_b=0.1138 gnorm_G=30.8244 gnorm_D=9.1891
+2026-10-03 02:15:53 epoch 28 step 2500/6335 G=3.7836 D=0.1457 cycle_a=0.0819 cycle_b=0.0772 id_a=0.0691 id_b=0.0598 gnorm_G=37.7449 gnorm_D=5.2624
+2026-10-03 02:16:21 epoch 28 step 3000/6335 G=3.4865 D=0.2003 cycle_a=0.0529 cycle_b=0.0585 id_a=0.0508 id_b=0.0404 gnorm_G=33.1775 gnorm_D=11.8985
+2026-10-03 02:16:48 epoch 28 step 3500/6335 G=4.6023 D=0.0793 cycle_a=0.0766 cycle_b=0.1128 id_a=0.0574 id_b=0.1345 gnorm_G=61.1968 gnorm_D=7.8102
+2026-10-03 02:17:15 epoch 28 step 4000/6335 G=3.5351 D=0.2304 cycle_a=0.0731 cycle_b=0.0807 id_a=0.0512 id_b=0.0726 gnorm_G=11.1255 gnorm_D=14.2773
+2026-10-03 02:17:42 epoch 28 step 4500/6335 G=3.3833 D=0.0983 cycle_a=0.1195 cycle_b=0.0326 id_a=0.0606 id_b=0.0273 gnorm_G=30.0092 gnorm_D=8.7089
+2026-10-03 02:18:09 epoch 28 step 5000/6335 G=4.9947 D=0.1937 cycle_a=0.0991 cycle_b=0.1400 id_a=0.0794 id_b=0.1013 gnorm_G=28.5946 gnorm_D=12.2232
+2026-10-03 02:18:37 epoch 28 step 5500/6335 G=4.1721 D=0.1044 cycle_a=0.0769 cycle_b=0.1171 id_a=0.0562 id_b=0.0707 gnorm_G=27.3976 gnorm_D=4.2463
+2026-10-03 02:19:04 epoch 28 step 6000/6335 G=3.9670 D=0.1751 cycle_a=0.0870 cycle_b=0.0765 id_a=0.0525 id_b=0.1059 gnorm_G=22.8844 gnorm_D=6.9570
+2026-10-03 02:19:34 EPOCH 28/50 train_G=4.1729 train_D=0.1588 val_G=6.9561 val_D=0.7148 cycle_a=0.0819 cycle_b=0.1013 gnorm_G=30.3339 gnorm_D=9.3944 seconds=356.05 images_per_sec=35.58 peak_gb=1.563 nan_inf=0 lr=0.000176
+2026-10-03 02:20:03 epoch 29 step 500/6335 G=3.9436 D=0.0727 cycle_a=0.0783 cycle_b=0.0955 id_a=0.0543 id_b=0.0526 gnorm_G=26.1519 gnorm_D=4.2681
+2026-10-03 02:20:30 epoch 29 step 1000/6335 G=4.2572 D=0.1768 cycle_a=0.1059 cycle_b=0.0840 id_a=0.0759 id_b=0.0530 gnorm_G=33.3778 gnorm_D=11.5077
+2026-10-03 02:20:57 epoch 29 step 1500/6335 G=4.0457 D=0.3114 cycle_a=0.0829 cycle_b=0.0583 id_a=0.0675 id_b=0.0390 gnorm_G=45.0545 gnorm_D=14.0658
+2026-10-03 02:21:24 epoch 29 step 2000/6335 G=4.9450 D=0.0627 cycle_a=0.1005 cycle_b=0.1257 id_a=0.0683 id_b=0.0864 gnorm_G=28.3619 gnorm_D=4.5042
+2026-10-03 02:21:51 epoch 29 step 2500/6335 G=3.8352 D=0.1104 cycle_a=0.0716 cycle_b=0.0971 id_a=0.0454 id_b=0.0565 gnorm_G=23.0121 gnorm_D=7.2580
+2026-10-03 02:22:18 epoch 29 step 3000/6335 G=4.4043 D=0.1198 cycle_a=0.0855 cycle_b=0.1224 id_a=0.0460 id_b=0.0795 gnorm_G=18.9150 gnorm_D=10.6403
+2026-10-03 02:22:45 epoch 29 step 3500/6335 G=5.9516 D=0.1124 cycle_a=0.0665 cycle_b=0.1561 id_a=0.0392 id_b=0.3543 gnorm_G=28.4043 gnorm_D=7.9526
+2026-10-03 02:23:12 epoch 29 step 4000/6335 G=4.3684 D=0.0716 cycle_a=0.0791 cycle_b=0.1139 id_a=0.0753 id_b=0.0808 gnorm_G=40.4401 gnorm_D=5.0960
+2026-10-03 02:23:39 epoch 29 step 4500/6335 G=4.2550 D=0.4047 cycle_a=0.1002 cycle_b=0.0816 id_a=0.0985 id_b=0.0515 gnorm_G=39.1839 gnorm_D=16.0190
+2026-10-03 02:24:06 epoch 29 step 5000/6335 G=3.4816 D=0.1329 cycle_a=0.0473 cycle_b=0.0842 id_a=0.0401 id_b=0.0506 gnorm_G=40.6159 gnorm_D=9.2074
+2026-10-03 02:24:34 epoch 29 step 5500/6335 G=3.8392 D=0.0894 cycle_a=0.1106 cycle_b=0.0556 id_a=0.0671 id_b=0.0776 gnorm_G=30.1043 gnorm_D=5.4004
+2026-10-03 02:25:01 epoch 29 step 6000/6335 G=4.8574 D=0.1750 cycle_a=0.0896 cycle_b=0.1255 id_a=0.0537 id_b=0.0783 gnorm_G=26.7811 gnorm_D=8.4062
+2026-10-03 02:25:32 EPOCH 29/50 train_G=4.1422 train_D=0.1584 val_G=6.7226 val_D=0.4865 cycle_a=0.0815 cycle_b=0.1003 gnorm_G=29.7132 gnorm_D=9.2202 seconds=356.23 images_per_sec=35.57 peak_gb=1.563 nan_inf=0 lr=0.000168
+2026-10-03 02:26:00 epoch 30 step 500/6335 G=4.9166 D=0.1010 cycle_a=0.0644 cycle_b=0.1026 id_a=0.0456 id_b=0.1811 gnorm_G=50.1239 gnorm_D=7.2531
+2026-10-03 02:26:28 epoch 30 step 1000/6335 G=3.8848 D=0.3328 cycle_a=0.0625 cycle_b=0.0704 id_a=0.0504 id_b=0.1076 gnorm_G=16.2016 gnorm_D=13.7706
+2026-10-03 02:26:55 epoch 30 step 1500/6335 G=4.4549 D=0.0799 cycle_a=0.0709 cycle_b=0.1090 id_a=0.0446 id_b=0.0478 gnorm_G=37.5351 gnorm_D=9.5145
+2026-10-03 02:27:22 epoch 30 step 2000/6335 G=4.0082 D=0.1889 cycle_a=0.0543 cycle_b=0.1294 id_a=0.0432 id_b=0.1652 gnorm_G=28.6289 gnorm_D=14.9519
+2026-10-03 02:27:49 epoch 30 step 2500/6335 G=4.8223 D=0.2647 cycle_a=0.0721 cycle_b=0.1080 id_a=0.0431 id_b=0.0952 gnorm_G=35.1031 gnorm_D=12.0947
+2026-10-03 02:28:16 epoch 30 step 3000/6335 G=3.9635 D=0.1815 cycle_a=0.0629 cycle_b=0.0875 id_a=0.0470 id_b=0.0758 gnorm_G=46.2425 gnorm_D=11.0406
+2026-10-03 02:28:43 epoch 30 step 3500/6335 G=3.7360 D=0.0745 cycle_a=0.0841 cycle_b=0.0773 id_a=0.0579 id_b=0.0518 gnorm_G=36.5620 gnorm_D=3.5561
+2026-10-03 02:29:10 epoch 30 step 4000/6335 G=4.6634 D=0.0989 cycle_a=0.0924 cycle_b=0.0814 id_a=0.0646 id_b=0.0618 gnorm_G=18.6484 gnorm_D=8.6269
+2026-10-03 02:29:38 epoch 30 step 4500/6335 G=4.2232 D=0.2782 cycle_a=0.0884 cycle_b=0.1217 id_a=0.0646 id_b=0.0850 gnorm_G=22.9058 gnorm_D=10.1161
+2026-10-03 02:30:05 epoch 30 step 5000/6335 G=3.7100 D=0.2744 cycle_a=0.0656 cycle_b=0.0902 id_a=0.0461 id_b=0.0961 gnorm_G=30.4480 gnorm_D=12.8820
+2026-10-03 02:30:32 epoch 30 step 5500/6335 G=2.9188 D=0.1723 cycle_a=0.0613 cycle_b=0.0471 id_a=0.0432 id_b=0.0312 gnorm_G=44.2330 gnorm_D=7.3728
+2026-10-03 02:30:59 epoch 30 step 6000/6335 G=5.6430 D=0.3128 cycle_a=0.1130 cycle_b=0.1525 id_a=0.0772 id_b=0.2123 gnorm_G=26.3499 gnorm_D=16.1309
+2026-10-03 02:31:29 EPOCH 30/50 train_G=4.0969 train_D=0.1589 val_G=6.0120 val_D=0.4239 cycle_a=0.0808 cycle_b=0.0990 gnorm_G=29.4167 gnorm_D=9.1915 seconds=356.02 images_per_sec=35.59 peak_gb=1.563 nan_inf=0 lr=0.000160
+2026-10-03 02:31:31 MILESTONE saved task3_outputs/checkpoints/generators_epoch_030.pt
+2026-10-03 02:31:58 epoch 31 step 500/6335 G=4.7259 D=0.1273 cycle_a=0.0930 cycle_b=0.0950 id_a=0.0710 id_b=0.0732 gnorm_G=24.7073 gnorm_D=10.7718
+2026-10-03 02:32:26 epoch 31 step 1000/6335 G=4.3246 D=0.1580 cycle_a=0.0709 cycle_b=0.1094 id_a=0.0496 id_b=0.0825 gnorm_G=30.3478 gnorm_D=7.3055
+2026-10-03 02:32:53 epoch 31 step 1500/6335 G=3.9956 D=0.0566 cycle_a=0.0676 cycle_b=0.0953 id_a=0.0307 id_b=0.0632 gnorm_G=30.6484 gnorm_D=5.7351
+2026-10-03 02:33:20 epoch 31 step 2000/6335 G=4.5486 D=0.1295 cycle_a=0.0655 cycle_b=0.1592 id_a=0.0460 id_b=0.1423 gnorm_G=24.2404 gnorm_D=6.3356
+2026-10-03 02:33:47 epoch 31 step 2500/6335 G=4.6984 D=0.1414 cycle_a=0.1293 cycle_b=0.0985 id_a=0.0864 id_b=0.0798 gnorm_G=26.7504 gnorm_D=10.0297
+2026-10-03 02:34:14 epoch 31 step 3000/6335 G=5.3334 D=0.1868 cycle_a=0.1157 cycle_b=0.1352 id_a=0.0674 id_b=0.1492 gnorm_G=20.7177 gnorm_D=8.7164
+2026-10-03 02:34:41 epoch 31 step 3500/6335 G=3.7809 D=0.2114 cycle_a=0.0780 cycle_b=0.1139 id_a=0.0460 id_b=0.0770 gnorm_G=18.6308 gnorm_D=14.2354
+2026-10-03 02:35:09 epoch 31 step 4000/6335 G=5.5667 D=0.1287 cycle_a=0.0688 cycle_b=0.1915 id_a=0.0571 id_b=0.1922 gnorm_G=58.3386 gnorm_D=7.0048
+2026-10-03 02:35:36 epoch 31 step 4500/6335 G=3.2103 D=0.2391 cycle_a=0.0569 cycle_b=0.0694 id_a=0.0406 id_b=0.0666 gnorm_G=22.4102 gnorm_D=10.3561
+2026-10-03 02:36:03 epoch 31 step 5000/6335 G=4.0375 D=0.2578 cycle_a=0.0777 cycle_b=0.0491 id_a=0.0417 id_b=0.0429 gnorm_G=31.3181 gnorm_D=15.8519
+2026-10-03 02:36:30 epoch 31 step 5500/6335 G=3.8136 D=0.0877 cycle_a=0.0625 cycle_b=0.1209 id_a=0.0443 id_b=0.0710 gnorm_G=33.0382 gnorm_D=6.0187
+2026-10-03 02:36:57 epoch 31 step 6000/6335 G=3.3131 D=0.1514 cycle_a=0.0797 cycle_b=0.0774 id_a=0.0593 id_b=0.0741 gnorm_G=25.2150 gnorm_D=7.5570
+2026-10-03 02:37:27 EPOCH 31/50 train_G=4.0496 train_D=0.1596 val_G=6.4207 val_D=0.5630 cycle_a=0.0805 cycle_b=0.0964 gnorm_G=29.0974 gnorm_D=9.0545 seconds=356.09 images_per_sec=35.58 peak_gb=1.563 nan_inf=0 lr=0.000152
+2026-10-03 02:37:57 epoch 32 step 500/6335 G=4.6193 D=0.0846 cycle_a=0.0678 cycle_b=0.0669 id_a=0.0474 id_b=0.1153 gnorm_G=30.5204 gnorm_D=9.6446
+2026-10-03 02:38:24 epoch 32 step 1000/6335 G=3.8761 D=0.2590 cycle_a=0.1124 cycle_b=0.0720 id_a=0.0692 id_b=0.0412 gnorm_G=18.7403 gnorm_D=8.1925
+2026-10-03 02:38:50 epoch 32 step 1500/6335 G=3.9541 D=0.2296 cycle_a=0.0815 cycle_b=0.1119 id_a=0.0451 id_b=0.0872 gnorm_G=20.2566 gnorm_D=15.2579
+2026-10-03 02:39:18 epoch 32 step 2000/6335 G=4.3596 D=0.0714 cycle_a=0.0538 cycle_b=0.1328 id_a=0.0399 id_b=0.1156 gnorm_G=29.6113 gnorm_D=6.7954
+2026-10-03 02:39:45 epoch 32 step 2500/6335 G=3.9325 D=0.0727 cycle_a=0.0503 cycle_b=0.0823 id_a=0.0392 id_b=0.1059 gnorm_G=29.1548 gnorm_D=6.7947
+2026-10-03 02:40:12 epoch 32 step 3000/6335 G=4.0634 D=0.1278 cycle_a=0.0824 cycle_b=0.0929 id_a=0.0446 id_b=0.0644 gnorm_G=18.0166 gnorm_D=5.1081
+2026-10-03 02:40:39 epoch 32 step 3500/6335 G=4.2514 D=0.1796 cycle_a=0.0691 cycle_b=0.1151 id_a=0.0480 id_b=0.1044 gnorm_G=14.9390 gnorm_D=18.0492
+2026-10-03 02:41:06 epoch 32 step 4000/6335 G=3.7005 D=0.1827 cycle_a=0.0650 cycle_b=0.0784 id_a=0.0437 id_b=0.0771 gnorm_G=23.9624 gnorm_D=10.2685
+2026-10-03 02:41:33 epoch 32 step 4500/6335 G=3.6074 D=0.2649 cycle_a=0.0852 cycle_b=0.0486 id_a=0.0551 id_b=0.0625 gnorm_G=26.7661 gnorm_D=17.7646
+2026-10-03 02:42:01 epoch 32 step 5000/6335 G=3.2712 D=0.1372 cycle_a=0.0908 cycle_b=0.0636 id_a=0.0692 id_b=0.0503 gnorm_G=24.5770 gnorm_D=9.2603
+2026-10-03 02:42:28 epoch 32 step 5500/6335 G=4.7611 D=0.2033 cycle_a=0.1131 cycle_b=0.0916 id_a=0.0753 id_b=0.0662 gnorm_G=23.9673 gnorm_D=14.5668
+2026-10-03 02:42:54 epoch 32 step 6000/6335 G=3.2544 D=0.1191 cycle_a=0.0938 cycle_b=0.0551 id_a=0.0613 id_b=0.0459 gnorm_G=30.3492 gnorm_D=5.2666
+2026-10-03 02:43:25 EPOCH 32/50 train_G=4.0191 train_D=0.1573 val_G=6.6864 val_D=0.6036 cycle_a=0.0803 cycle_b=0.0953 gnorm_G=29.1528 gnorm_D=8.9664 seconds=355.73 images_per_sec=35.62 peak_gb=1.563 nan_inf=0 lr=0.000144
+2026-10-03 02:43:54 epoch 33 step 500/6335 G=4.7587 D=0.1483 cycle_a=0.0901 cycle_b=0.1254 id_a=0.0559 id_b=0.1033 gnorm_G=27.3160 gnorm_D=7.7337
+2026-10-03 02:44:21 epoch 33 step 1000/6335 G=3.4824 D=0.1023 cycle_a=0.0595 cycle_b=0.0727 id_a=0.0486 id_b=0.0548 gnorm_G=28.0522 gnorm_D=5.5640
+2026-10-03 02:44:49 epoch 33 step 1500/6335 G=3.3738 D=0.2907 cycle_a=0.0976 cycle_b=0.0719 id_a=0.0613 id_b=0.0517 gnorm_G=20.2344 gnorm_D=15.9493
+2026-10-03 02:45:16 epoch 33 step 2000/6335 G=4.5647 D=0.2057 cycle_a=0.0529 cycle_b=0.1592 id_a=0.0346 id_b=0.1162 gnorm_G=42.3023 gnorm_D=15.2126
+2026-10-03 02:45:44 epoch 33 step 2500/6335 G=4.8993 D=0.0954 cycle_a=0.1163 cycle_b=0.0874 id_a=0.0593 id_b=0.0798 gnorm_G=44.7949 gnorm_D=7.9217
+2026-10-03 02:46:11 epoch 33 step 3000/6335 G=3.9491 D=0.0884 cycle_a=0.0633 cycle_b=0.0974 id_a=0.0455 id_b=0.0998 gnorm_G=20.8013 gnorm_D=5.4307
+2026-10-03 02:46:39 epoch 33 step 3500/6335 G=3.4999 D=0.1099 cycle_a=0.0784 cycle_b=0.0761 id_a=0.0419 id_b=0.0581 gnorm_G=17.4047 gnorm_D=6.2565
+2026-10-03 02:47:06 epoch 33 step 4000/6335 G=4.2467 D=0.2684 cycle_a=0.0997 cycle_b=0.0593 id_a=0.0668 id_b=0.0462 gnorm_G=55.3033 gnorm_D=16.1780
+2026-10-03 02:47:33 epoch 33 step 4500/6335 G=4.6927 D=0.2939 cycle_a=0.0939 cycle_b=0.1626 id_a=0.0492 id_b=0.1594 gnorm_G=17.5662 gnorm_D=11.0907
+2026-10-03 02:48:01 epoch 33 step 5000/6335 G=3.8945 D=0.0872 cycle_a=0.0905 cycle_b=0.0667 id_a=0.0466 id_b=0.0536 gnorm_G=24.0051 gnorm_D=7.4573
+2026-10-03 02:48:29 epoch 33 step 5500/6335 G=3.6070 D=0.1313 cycle_a=0.0852 cycle_b=0.0635 id_a=0.0455 id_b=0.0565 gnorm_G=12.5940 gnorm_D=7.6192
+2026-10-03 02:48:56 epoch 33 step 6000/6335 G=3.6482 D=0.1080 cycle_a=0.0814 cycle_b=0.0756 id_a=0.0465 id_b=0.0534 gnorm_G=22.7922 gnorm_D=5.6332
+2026-10-03 02:49:27 EPOCH 33/50 train_G=3.9912 train_D=0.1580 val_G=6.7012 val_D=0.6369 cycle_a=0.0802 cycle_b=0.0942 gnorm_G=28.5096 gnorm_D=8.8934 seconds=360.13 images_per_sec=35.18 peak_gb=1.563 nan_inf=0 lr=0.000136
+2026-10-03 02:49:56 epoch 34 step 500/6335 G=3.6562 D=0.1689 cycle_a=0.1052 cycle_b=0.0857 id_a=0.0839 id_b=0.0750 gnorm_G=24.4918 gnorm_D=9.5347
+2026-10-03 02:50:23 epoch 34 step 1000/6335 G=4.2004 D=0.2908 cycle_a=0.1325 cycle_b=0.0993 id_a=0.0982 id_b=0.0686 gnorm_G=28.5596 gnorm_D=8.6495
+2026-10-03 02:50:51 epoch 34 step 1500/6335 G=5.3694 D=0.2221 cycle_a=0.0889 cycle_b=0.1710 id_a=0.0582 id_b=0.1483 gnorm_G=33.8417 gnorm_D=8.1834
+2026-10-03 02:51:18 epoch 34 step 2000/6335 G=3.9752 D=0.0768 cycle_a=0.0648 cycle_b=0.0950 id_a=0.0349 id_b=0.0717 gnorm_G=21.3647 gnorm_D=5.6789
+2026-10-03 02:51:45 epoch 34 step 2500/6335 G=3.4919 D=0.2603 cycle_a=0.0861 cycle_b=0.0756 id_a=0.0518 id_b=0.0658 gnorm_G=25.6153 gnorm_D=5.7467
+2026-10-03 02:52:13 epoch 34 step 3000/6335 G=4.0562 D=0.1286 cycle_a=0.0879 cycle_b=0.0805 id_a=0.0726 id_b=0.0602 gnorm_G=28.3241 gnorm_D=6.8574
+2026-10-03 02:52:40 epoch 34 step 3500/6335 G=3.1141 D=0.1079 cycle_a=0.0628 cycle_b=0.0545 id_a=0.0373 id_b=0.0453 gnorm_G=30.7096 gnorm_D=7.1389
+2026-10-03 02:53:07 epoch 34 step 4000/6335 G=3.8385 D=0.1895 cycle_a=0.1136 cycle_b=0.0674 id_a=0.0642 id_b=0.0521 gnorm_G=19.4771 gnorm_D=7.8855
+2026-10-03 02:53:34 epoch 34 step 4500/6335 G=4.4463 D=0.2626 cycle_a=0.1512 cycle_b=0.0891 id_a=0.0974 id_b=0.0539 gnorm_G=24.4538 gnorm_D=6.9617
+2026-10-03 02:54:02 epoch 34 step 5000/6335 G=3.5846 D=0.1401 cycle_a=0.0701 cycle_b=0.0703 id_a=0.0547 id_b=0.0462 gnorm_G=20.7168 gnorm_D=7.9207
+2026-10-03 02:54:29 epoch 34 step 5500/6335 G=3.6943 D=0.1317 cycle_a=0.0651 cycle_b=0.1021 id_a=0.0423 id_b=0.0743 gnorm_G=28.1126 gnorm_D=7.7685
+2026-10-03 02:54:57 epoch 34 step 6000/6335 G=2.8047 D=0.0971 cycle_a=0.0362 cycle_b=0.0651 id_a=0.0219 id_b=0.0445 gnorm_G=15.1508 gnorm_D=7.8943
+2026-10-03 02:55:28 EPOCH 34/50 train_G=3.9605 train_D=0.1580 val_G=6.2915 val_D=0.5415 cycle_a=0.0802 cycle_b=0.0927 gnorm_G=28.3065 gnorm_D=8.8772 seconds=359.35 images_per_sec=35.26 peak_gb=1.563 nan_inf=0 lr=0.000128
+2026-10-03 02:55:57 epoch 35 step 500/6335 G=3.3974 D=0.3058 cycle_a=0.0900 cycle_b=0.0517 id_a=0.0565 id_b=0.0339 gnorm_G=22.4678 gnorm_D=13.5502
+2026-10-03 02:56:25 epoch 35 step 1000/6335 G=4.2109 D=0.1288 cycle_a=0.1111 cycle_b=0.0940 id_a=0.0694 id_b=0.0815 gnorm_G=25.2919 gnorm_D=6.0340
+2026-10-03 02:56:53 epoch 35 step 1500/6335 G=3.7164 D=0.0987 cycle_a=0.0679 cycle_b=0.0911 id_a=0.0393 id_b=0.0641 gnorm_G=25.1095 gnorm_D=5.8797
+2026-10-03 02:57:20 epoch 35 step 2000/6335 G=3.7183 D=0.1202 cycle_a=0.0578 cycle_b=0.1145 id_a=0.0331 id_b=0.0830 gnorm_G=17.8722 gnorm_D=10.3192
+2026-10-03 02:57:49 epoch 35 step 2500/6335 G=4.7285 D=0.1011 cycle_a=0.0979 cycle_b=0.0671 id_a=0.0611 id_b=0.0438 gnorm_G=35.9357 gnorm_D=9.2964
+2026-10-03 02:58:18 epoch 35 step 3000/6335 G=4.1024 D=0.1851 cycle_a=0.1182 cycle_b=0.0846 id_a=0.0740 id_b=0.0741 gnorm_G=22.1269 gnorm_D=6.2740
+2026-10-03 02:58:46 epoch 35 step 3500/6335 G=3.8423 D=0.1576 cycle_a=0.0838 cycle_b=0.1024 id_a=0.0439 id_b=0.0629 gnorm_G=23.2481 gnorm_D=8.4551
+2026-10-03 02:59:15 epoch 35 step 4000/6335 G=3.6834 D=0.2105 cycle_a=0.0721 cycle_b=0.0957 id_a=0.0406 id_b=0.0500 gnorm_G=23.3495 gnorm_D=10.0904
+2026-10-03 02:59:43 epoch 35 step 4500/6335 G=3.8306 D=0.2076 cycle_a=0.0991 cycle_b=0.0904 id_a=0.0685 id_b=0.0560 gnorm_G=26.7472 gnorm_D=10.5594
+2026-10-03 03:00:12 epoch 35 step 5000/6335 G=4.5315 D=0.3724 cycle_a=0.0618 cycle_b=0.0741 id_a=0.0472 id_b=0.0597 gnorm_G=30.7453 gnorm_D=21.4167
+2026-10-03 03:00:41 epoch 35 step 5500/6335 G=3.5390 D=0.2341 cycle_a=0.0858 cycle_b=0.0612 id_a=0.0557 id_b=0.0476 gnorm_G=22.6362 gnorm_D=12.6494
+2026-10-03 03:01:09 epoch 35 step 6000/6335 G=3.8345 D=0.1894 cycle_a=0.0726 cycle_b=0.1148 id_a=0.0369 id_b=0.1038 gnorm_G=15.1802 gnorm_D=6.3922
+2026-10-03 03:01:41 EPOCH 35/50 train_G=3.9298 train_D=0.1575 val_G=5.8564 val_D=0.5166 cycle_a=0.0802 cycle_b=0.0915 gnorm_G=27.9568 gnorm_D=8.8066 seconds=371.61 images_per_sec=34.10 peak_gb=1.563 nan_inf=0 lr=0.000120
+2026-10-03 03:01:43 MILESTONE saved task3_outputs/checkpoints/generators_epoch_035.pt
+2026-10-03 03:02:11 epoch 36 step 500/6335 G=4.8311 D=0.1537 cycle_a=0.1045 cycle_b=0.1090 id_a=0.0583 id_b=0.0759 gnorm_G=37.9805 gnorm_D=13.5052
+2026-10-03 03:02:40 epoch 36 step 1000/6335 G=3.9459 D=0.1142 cycle_a=0.0864 cycle_b=0.0801 id_a=0.0489 id_b=0.0611 gnorm_G=24.1518 gnorm_D=7.9656
+2026-10-03 03:03:08 epoch 36 step 1500/6335 G=3.3297 D=0.0822 cycle_a=0.0556 cycle_b=0.0871 id_a=0.0387 id_b=0.0648 gnorm_G=24.8280 gnorm_D=5.4773
+2026-10-03 03:03:36 epoch 36 step 2000/6335 G=3.9588 D=0.1529 cycle_a=0.1349 cycle_b=0.0592 id_a=0.0906 id_b=0.0664 gnorm_G=21.3441 gnorm_D=7.8387
+2026-10-03 03:04:03 epoch 36 step 2500/6335 G=6.9858 D=0.1248 cycle_a=0.0725 cycle_b=0.2283 id_a=0.0457 id_b=0.3424 gnorm_G=45.7384 gnorm_D=8.3820
+2026-10-03 03:04:30 epoch 36 step 3000/6335 G=4.3326 D=0.1127 cycle_a=0.0767 cycle_b=0.0967 id_a=0.0396 id_b=0.0709 gnorm_G=33.5080 gnorm_D=8.9601
+2026-10-03 03:04:57 epoch 36 step 3500/6335 G=3.5950 D=0.0496 cycle_a=0.0734 cycle_b=0.0700 id_a=0.0468 id_b=0.0319 gnorm_G=33.6705 gnorm_D=6.1891
+2026-10-03 03:05:24 epoch 36 step 4000/6335 G=3.6937 D=0.1939 cycle_a=0.0753 cycle_b=0.0833 id_a=0.0537 id_b=0.0574 gnorm_G=27.3602 gnorm_D=8.3672
+2026-10-03 03:05:52 epoch 36 step 4500/6335 G=4.1333 D=0.1196 cycle_a=0.0934 cycle_b=0.1060 id_a=0.0661 id_b=0.0643 gnorm_G=31.4185 gnorm_D=11.5967
+2026-10-03 03:06:18 epoch 36 step 5000/6335 G=3.5153 D=0.0821 cycle_a=0.0643 cycle_b=0.0792 id_a=0.0327 id_b=0.0570 gnorm_G=19.2244 gnorm_D=4.7929
+2026-10-03 03:06:45 epoch 36 step 5500/6335 G=3.5524 D=0.2617 cycle_a=0.1012 cycle_b=0.0732 id_a=0.0556 id_b=0.0561 gnorm_G=24.2064 gnorm_D=10.9720
+2026-10-03 03:07:13 epoch 36 step 6000/6335 G=3.5231 D=0.1198 cycle_a=0.0864 cycle_b=0.0601 id_a=0.0516 id_b=0.0446 gnorm_G=27.7221 gnorm_D=7.1492
+2026-10-03 03:07:45 EPOCH 36/50 train_G=3.9136 train_D=0.1571 val_G=7.0034 val_D=0.7730 cycle_a=0.0807 cycle_b=0.0901 gnorm_G=27.3642 gnorm_D=8.7107 seconds=361.87 images_per_sec=35.01 peak_gb=1.563 nan_inf=0 lr=0.000112
+2026-10-03 03:08:14 epoch 37 step 500/6335 G=4.3971 D=0.0793 cycle_a=0.0898 cycle_b=0.1101 id_a=0.0449 id_b=0.0889 gnorm_G=22.2988 gnorm_D=6.2337
+2026-10-03 03:08:41 epoch 37 step 1000/6335 G=3.0678 D=0.2608 cycle_a=0.0778 cycle_b=0.0389 id_a=0.0409 id_b=0.0429 gnorm_G=11.2200 gnorm_D=8.7709
+2026-10-03 03:09:08 epoch 37 step 1500/6335 G=4.0915 D=0.1436 cycle_a=0.0779 cycle_b=0.1255 id_a=0.0543 id_b=0.0873 gnorm_G=15.0232 gnorm_D=8.1905
+2026-10-03 03:09:35 epoch 37 step 2000/6335 G=3.8994 D=0.1025 cycle_a=0.0746 cycle_b=0.0958 id_a=0.0430 id_b=0.0640 gnorm_G=23.4925 gnorm_D=6.7589
+2026-10-03 03:10:02 epoch 37 step 2500/6335 G=3.9307 D=0.1672 cycle_a=0.1019 cycle_b=0.0992 id_a=0.0591 id_b=0.0678 gnorm_G=23.1110 gnorm_D=5.3579
+2026-10-03 03:10:30 epoch 37 step 3000/6335 G=3.7736 D=0.1361 cycle_a=0.0740 cycle_b=0.1149 id_a=0.0432 id_b=0.0741 gnorm_G=27.9475 gnorm_D=12.0954
+2026-10-03 03:10:57 epoch 37 step 3500/6335 G=3.9216 D=0.1034 cycle_a=0.0893 cycle_b=0.0869 id_a=0.0450 id_b=0.0888 gnorm_G=23.6392 gnorm_D=5.4840
+2026-10-03 03:11:25 epoch 37 step 4000/6335 G=4.7519 D=0.1893 cycle_a=0.1530 cycle_b=0.0635 id_a=0.0929 id_b=0.0460 gnorm_G=12.9673 gnorm_D=12.5747
+2026-10-03 03:11:53 epoch 37 step 4500/6335 G=4.0423 D=0.0614 cycle_a=0.0698 cycle_b=0.0928 id_a=0.0487 id_b=0.0979 gnorm_G=32.1791 gnorm_D=3.2840
+2026-10-03 03:12:20 epoch 37 step 5000/6335 G=3.7625 D=0.0940 cycle_a=0.0556 cycle_b=0.0624 id_a=0.0488 id_b=0.0745 gnorm_G=22.6736 gnorm_D=8.5991
+2026-10-03 03:12:48 epoch 37 step 5500/6335 G=4.2978 D=0.2578 cycle_a=0.1065 cycle_b=0.0768 id_a=0.0671 id_b=0.0549 gnorm_G=26.2442 gnorm_D=13.3623
+2026-10-03 03:13:15 epoch 37 step 6000/6335 G=4.0572 D=0.1310 cycle_a=0.0858 cycle_b=0.0811 id_a=0.0569 id_b=0.0649 gnorm_G=27.2337 gnorm_D=5.8480
+2026-10-03 03:13:46 EPOCH 37/50 train_G=3.8662 train_D=0.1578 val_G=6.3821 val_D=0.5868 cycle_a=0.0803 cycle_b=0.0881 gnorm_G=27.0381 gnorm_D=8.6809 seconds=359.91 images_per_sec=35.20 peak_gb=1.563 nan_inf=0 lr=0.000104
+2026-10-03 03:14:15 epoch 38 step 500/6335 G=4.5956 D=0.2445 cycle_a=0.1100 cycle_b=0.1199 id_a=0.0651 id_b=0.0946 gnorm_G=24.1333 gnorm_D=10.6778
+2026-10-03 03:14:42 epoch 38 step 1000/6335 G=4.2635 D=0.1209 cycle_a=0.1282 cycle_b=0.0846 id_a=0.0922 id_b=0.0542 gnorm_G=21.3047 gnorm_D=5.4592
+2026-10-03 03:15:10 epoch 38 step 1500/6335 G=3.2934 D=0.2309 cycle_a=0.0888 cycle_b=0.0336 id_a=0.0654 id_b=0.0459 gnorm_G=28.6964 gnorm_D=12.0580
+2026-10-03 03:15:37 epoch 38 step 2000/6335 G=3.9710 D=0.1322 cycle_a=0.0785 cycle_b=0.1111 id_a=0.0495 id_b=0.0913 gnorm_G=25.8228 gnorm_D=8.3035
+2026-10-03 03:16:04 epoch 38 step 2500/6335 G=3.8894 D=0.1007 cycle_a=0.0914 cycle_b=0.0621 id_a=0.0567 id_b=0.0646 gnorm_G=25.9870 gnorm_D=4.4569
+2026-10-03 03:16:32 epoch 38 step 3000/6335 G=3.5168 D=0.1391 cycle_a=0.0895 cycle_b=0.0663 id_a=0.0490 id_b=0.0573 gnorm_G=24.9877 gnorm_D=5.7389
+2026-10-03 03:16:59 epoch 38 step 3500/6335 G=4.1283 D=0.2762 cycle_a=0.0940 cycle_b=0.0931 id_a=0.0628 id_b=0.0747 gnorm_G=33.8541 gnorm_D=11.3739
+2026-10-03 03:17:26 epoch 38 step 4000/6335 G=4.3481 D=0.1208 cycle_a=0.0963 cycle_b=0.0805 id_a=0.0651 id_b=0.0517 gnorm_G=43.8155 gnorm_D=8.4646
+2026-10-03 03:17:54 epoch 38 step 4500/6335 G=3.7508 D=0.0698 cycle_a=0.0882 cycle_b=0.0694 id_a=0.0468 id_b=0.0483 gnorm_G=52.2995 gnorm_D=5.6334
+2026-10-03 03:18:21 epoch 38 step 5000/6335 G=4.3048 D=0.1201 cycle_a=0.1365 cycle_b=0.0667 id_a=0.0926 id_b=0.0350 gnorm_G=25.8500 gnorm_D=8.0878
+2026-10-03 03:18:49 epoch 38 step 5500/6335 G=2.9690 D=0.1958 cycle_a=0.0772 cycle_b=0.0397 id_a=0.0385 id_b=0.0433 gnorm_G=37.6786 gnorm_D=11.7917
+2026-10-03 03:19:16 epoch 38 step 6000/6335 G=4.5784 D=0.0451 cycle_a=0.0916 cycle_b=0.0886 id_a=0.0595 id_b=0.0797 gnorm_G=45.5271 gnorm_D=4.3518
+2026-10-03 03:19:47 EPOCH 38/50 train_G=3.8425 train_D=0.1579 val_G=6.3149 val_D=0.5491 cycle_a=0.0805 cycle_b=0.0868 gnorm_G=26.7241 gnorm_D=8.6275 seconds=358.96 images_per_sec=35.30 peak_gb=1.563 nan_inf=0 lr=0.000096
+2026-10-03 03:20:15 epoch 39 step 500/6335 G=4.3978 D=0.1387 cycle_a=0.0597 cycle_b=0.1251 id_a=0.0478 id_b=0.1761 gnorm_G=22.7779 gnorm_D=12.8293
+2026-10-03 03:20:42 epoch 39 step 1000/6335 G=4.5080 D=0.1254 cycle_a=0.0980 cycle_b=0.1125 id_a=0.0640 id_b=0.0344 gnorm_G=33.7174 gnorm_D=8.0287
+2026-10-03 03:21:09 epoch 39 step 1500/6335 G=4.1408 D=0.1264 cycle_a=0.0914 cycle_b=0.0941 id_a=0.0568 id_b=0.0683 gnorm_G=28.9515 gnorm_D=5.4382
+2026-10-03 03:21:37 epoch 39 step 2000/6335 G=3.8154 D=0.1512 cycle_a=0.0483 cycle_b=0.0748 id_a=0.0272 id_b=0.0719 gnorm_G=22.6497 gnorm_D=11.3607
+2026-10-03 03:22:04 epoch 39 step 2500/6335 G=3.5968 D=0.1426 cycle_a=0.0660 cycle_b=0.0721 id_a=0.0414 id_b=0.0593 gnorm_G=22.3966 gnorm_D=7.2065
+2026-10-03 03:22:31 epoch 39 step 3000/6335 G=3.5701 D=0.0925 cycle_a=0.0753 cycle_b=0.0595 id_a=0.0394 id_b=0.0411 gnorm_G=15.6189 gnorm_D=6.6639
+2026-10-03 03:22:59 epoch 39 step 3500/6335 G=4.2130 D=0.1094 cycle_a=0.0632 cycle_b=0.1064 id_a=0.0359 id_b=0.0845 gnorm_G=18.8689 gnorm_D=8.3246
+2026-10-03 03:23:26 epoch 39 step 4000/6335 G=3.3218 D=0.2025 cycle_a=0.1050 cycle_b=0.0616 id_a=0.0584 id_b=0.0353 gnorm_G=34.1878 gnorm_D=10.7220
+2026-10-03 03:23:53 epoch 39 step 4500/6335 G=3.3838 D=0.0845 cycle_a=0.0654 cycle_b=0.0881 id_a=0.0361 id_b=0.0603 gnorm_G=19.8966 gnorm_D=6.5026
+2026-10-03 03:24:21 epoch 39 step 5000/6335 G=4.6083 D=0.1632 cycle_a=0.0967 cycle_b=0.1041 id_a=0.0747 id_b=0.0955 gnorm_G=35.0686 gnorm_D=8.2918
+2026-10-03 03:24:48 epoch 39 step 5500/6335 G=4.0355 D=0.1261 cycle_a=0.0941 cycle_b=0.1107 id_a=0.0601 id_b=0.0828 gnorm_G=28.7215 gnorm_D=5.3526
+2026-10-03 03:25:16 epoch 39 step 6000/6335 G=3.5627 D=0.1748 cycle_a=0.0611 cycle_b=0.0699 id_a=0.0325 id_b=0.0516 gnorm_G=35.9812 gnorm_D=12.2344
+2026-10-03 03:25:47 EPOCH 39/50 train_G=3.8212 train_D=0.1567 val_G=7.2603 val_D=0.8369 cycle_a=0.0807 cycle_b=0.0858 gnorm_G=26.4161 gnorm_D=8.6539 seconds=358.32 images_per_sec=35.36 peak_gb=1.563 nan_inf=0 lr=0.000088
+2026-10-03 03:26:15 epoch 40 step 500/6335 G=4.5685 D=0.1364 cycle_a=0.1556 cycle_b=0.0880 id_a=0.0941 id_b=0.0717 gnorm_G=12.4486 gnorm_D=4.4291
+2026-10-03 03:26:42 epoch 40 step 1000/6335 G=3.1251 D=0.1435 cycle_a=0.0521 cycle_b=0.0656 id_a=0.0286 id_b=0.0368 gnorm_G=30.6569 gnorm_D=6.9609
+2026-10-03 03:27:09 epoch 40 step 1500/6335 G=4.2173 D=0.1453 cycle_a=0.1535 cycle_b=0.0738 id_a=0.0936 id_b=0.0457 gnorm_G=19.0558 gnorm_D=6.4169
+2026-10-03 03:27:37 epoch 40 step 2000/6335 G=4.4797 D=0.4953 cycle_a=0.0991 cycle_b=0.1253 id_a=0.0528 id_b=0.0998 gnorm_G=12.5201 gnorm_D=12.9899
+2026-10-03 03:28:04 epoch 40 step 2500/6335 G=3.3896 D=0.2516 cycle_a=0.0557 cycle_b=0.0715 id_a=0.0329 id_b=0.0475 gnorm_G=20.1621 gnorm_D=13.2932
+2026-10-03 03:28:31 epoch 40 step 3000/6335 G=3.3562 D=0.0671 cycle_a=0.0732 cycle_b=0.0653 id_a=0.0393 id_b=0.0427 gnorm_G=30.8909 gnorm_D=5.4224
+2026-10-03 03:28:59 epoch 40 step 3500/6335 G=4.0528 D=0.2158 cycle_a=0.0888 cycle_b=0.1135 id_a=0.0504 id_b=0.0861 gnorm_G=32.2778 gnorm_D=12.1937
+2026-10-03 03:29:26 epoch 40 step 4000/6335 G=3.9866 D=0.1837 cycle_a=0.0736 cycle_b=0.0841 id_a=0.0392 id_b=0.0771 gnorm_G=43.1640 gnorm_D=16.0246
+2026-10-03 03:29:52 epoch 40 step 4500/6335 G=4.2792 D=0.1233 cycle_a=0.1345 cycle_b=0.0762 id_a=0.0998 id_b=0.0523 gnorm_G=32.7360 gnorm_D=6.3363
+2026-10-03 03:30:19 epoch 40 step 5000/6335 G=3.1521 D=0.1632 cycle_a=0.0510 cycle_b=0.0730 id_a=0.0282 id_b=0.0441 gnorm_G=16.8328 gnorm_D=9.2781
+2026-10-03 03:30:47 epoch 40 step 5500/6335 G=4.0527 D=0.1712 cycle_a=0.1296 cycle_b=0.0723 id_a=0.0802 id_b=0.0492 gnorm_G=22.5686 gnorm_D=10.2429
+2026-10-03 03:31:14 epoch 40 step 6000/6335 G=3.2650 D=0.1067 cycle_a=0.0554 cycle_b=0.0804 id_a=0.0274 id_b=0.0494 gnorm_G=20.5626 gnorm_D=5.4137
+2026-10-03 03:31:45 EPOCH 40/50 train_G=3.7943 train_D=0.1596 val_G=6.8309 val_D=0.6883 cycle_a=0.0808 cycle_b=0.0852 gnorm_G=25.7901 gnorm_D=8.7018 seconds=356.73 images_per_sec=35.52 peak_gb=1.563 nan_inf=0 lr=0.000080
+2026-10-03 03:31:47 MILESTONE saved task3_outputs/checkpoints/generators_epoch_040.pt
+2026-10-03 03:32:15 epoch 41 step 500/6335 G=4.1345 D=0.1678 cycle_a=0.0918 cycle_b=0.0610 id_a=0.0452 id_b=0.0546 gnorm_G=23.0486 gnorm_D=15.6968
+2026-10-03 03:32:42 epoch 41 step 1000/6335 G=3.2564 D=0.1493 cycle_a=0.0591 cycle_b=0.0764 id_a=0.0348 id_b=0.0508 gnorm_G=17.3251 gnorm_D=9.7539
+2026-10-03 03:33:10 epoch 41 step 1500/6335 G=3.6384 D=0.2366 cycle_a=0.0726 cycle_b=0.1108 id_a=0.0341 id_b=0.0911 gnorm_G=25.1802 gnorm_D=10.5616
+2026-10-03 03:33:37 epoch 41 step 2000/6335 G=3.6162 D=0.1381 cycle_a=0.0592 cycle_b=0.0807 id_a=0.0335 id_b=0.1071 gnorm_G=24.5982 gnorm_D=6.9028
+2026-10-03 03:34:04 epoch 41 step 2500/6335 G=3.8459 D=0.1076 cycle_a=0.1036 cycle_b=0.0684 id_a=0.0686 id_b=0.0391 gnorm_G=22.0901 gnorm_D=7.5081
+2026-10-03 03:34:31 epoch 41 step 3000/6335 G=3.2992 D=0.1330 cycle_a=0.0603 cycle_b=0.0395 id_a=0.0277 id_b=0.0289 gnorm_G=23.1515 gnorm_D=9.2868
+2026-10-03 03:34:59 epoch 41 step 3500/6335 G=3.0133 D=0.2844 cycle_a=0.0588 cycle_b=0.0712 id_a=0.0353 id_b=0.0459 gnorm_G=15.9023 gnorm_D=11.8693
+2026-10-03 03:35:27 epoch 41 step 4000/6335 G=3.3718 D=0.0698 cycle_a=0.0939 cycle_b=0.0429 id_a=0.0596 id_b=0.0312 gnorm_G=28.1040 gnorm_D=3.9236
+2026-10-03 03:35:54 epoch 41 step 4500/6335 G=3.9460 D=0.2023 cycle_a=0.1009 cycle_b=0.1009 id_a=0.0578 id_b=0.0826 gnorm_G=29.9040 gnorm_D=12.5544
+2026-10-03 03:36:22 epoch 41 step 5000/6335 G=3.1372 D=0.1284 cycle_a=0.0590 cycle_b=0.0657 id_a=0.0298 id_b=0.0419 gnorm_G=30.3804 gnorm_D=7.4744
+2026-10-03 03:36:49 epoch 41 step 5500/6335 G=3.1674 D=0.4361 cycle_a=0.0986 cycle_b=0.0655 id_a=0.0520 id_b=0.0403 gnorm_G=16.2701 gnorm_D=11.2720
+2026-10-03 03:37:17 epoch 41 step 6000/6335 G=4.3092 D=0.0906 cycle_a=0.0700 cycle_b=0.1304 id_a=0.0327 id_b=0.0835 gnorm_G=22.4362 gnorm_D=4.3423
+2026-10-03 03:37:49 EPOCH 41/50 train_G=3.7866 train_D=0.1593 val_G=6.8965 val_D=0.7294 cycle_a=0.0813 cycle_b=0.0846 gnorm_G=25.0023 gnorm_D=8.6460 seconds=361.74 images_per_sec=35.02 peak_gb=1.563 nan_inf=0 lr=0.000072
+2026-10-03 03:38:19 epoch 42 step 500/6335 G=4.1960 D=0.1746 cycle_a=0.0970 cycle_b=0.0902 id_a=0.0621 id_b=0.0706 gnorm_G=24.2267 gnorm_D=7.7719
+2026-10-03 03:38:47 epoch 42 step 1000/6335 G=3.5665 D=0.1601 cycle_a=0.0662 cycle_b=0.0954 id_a=0.0393 id_b=0.0771 gnorm_G=19.1707 gnorm_D=7.7776
+2026-10-03 03:39:15 epoch 42 step 1500/6335 G=4.0086 D=0.2397 cycle_a=0.0748 cycle_b=0.0846 id_a=0.0484 id_b=0.0664 gnorm_G=32.6243 gnorm_D=13.2766
+2026-10-03 03:39:43 epoch 42 step 2000/6335 G=3.0341 D=0.1133 cycle_a=0.0739 cycle_b=0.0686 id_a=0.0356 id_b=0.0515 gnorm_G=19.2139 gnorm_D=5.5851
+2026-10-03 03:40:12 epoch 42 step 2500/6335 G=4.1732 D=0.1511 cycle_a=0.0953 cycle_b=0.0873 id_a=0.0515 id_b=0.0549 gnorm_G=17.5598 gnorm_D=6.0217
+2026-10-03 03:40:40 epoch 42 step 3000/6335 G=3.6432 D=0.2219 cycle_a=0.0847 cycle_b=0.0572 id_a=0.0433 id_b=0.0344 gnorm_G=27.0506 gnorm_D=19.0342
+2026-10-03 03:41:09 epoch 42 step 3500/6335 G=4.2045 D=0.1494 cycle_a=0.1120 cycle_b=0.0725 id_a=0.0772 id_b=0.0395 gnorm_G=26.5999 gnorm_D=7.8555
+2026-10-03 03:41:37 epoch 42 step 4000/6335 G=4.8957 D=0.1863 cycle_a=0.0964 cycle_b=0.1245 id_a=0.0567 id_b=0.0954 gnorm_G=18.8684 gnorm_D=11.3554
+2026-10-03 03:42:05 epoch 42 step 4500/6335 G=3.3184 D=0.2195 cycle_a=0.0890 cycle_b=0.0583 id_a=0.0436 id_b=0.0565 gnorm_G=24.0999 gnorm_D=10.2612
+2026-10-03 03:42:33 epoch 42 step 5000/6335 G=3.5851 D=0.2604 cycle_a=0.0546 cycle_b=0.1022 id_a=0.0279 id_b=0.0768 gnorm_G=19.0426 gnorm_D=9.5220
+2026-10-03 03:43:02 epoch 42 step 5500/6335 G=3.9402 D=0.1179 cycle_a=0.0669 cycle_b=0.0896 id_a=0.0361 id_b=0.0968 gnorm_G=55.1720 gnorm_D=13.9739
+2026-10-03 03:43:30 epoch 42 step 6000/6335 G=4.9306 D=0.0962 cycle_a=0.0965 cycle_b=0.1401 id_a=0.0498 id_b=0.1043 gnorm_G=17.9376 gnorm_D=8.3297
+2026-10-03 03:44:02 EPOCH 42/50 train_G=3.7436 train_D=0.1615 val_G=6.9408 val_D=0.7443 cycle_a=0.0811 cycle_b=0.0827 gnorm_G=24.8138 gnorm_D=8.7162 seconds=371.79 images_per_sec=34.08 peak_gb=1.563 nan_inf=0 lr=0.000064
+2026-10-03 03:44:32 epoch 43 step 500/6335 G=4.1640 D=0.0759 cycle_a=0.0968 cycle_b=0.0711 id_a=0.0471 id_b=0.0457 gnorm_G=34.0048 gnorm_D=5.3275
+2026-10-03 03:45:00 epoch 43 step 1000/6335 G=4.8898 D=0.0842 cycle_a=0.0705 cycle_b=0.0956 id_a=0.0355 id_b=0.2814 gnorm_G=28.4644 gnorm_D=8.8311
+2026-10-03 03:45:28 epoch 43 step 1500/6335 G=4.8032 D=0.1118 cycle_a=0.1160 cycle_b=0.1164 id_a=0.0738 id_b=0.1030 gnorm_G=28.9794 gnorm_D=4.2656
+2026-10-03 03:45:56 epoch 43 step 2000/6335 G=3.9790 D=0.0761 cycle_a=0.0976 cycle_b=0.0926 id_a=0.0546 id_b=0.0642 gnorm_G=14.8264 gnorm_D=4.1962
+2026-10-03 03:46:25 epoch 43 step 2500/6335 G=4.3149 D=0.1234 cycle_a=0.1092 cycle_b=0.1018 id_a=0.0562 id_b=0.0712 gnorm_G=24.7368 gnorm_D=4.3640
+2026-10-03 03:46:53 epoch 43 step 3000/6335 G=3.9046 D=0.0906 cycle_a=0.0645 cycle_b=0.0948 id_a=0.0356 id_b=0.0642 gnorm_G=34.0658 gnorm_D=5.1434
+2026-10-03 03:47:21 epoch 43 step 3500/6335 G=3.4725 D=0.0875 cycle_a=0.0675 cycle_b=0.0779 id_a=0.0334 id_b=0.0558 gnorm_G=23.3240 gnorm_D=5.8898
+2026-10-03 03:47:50 epoch 43 step 4000/6335 G=4.3534 D=0.0861 cycle_a=0.0793 cycle_b=0.1092 id_a=0.0435 id_b=0.1307 gnorm_G=37.9183 gnorm_D=5.9272
+2026-10-03 03:48:18 epoch 43 step 4500/6335 G=3.2562 D=0.1008 cycle_a=0.0785 cycle_b=0.0529 id_a=0.0392 id_b=0.0360 gnorm_G=16.6476 gnorm_D=7.1487
+2026-10-03 03:48:46 epoch 43 step 5000/6335 G=3.3675 D=0.1813 cycle_a=0.0909 cycle_b=0.0741 id_a=0.0457 id_b=0.0491 gnorm_G=15.7271 gnorm_D=8.6613
+2026-10-03 03:49:15 epoch 43 step 5500/6335 G=3.4300 D=0.1413 cycle_a=0.0666 cycle_b=0.0636 id_a=0.0374 id_b=0.0624 gnorm_G=18.5955 gnorm_D=7.4627
+2026-10-03 03:49:43 epoch 43 step 6000/6335 G=3.9036 D=0.0736 cycle_a=0.0734 cycle_b=0.0906 id_a=0.0394 id_b=0.0809 gnorm_G=27.0301 gnorm_D=6.4561
+2026-10-03 03:50:15 EPOCH 43/50 train_G=3.7201 train_D=0.1611 val_G=7.4426 val_D=0.9557 cycle_a=0.0812 cycle_b=0.0816 gnorm_G=24.0480 gnorm_D=8.6555 seconds=370.99 images_per_sec=34.15 peak_gb=1.563 nan_inf=0 lr=0.000056
+2026-10-03 03:50:44 epoch 44 step 500/6335 G=3.7580 D=0.2487 cycle_a=0.0961 cycle_b=0.0544 id_a=0.0474 id_b=0.0543 gnorm_G=28.4159 gnorm_D=11.9219
+2026-10-03 03:51:13 epoch 44 step 1000/6335 G=3.7365 D=0.1661 cycle_a=0.0607 cycle_b=0.0935 id_a=0.0290 id_b=0.0661 gnorm_G=16.3601 gnorm_D=9.2479
+2026-10-03 03:51:41 epoch 44 step 1500/6335 G=4.0508 D=0.2303 cycle_a=0.0593 cycle_b=0.1019 id_a=0.0266 id_b=0.0909 gnorm_G=17.4446 gnorm_D=7.2078
+2026-10-03 03:52:08 epoch 44 step 2000/6335 G=3.6073 D=0.1530 cycle_a=0.1050 cycle_b=0.0637 id_a=0.0567 id_b=0.0468 gnorm_G=27.7512 gnorm_D=9.4169
+2026-10-03 03:52:36 epoch 44 step 2500/6335 G=4.6932 D=0.2611 cycle_a=0.0914 cycle_b=0.1027 id_a=0.0462 id_b=0.0715 gnorm_G=67.5588 gnorm_D=16.1959
+2026-10-03 03:53:05 epoch 44 step 3000/6335 G=3.3975 D=0.0959 cycle_a=0.0683 cycle_b=0.0651 id_a=0.0331 id_b=0.0464 gnorm_G=19.8140 gnorm_D=8.3747
+2026-10-03 03:53:34 epoch 44 step 3500/6335 G=3.3878 D=0.2382 cycle_a=0.0682 cycle_b=0.0744 id_a=0.0307 id_b=0.0534 gnorm_G=25.9297 gnorm_D=10.6501
+2026-10-03 03:54:01 epoch 44 step 4000/6335 G=4.9597 D=0.5284 cycle_a=0.0750 cycle_b=0.1664 id_a=0.0469 id_b=0.1355 gnorm_G=28.8915 gnorm_D=18.0070
+2026-10-03 03:54:28 epoch 44 step 4500/6335 G=3.5411 D=0.0461 cycle_a=0.0735 cycle_b=0.0536 id_a=0.0363 id_b=0.0334 gnorm_G=23.3022 gnorm_D=4.0912
+2026-10-03 03:54:56 epoch 44 step 5000/6335 G=3.4164 D=0.1308 cycle_a=0.0654 cycle_b=0.0705 id_a=0.0343 id_b=0.0715 gnorm_G=22.4537 gnorm_D=12.4900
+2026-10-03 03:55:23 epoch 44 step 5500/6335 G=3.3475 D=0.1905 cycle_a=0.0885 cycle_b=0.0669 id_a=0.0407 id_b=0.0436 gnorm_G=14.6580 gnorm_D=9.0966
+2026-10-03 03:55:52 epoch 44 step 6000/6335 G=2.9026 D=0.1413 cycle_a=0.0613 cycle_b=0.0606 id_a=0.0285 id_b=0.0420 gnorm_G=21.5959 gnorm_D=5.5119
+2026-10-03 03:56:22 EPOCH 44/50 train_G=3.7064 train_D=0.1618 val_G=7.3958 val_D=0.9444 cycle_a=0.0814 cycle_b=0.0811 gnorm_G=23.2929 gnorm_D=8.7180 seconds=365.96 images_per_sec=34.62 peak_gb=1.563 nan_inf=0 lr=0.000048
+2026-10-03 03:56:51 epoch 45 step 500/6335 G=3.1578 D=0.0843 cycle_a=0.0756 cycle_b=0.0537 id_a=0.0426 id_b=0.0387 gnorm_G=27.7281 gnorm_D=4.6311
+2026-10-03 03:57:19 epoch 45 step 1000/6335 G=3.0396 D=0.3121 cycle_a=0.0578 cycle_b=0.0720 id_a=0.0321 id_b=0.0465 gnorm_G=25.0355 gnorm_D=12.6038
+2026-10-03 03:57:47 epoch 45 step 1500/6335 G=3.8231 D=0.0668 cycle_a=0.0862 cycle_b=0.0711 id_a=0.0533 id_b=0.0630 gnorm_G=14.0664 gnorm_D=4.3380
+2026-10-03 03:58:14 epoch 45 step 2000/6335 G=3.6532 D=0.0849 cycle_a=0.0748 cycle_b=0.0693 id_a=0.0323 id_b=0.0479 gnorm_G=28.0677 gnorm_D=4.7307
+2026-10-03 03:58:42 epoch 45 step 2500/6335 G=2.9687 D=0.4435 cycle_a=0.0612 cycle_b=0.0731 id_a=0.0312 id_b=0.0456 gnorm_G=20.6938 gnorm_D=12.1229
+2026-10-03 03:59:09 epoch 45 step 3000/6335 G=3.5171 D=0.2329 cycle_a=0.0819 cycle_b=0.0800 id_a=0.0589 id_b=0.0540 gnorm_G=14.9435 gnorm_D=11.4273
+2026-10-03 03:59:37 epoch 45 step 3500/6335 G=2.9620 D=0.1503 cycle_a=0.0685 cycle_b=0.0535 id_a=0.0318 id_b=0.0413 gnorm_G=17.1942 gnorm_D=5.1995
+2026-10-03 04:00:05 epoch 45 step 4000/6335 G=3.7075 D=0.1126 cycle_a=0.0799 cycle_b=0.0751 id_a=0.0394 id_b=0.0542 gnorm_G=19.5296 gnorm_D=10.3199
+2026-10-03 04:00:32 epoch 45 step 4500/6335 G=3.1398 D=0.2179 cycle_a=0.0604 cycle_b=0.0643 id_a=0.0277 id_b=0.0348 gnorm_G=23.1029 gnorm_D=11.5162
+2026-10-03 04:01:00 epoch 45 step 5000/6335 G=3.1039 D=0.1789 cycle_a=0.0876 cycle_b=0.0538 id_a=0.0470 id_b=0.0377 gnorm_G=11.0184 gnorm_D=7.8904
+2026-10-03 04:01:27 epoch 45 step 5500/6335 G=4.7191 D=0.2781 cycle_a=0.0920 cycle_b=0.1663 id_a=0.0451 id_b=0.1321 gnorm_G=12.1816 gnorm_D=8.8646
+2026-10-03 04:01:54 epoch 45 step 6000/6335 G=3.7567 D=0.0332 cycle_a=0.0877 cycle_b=0.0579 id_a=0.0621 id_b=0.0400 gnorm_G=24.1516 gnorm_D=3.3179
+2026-10-03 04:02:25 EPOCH 45/50 train_G=3.6698 train_D=0.1646 val_G=7.4827 val_D=0.9107 cycle_a=0.0813 cycle_b=0.0796 gnorm_G=22.5450 gnorm_D=8.7568 seconds=361.04 images_per_sec=35.09 peak_gb=1.563 nan_inf=0 lr=0.000040
+2026-10-03 04:02:27 MILESTONE saved task3_outputs/checkpoints/generators_epoch_045.pt
+2026-10-03 04:02:54 epoch 46 step 500/6335 G=2.9241 D=0.0937 cycle_a=0.0520 cycle_b=0.0509 id_a=0.0266 id_b=0.0447 gnorm_G=13.6558 gnorm_D=9.4480
+2026-10-03 04:03:22 epoch 46 step 1000/6335 G=2.7706 D=0.1703 cycle_a=0.0639 cycle_b=0.0656 id_a=0.0343 id_b=0.0458 gnorm_G=15.5599 gnorm_D=8.5192
+2026-10-03 04:03:49 epoch 46 step 1500/6335 G=3.4945 D=0.0692 cycle_a=0.0916 cycle_b=0.0520 id_a=0.0462 id_b=0.0335 gnorm_G=17.6950 gnorm_D=5.6438
+2026-10-03 04:04:16 epoch 46 step 2000/6335 G=3.4724 D=0.0812 cycle_a=0.0660 cycle_b=0.0727 id_a=0.0314 id_b=0.0671 gnorm_G=11.5790 gnorm_D=8.6122
+2026-10-03 04:04:44 epoch 46 step 2500/6335 G=4.1244 D=0.0635 cycle_a=0.0764 cycle_b=0.1108 id_a=0.0356 id_b=0.0806 gnorm_G=25.5919 gnorm_D=5.7794
+2026-10-03 04:05:11 epoch 46 step 3000/6335 G=4.3294 D=0.1969 cycle_a=0.1140 cycle_b=0.1096 id_a=0.0620 id_b=0.0946 gnorm_G=11.4841 gnorm_D=7.4464
+2026-10-03 04:05:38 epoch 46 step 3500/6335 G=3.7052 D=0.1374 cycle_a=0.0754 cycle_b=0.0928 id_a=0.0404 id_b=0.0642 gnorm_G=19.8941 gnorm_D=5.4124
+2026-10-03 04:06:05 epoch 46 step 4000/6335 G=3.1862 D=0.1304 cycle_a=0.0628 cycle_b=0.0639 id_a=0.0383 id_b=0.0422 gnorm_G=26.1945 gnorm_D=9.6147
+2026-10-03 04:06:32 epoch 46 step 4500/6335 G=3.0112 D=0.1142 cycle_a=0.0566 cycle_b=0.0483 id_a=0.0255 id_b=0.0299 gnorm_G=19.7455 gnorm_D=7.2895
+2026-10-03 04:06:59 epoch 46 step 5000/6335 G=3.1514 D=0.0678 cycle_a=0.0501 cycle_b=0.0745 id_a=0.0236 id_b=0.0637 gnorm_G=18.5921 gnorm_D=5.3552
+2026-10-03 04:07:26 epoch 46 step 5500/6335 G=3.4983 D=0.0863 cycle_a=0.0819 cycle_b=0.0549 id_a=0.0399 id_b=0.0459 gnorm_G=16.9249 gnorm_D=6.2517
+2026-10-03 04:07:54 epoch 46 step 6000/6335 G=4.4300 D=0.0953 cycle_a=0.1062 cycle_b=0.0956 id_a=0.0606 id_b=0.0741 gnorm_G=34.5803 gnorm_D=6.5816
+2026-10-03 04:08:25 EPOCH 46/50 train_G=3.6369 train_D=0.1654 val_G=7.5636 val_D=0.9870 cycle_a=0.0813 cycle_b=0.0780 gnorm_G=21.5902 gnorm_D=8.8229 seconds=357.89 images_per_sec=35.40 peak_gb=1.563 nan_inf=0 lr=0.000032
+2026-10-03 04:08:54 epoch 47 step 500/6335 G=3.2399 D=0.0613 cycle_a=0.0762 cycle_b=0.0487 id_a=0.0364 id_b=0.0355 gnorm_G=20.5450 gnorm_D=8.5269
+2026-10-03 04:09:21 epoch 47 step 1000/6335 G=4.2651 D=0.1654 cycle_a=0.1555 cycle_b=0.0528 id_a=0.0876 id_b=0.0464 gnorm_G=19.3763 gnorm_D=5.9454
+2026-10-03 04:09:48 epoch 47 step 1500/6335 G=3.2320 D=0.1083 cycle_a=0.0692 cycle_b=0.0676 id_a=0.0320 id_b=0.0441 gnorm_G=25.0715 gnorm_D=5.8633
+2026-10-03 04:10:15 epoch 47 step 2000/6335 G=3.4054 D=0.1314 cycle_a=0.0536 cycle_b=0.0877 id_a=0.0233 id_b=0.0741 gnorm_G=30.5024 gnorm_D=7.3928
+2026-10-03 04:10:42 epoch 47 step 2500/6335 G=3.2234 D=0.3316 cycle_a=0.0668 cycle_b=0.0636 id_a=0.0296 id_b=0.0476 gnorm_G=13.7491 gnorm_D=10.8739
+2026-10-03 04:11:10 epoch 47 step 3000/6335 G=3.4158 D=0.1956 cycle_a=0.0923 cycle_b=0.0438 id_a=0.0442 id_b=0.0331 gnorm_G=31.3280 gnorm_D=16.5696
+2026-10-03 04:11:38 epoch 47 step 3500/6335 G=3.3037 D=0.2603 cycle_a=0.0775 cycle_b=0.0549 id_a=0.0455 id_b=0.0432 gnorm_G=18.1711 gnorm_D=13.0760
+2026-10-03 04:12:05 epoch 47 step 4000/6335 G=3.8457 D=0.0808 cycle_a=0.0621 cycle_b=0.1002 id_a=0.0278 id_b=0.0689 gnorm_G=22.7010 gnorm_D=6.1729
+2026-10-03 04:12:32 epoch 47 step 4500/6335 G=4.4905 D=0.2087 cycle_a=0.1132 cycle_b=0.1081 id_a=0.0611 id_b=0.0941 gnorm_G=12.2800 gnorm_D=13.6988
+2026-10-03 04:13:01 epoch 47 step 5000/6335 G=3.4602 D=0.2497 cycle_a=0.0728 cycle_b=0.0763 id_a=0.0341 id_b=0.0454 gnorm_G=20.5458 gnorm_D=12.9410
+2026-10-03 04:13:29 epoch 47 step 5500/6335 G=3.7051 D=0.1276 cycle_a=0.0767 cycle_b=0.1041 id_a=0.0395 id_b=0.0592 gnorm_G=23.5800 gnorm_D=14.6733
+2026-10-03 04:13:56 epoch 47 step 6000/6335 G=3.1437 D=0.2176 cycle_a=0.0681 cycle_b=0.0532 id_a=0.0323 id_b=0.0619 gnorm_G=19.4209 gnorm_D=12.1128
+2026-10-03 04:14:27 EPOCH 47/50 train_G=3.6175 train_D=0.1672 val_G=8.0399 val_D=1.1541 cycle_a=0.0812 cycle_b=0.0774 gnorm_G=20.6126 gnorm_D=8.7979 seconds=360.12 images_per_sec=35.18 peak_gb=1.563 nan_inf=0 lr=0.000024
+2026-10-03 04:14:56 epoch 48 step 500/6335 G=3.2817 D=0.1507 cycle_a=0.0746 cycle_b=0.0700 id_a=0.0415 id_b=0.0395 gnorm_G=21.4384 gnorm_D=8.1017
+2026-10-03 04:15:23 epoch 48 step 1000/6335 G=3.6524 D=0.1464 cycle_a=0.0762 cycle_b=0.0805 id_a=0.0368 id_b=0.0504 gnorm_G=12.3622 gnorm_D=13.8018
+2026-10-03 04:15:50 epoch 48 step 1500/6335 G=3.5692 D=0.2585 cycle_a=0.1042 cycle_b=0.0515 id_a=0.0660 id_b=0.0374 gnorm_G=21.9504 gnorm_D=7.8674
+2026-10-03 04:16:18 epoch 48 step 2000/6335 G=3.7316 D=0.0700 cycle_a=0.0610 cycle_b=0.0933 id_a=0.0358 id_b=0.1105 gnorm_G=27.8852 gnorm_D=6.6274
+2026-10-03 04:16:45 epoch 48 step 2500/6335 G=2.9679 D=0.1261 cycle_a=0.0460 cycle_b=0.0781 id_a=0.0223 id_b=0.0510 gnorm_G=19.0292 gnorm_D=5.3655
+2026-10-03 04:17:12 epoch 48 step 3000/6335 G=3.7067 D=0.0483 cycle_a=0.0742 cycle_b=0.0723 id_a=0.0360 id_b=0.0624 gnorm_G=23.4346 gnorm_D=3.0449
+2026-10-03 04:17:39 epoch 48 step 3500/6335 G=3.9405 D=0.1269 cycle_a=0.1004 cycle_b=0.0847 id_a=0.0588 id_b=0.0553 gnorm_G=16.4518 gnorm_D=4.3932
+2026-10-03 04:18:07 epoch 48 step 4000/6335 G=2.8520 D=0.1231 cycle_a=0.0672 cycle_b=0.0630 id_a=0.0310 id_b=0.0498 gnorm_G=13.6659 gnorm_D=9.3574
+2026-10-03 04:18:34 epoch 48 step 4500/6335 G=3.6829 D=0.0676 cycle_a=0.0798 cycle_b=0.0756 id_a=0.0306 id_b=0.0505 gnorm_G=14.0547 gnorm_D=5.7474
+2026-10-03 04:19:01 epoch 48 step 5000/6335 G=3.7004 D=0.0925 cycle_a=0.0965 cycle_b=0.0554 id_a=0.0534 id_b=0.0410 gnorm_G=18.0515 gnorm_D=7.3572
+2026-10-03 04:19:29 epoch 48 step 5500/6335 G=3.0252 D=0.0765 cycle_a=0.0733 cycle_b=0.0332 id_a=0.0423 id_b=0.0292 gnorm_G=18.6632 gnorm_D=5.5790
+2026-10-03 04:19:56 epoch 48 step 6000/6335 G=3.7491 D=0.1495 cycle_a=0.0783 cycle_b=0.0978 id_a=0.0389 id_b=0.0675 gnorm_G=10.6256 gnorm_D=5.9086
+2026-10-03 04:20:27 EPOCH 48/50 train_G=3.6007 train_D=0.1677 val_G=7.9151 val_D=1.0982 cycle_a=0.0813 cycle_b=0.0766 gnorm_G=19.3861 gnorm_D=8.8321 seconds=358.64 images_per_sec=35.33 peak_gb=1.563 nan_inf=0 lr=0.000016
+2026-10-03 04:20:56 epoch 49 step 500/6335 G=4.8014 D=0.1437 cycle_a=0.1308 cycle_b=0.0573 id_a=0.0834 id_b=0.1666 gnorm_G=19.5088 gnorm_D=15.9559
+2026-10-03 04:21:23 epoch 49 step 1000/6335 G=4.4268 D=0.1530 cycle_a=0.1151 cycle_b=0.0791 id_a=0.1168 id_b=0.0436 gnorm_G=25.4109 gnorm_D=6.0642
+2026-10-03 04:21:51 epoch 49 step 1500/6335 G=3.1011 D=0.1014 cycle_a=0.0607 cycle_b=0.0701 id_a=0.0267 id_b=0.0433 gnorm_G=17.8866 gnorm_D=7.1847
+2026-10-03 04:22:18 epoch 49 step 2000/6335 G=3.9251 D=0.2480 cycle_a=0.0724 cycle_b=0.1233 id_a=0.0346 id_b=0.0816 gnorm_G=10.7231 gnorm_D=7.9210
+2026-10-03 04:22:45 epoch 49 step 2500/6335 G=3.7743 D=0.1193 cycle_a=0.1130 cycle_b=0.0693 id_a=0.0539 id_b=0.0510 gnorm_G=10.6334 gnorm_D=8.7995
+2026-10-03 04:23:12 epoch 49 step 3000/6335 G=3.0196 D=0.0982 cycle_a=0.0916 cycle_b=0.0344 id_a=0.0414 id_b=0.0236 gnorm_G=13.2659 gnorm_D=5.5457
+2026-10-03 04:23:40 epoch 49 step 3500/6335 G=3.2384 D=0.2879 cycle_a=0.0818 cycle_b=0.0606 id_a=0.0401 id_b=0.0351 gnorm_G=16.9433 gnorm_D=12.6909
+2026-10-03 04:24:07 epoch 49 step 4000/6335 G=2.8600 D=0.4018 cycle_a=0.0833 cycle_b=0.0382 id_a=0.0453 id_b=0.0317 gnorm_G=12.9482 gnorm_D=22.5558
+2026-10-03 04:24:34 epoch 49 step 4500/6335 G=3.0088 D=0.1125 cycle_a=0.0541 cycle_b=0.0593 id_a=0.0255 id_b=0.0428 gnorm_G=16.7654 gnorm_D=8.1955
+2026-10-03 04:25:02 epoch 49 step 5000/6335 G=3.6113 D=0.3753 cycle_a=0.0907 cycle_b=0.1052 id_a=0.0423 id_b=0.0758 gnorm_G=11.2738 gnorm_D=9.0564
+2026-10-03 04:25:29 epoch 49 step 5500/6335 G=3.4578 D=0.1857 cycle_a=0.0908 cycle_b=0.0627 id_a=0.0421 id_b=0.0367 gnorm_G=14.6005 gnorm_D=8.4790
+2026-10-03 04:25:56 epoch 49 step 6000/6335 G=3.4842 D=0.2189 cycle_a=0.1025 cycle_b=0.0664 id_a=0.0538 id_b=0.0605 gnorm_G=20.5998 gnorm_D=7.5402
+2026-10-03 04:26:27 EPOCH 49/50 train_G=3.6043 train_D=0.1704 val_G=7.5586 val_D=0.9961 cycle_a=0.0815 cycle_b=0.0778 gnorm_G=18.6913 gnorm_D=8.7931 seconds=358.38 images_per_sec=35.35 peak_gb=1.563 nan_inf=0 lr=0.000008
+2026-10-03 04:26:56 epoch 50 step 500/6335 G=3.4043 D=0.1426 cycle_a=0.0638 cycle_b=0.0752 id_a=0.0335 id_b=0.0585 gnorm_G=13.7405 gnorm_D=7.3853
+2026-10-03 04:27:23 epoch 50 step 1000/6335 G=3.7541 D=0.1013 cycle_a=0.0673 cycle_b=0.0819 id_a=0.0381 id_b=0.0572 gnorm_G=21.6064 gnorm_D=8.3129
+2026-10-03 04:27:51 epoch 50 step 1500/6335 G=2.7212 D=0.1014 cycle_a=0.0661 cycle_b=0.0419 id_a=0.0342 id_b=0.0291 gnorm_G=19.1806 gnorm_D=10.2227
+2026-10-03 04:28:18 epoch 50 step 2000/6335 G=2.8182 D=0.1405 cycle_a=0.0478 cycle_b=0.0538 id_a=0.0223 id_b=0.0311 gnorm_G=19.7615 gnorm_D=12.3098
+2026-10-03 04:28:46 epoch 50 step 2500/6335 G=3.0719 D=0.1315 cycle_a=0.0833 cycle_b=0.0432 id_a=0.0441 id_b=0.0468 gnorm_G=9.0896 gnorm_D=6.4950
+2026-10-03 04:29:13 epoch 50 step 3000/6335 G=3.9437 D=0.0411 cycle_a=0.1005 cycle_b=0.0624 id_a=0.0576 id_b=0.0552 gnorm_G=20.2712 gnorm_D=4.0584
+2026-10-03 04:29:41 epoch 50 step 3500/6335 G=3.0462 D=0.1374 cycle_a=0.0598 cycle_b=0.0405 id_a=0.0315 id_b=0.0265 gnorm_G=14.5013 gnorm_D=11.5583
+2026-10-03 04:30:08 epoch 50 step 4000/6335 G=3.6477 D=0.1989 cycle_a=0.1100 cycle_b=0.0534 id_a=0.0633 id_b=0.0326 gnorm_G=15.9016 gnorm_D=11.3117
+2026-10-03 04:30:35 epoch 50 step 4500/6335 G=3.9455 D=0.0693 cycle_a=0.0935 cycle_b=0.0876 id_a=0.0444 id_b=0.0731 gnorm_G=20.4135 gnorm_D=4.1791
+2026-10-03 04:31:02 epoch 50 step 5000/6335 G=3.4548 D=0.1512 cycle_a=0.0833 cycle_b=0.0539 id_a=0.0443 id_b=0.0346 gnorm_G=13.7900 gnorm_D=11.1785
+2026-10-03 04:31:30 epoch 50 step 5500/6335 G=2.9810 D=0.0926 cycle_a=0.0528 cycle_b=0.0659 id_a=0.0235 id_b=0.0475 gnorm_G=18.2958 gnorm_D=8.2833
+2026-10-03 04:31:57 epoch 50 step 6000/6335 G=3.1659 D=0.0919 cycle_a=0.0512 cycle_b=0.0686 id_a=0.0226 id_b=0.0480 gnorm_G=14.6013 gnorm_D=6.3222
+2026-10-03 04:32:28 EPOCH 50/50 train_G=3.5460 train_D=0.1671 val_G=7.6624 val_D=1.0264 cycle_a=0.0812 cycle_b=0.0735 gnorm_G=16.9425 gnorm_D=8.6491 seconds=359.33 images_per_sec=35.26 peak_gb=1.563 nan_inf=0 lr=0.000000
+2026-10-03 04:32:30 MILESTONE saved task3_outputs/checkpoints/generators_epoch_050.pt
+2026-10-03 04:32:30 TRAINING COMPLETE total_hours=5.014
+2026-10-03 04:40:34 KAGGLE_EVAL FID_A2B=113.7460 FID_B2A=104.2163 MiFID_A2B=0.4248 MiFID_B2A=0.4093 FID_avg=108.9811 MiFID_avg=0.4171
