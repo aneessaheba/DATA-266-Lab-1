@@ -169,7 +169,59 @@ produces measurably better long range consistency at a similar bits per
 character, that would be evidence the context window rather than depth is the
 binding constraint at this scale.
 
-To be completed once both runs are compared as a team.
+### Measured comparison
+
+Her run is now in the repository, so this is against her numbers rather than an
+expectation.
+
+| | Mine | Yashashree | Better |
+|---|---|---|---|
+| Validation cross entropy | 0.7538 | 0.7077 | hers |
+| Validation perplexity | 2.125 | 2.029 | hers |
+| Validation bits per character | 1.0875 | 1.0210 | hers by 6 percent |
+| Validation top 1 accuracy | 76.07 percent | 77.59 percent | hers |
+| Generalisation gap | -0.0303 | -0.0009 | hers |
+| Parameters | 3,238,912 | 2,757,605 | mine is 17 percent larger |
+| Vocabulary | 91 | 101 | see below |
+| Distinct 3 at temperature 0.8 | 0.763 | 0.666 | mine |
+| Repeated 4gram at temperature 0.8 | 0.132 | 0.231 | mine |
+
+**She wins on prediction and this supports what my failure analysis predicted.**
+Her bits per character is 1.0210 against my 1.0875, with 15 percent fewer
+parameters. The two obvious candidates are her deeper stack and her longer
+context. My failure analysis argued that coherence broke down over spans longer
+than roughly two sentences, which 128 characters cannot hold, and named context
+length as the first thing I would change. Her 256 character context reaching a
+better bits per character on a smaller model is consistent with that, though
+depth and context changed together so this is evidence rather than proof.
+
+**I win on generation diversity, at the same temperature.** My repeated 4gram
+rate is 0.132 against her 0.231, and my distinct 3 is 0.763 against her 0.666.
+So the model with the better validation loss produces the more repetitive text.
+That is worth stating plainly because it is easy to assume lower perplexity
+means better generation. Perplexity measures how well a model predicts the next
+character given a true prefix. Repetition is a property of what happens when the
+model is fed its own output instead, which perplexity never observes.
+
+**The vocabularies are not the same set.** Mine is 91 characters after I found
+and repaired mojibake in the source text, where UTF-8 had been decoded as
+cp1252. Hers is 101, which is the size mine was before the repair, so her run
+spends part of its embedding and output layers on corrupted character sequences
+such as the three byte artifacts that should be a single quotation mark. Bits
+per character is still comparable between us, because it is normalised per
+character either way, but it is not quite like for like: a few of the characters
+she is predicting are artifacts rather than real text. If anything this makes
+her result stronger, since her model carries that overhead and still predicts
+better.
+
+**The hardware is not comparable.** She trained on an RTX 4090 in 435 seconds;
+I trained on Apple M4 through MPS in 3,557 seconds. The ratio reflects the
+hardware and not the models, so no timing conclusion should be drawn from it.
+
+**What I would take from this.** If we had one more run between us, the
+experiment worth doing is my architecture at a 256 character context, with
+everything else held fixed. That isolates context length from depth, which this
+comparison cannot do because both changed at once.
 
 ## 7. Hardware disclosure
 
