@@ -1,25 +1,34 @@
 direction,metric,value,notes
-,fid,,
-,kid,,
-,generative_precision,,
-,generative_recall,,
-,density,,
-,coverage,,
-,cycle_recon_l1,,
-,lpips,,
-,content_cosine_similarity,,
-,identity_loss,,
-,cycle_loss,,
-,gen_loss_final,,
-,disc_loss_final,,
-,grad_norm_mean,,
-,nan_count,,
-,human_audit_score,,
-,inter_rater_agreement,,
-,parameter_count,,
-,training_time_sec,,
-,images_per_sec,,
-,peak_memory_mb,,
-,kaggle_public_score,,
-,kaggle_private_score,,
-,kaggle_rank,,
+A2B,fid,178.9449,Monet to photo. 7038 real photos against 30 generated.
+B2A,fid,86.5920,Photo to Monet. 300 real Monets against 703 generated. This is the Kaggle direction.
+A2B,kid,0.0328,standard deviation 0.0050 over random subsets
+B2A,kid,0.0075,standard deviation 0.0004 over random subsets
+A2B,generative_precision,0.9333,reported as density following Naeem 2020
+B2A,generative_precision,0.5420,reported as density following Naeem 2020
+A2B,generative_recall,0.0117,reported as coverage following Naeem 2020
+B2A,generative_recall,0.7267,reported as coverage following Naeem 2020
+A2B,density,0.9333,fraction of generated samples near the real manifold
+B2A,density,0.5420,fraction of generated samples near the real manifold
+A2B,coverage,0.0117,low because only 30 images were generated against 7038 real photos
+B2A,coverage,0.7267,most real Monets have a nearby generated sample
+A2B,cycle_recon_l1,0.1647,Monet to photo to Monet, 30 unique Monet images
+B2A,cycle_recon_l1,0.0949,photo to Monet to photo, 703 unique photos
+A2B,lpips,0.3556,perceptual distance between input and translation
+B2A,lpips,0.3820,perceptual distance between input and translation
+A2B,content_cosine_similarity,0.7348,inception feature similarity between input and output
+B2A,content_cosine_similarity,0.8658,inception feature similarity between input and output
+both,identity_loss,0.0587,mean of identity_a 0.0501 and identity_b 0.0674 at epoch 50
+both,cycle_loss,0.0775,mean of cycle_a 0.0797 and cycle_b 0.0752 at epoch 50
+both,gen_loss_final,3.3199,training generator loss at epoch 50
+both,disc_loss_final,0.1800,training discriminator loss at epoch 50
+both,grad_norm_mean,17.0465,generator at epoch 50. Discriminator 9.1994.
+both,nan_count,0,no non finite step in 316750 optimiser steps
+both,human_audit_score,,pending. 30 sample template in outputs/metrics/human_audit_30_samples.csv needs two raters.
+both,inter_rater_agreement,,pending for the same reason
+both,parameter_count,30008200,two generators and two discriminators
+both,training_time_sec,32198.45,8.944 hours for 50 epochs
+both,images_per_sec,19.76,mean across the run
+both,peak_memory_mb,1605.6,1.5678 GB
+both,kaggle_public_score,,not submitted yet. Needs an inference pass over all 7038 photos.
+both,kaggle_private_score,,not submitted yet
+both,kaggle_rank,,not submitted yet
