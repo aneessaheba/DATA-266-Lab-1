@@ -257,7 +257,7 @@ temperature 1.2.
 
 ### 4) Results
 
-![Fig. 2. Training and validation loss curves over ten epochs, Yashashree. The two curves stay together, giving a generalisation gap of -0.0009.](figures/fig2_t1_yash_loss.svg)
+![Fig. 2. Training and validation loss curves over ten epochs, Yashashree. The two curves stay together, giving a generalisation gap of -0.0009.](figures/fig2_t1_yash_loss.png)
 
 | Metric | Value |
 |---|---|
