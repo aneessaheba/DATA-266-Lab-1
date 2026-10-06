@@ -71,11 +71,22 @@ runs:
       is kept; the milestones and the optimiser state, about 850 MB, are not in
       the repository.
 
+kaggle:
+  submitted: "2026-10-06"
+  file: "task3_gan/anees_saheba/outputs/submission.csv"
+  produced_by: "task3_gan/anees_saheba/src/make_kaggle_submission.py"
+  submitted_fid: 105.2606
+  submitted_mifid: 0.4175
+  public_score: -52.8390
+  teammate_public_score: -54.6990
+  scoring: >
+    The competition takes a one row csv with ID, FID and MiFID, and the
+    leaderboard shows the negative mean of the two. The script embeds the
+    instructor's scoring logic unchanged. The run itself only translated 30 of
+    the 300 Monet paintings, so the remaining 270 were generated from the saved
+    epoch 50 checkpoint before scoring. No retraining.
+
 pending:
-  kaggle_submission: >
-    Not submitted. The run generated 703 translated photographs, which is the
-    validation split. A submission needs all 7,038, which is an inference pass
-    with the saved generator rather than a retrain.
   human_audit: >
     outputs/metrics/human_audit_30_samples.csv is a 30 row template with empty
     rater columns. It needs two people. The notebook does not generate ratings.

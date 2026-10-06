@@ -163,15 +163,54 @@ had an RTX 5090 and measured 35.26 images per second against my 19.76 on a
 4090. My generator benchmarks 1.07 times her cost, so the architecture accounts
 for a small part of the gap and the hardware for the rest.
 
+### Kaggle result
+
+Submitted 6 October 2026. **Public leaderboard score -52.8390**, against
+Yashashree's -54.6990 on the same competition.
+
+The competition does not take images. It takes a one row `submission.csv` with
+columns ID, FID and MiFID, scored by the instructor's own evaluation script,
+and the leaderboard shows the negative mean of those two numbers. A less
+negative score is better.
+
+| | Mine | Yashashree |
+|---|---|---|
+| FID submitted | 105.2606 | 108.9811 |
+| MiFID submitted | 0.4175 | 0.4171 |
+| **Leaderboard score** | **-52.8390** | -54.6990 |
+
+Per direction under that scorer: photo to Monet FID 95.4884, Monet to photo FID
+115.0328, each measured on 300 pairs.
+
+Those FID values differ from the ones in the table above, 86.59 and 178.94,
+because the two are not the same measurement. My notebook compares 300 real
+Monets against all 703 generated images and uses its own Inception
+preprocessing. The instructor's scorer subsamples both sides to 300, sorts by
+filename and uses a different resize and crop. Neither is wrong; they answer
+slightly different questions, and only the scorer's version is comparable
+across the class.
+
+The submitted file is `outputs/submission.csv` and the script that produces it
+is `src/make_kaggle_submission.py`, which embeds the instructor's scoring logic
+unchanged so the number can be reproduced.
+
 ## 8. Honesty notes
 
-**The Kaggle submission is not done.** The run generated 703 translated
-photographs, which is the validation split. A submission needs all 7,038. That
-is an inference pass with the saved generator, not a retrain.
+**The run itself only translated 30 of the 300 Monet paintings,** because that
+was the validation split. The scorer needs 300, and FID on 30 images is badly
+biased, so the remaining 270 were generated afterwards from the saved epoch 50
+checkpoint before scoring. No retraining was involved.
 
 **The human audit is not done.** `outputs/metrics/human_audit_30_samples.csv` is
 a 30 row template with empty rater columns. It needs two people. The notebook
 deliberately refuses to generate ratings.
+
+**The config dictionary saved inside the checkpoint is wrong in one field.**
+It records `residual_blocks: 9` where the weights are unmistakably six blocks
+at 80 filters, 12,239,363 parameters per generator. The notebook wrote that
+field from a stale value. Everything else, including
+`src/configs/cyclegan_config.yaml` and the numbers in this document, matches
+the actual weights.
 
 **Only the final checkpoint is kept.** The milestone checkpoints at epochs 1
 through 40 and the optimiser state, 850 MB in total, are not in the repository.
