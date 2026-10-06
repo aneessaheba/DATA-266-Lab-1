@@ -1,15 +1,38 @@
-# DATA266 Lab 1 Report
+# DATA266 Lab 1: Language Modelling, Sentiment Classification and Unpaired Image Translation
 
-## Team 8
+::: authors
+Anees Saheba Guddi (SID4 5330) and Yashashree Shinde (SID4 4349)
 
-| | |
-|---|---|
-| **Member 1** | Anees Saheba Guddi, SID4 5330 |
-| **Member 2** | Yashashree Shinde, SID4 4349 |
-| **Repository** | https://github.com/aneessaheba/DATA-266-Lab-1 |
-| **Date** | 6 October 2026 |
+Team 8, DATA266, San Jose State University
 
-## Team ownership statement
+Repository: https://github.com/aneessaheba/DATA-266-Lab-1
+:::
+
+::: abstract
+**Abstract**---This report covers three machine learning systems built from
+scratch by a team of two, with each member independently designing, training
+and evaluating their own model for every task so that all results appear twice.
+Task 1 is a character level GPT trained on TinyStories, where the two models
+reach validation bits per character of 1.0875 and 1.0210. Task 2 is Yelp
+Polarity sentiment classification with three classifiers per member, where the
+best model reaches 95.02 percent test accuracy. Task 3 is a CycleGAN for
+unpaired translation between Monet paintings and photographs, where the two
+runs reach photo to Monet FID of 86.59 and 92.39 and Kaggle public scores of
+-52.8390 and -54.6990. Three findings emerged only from comparing the two
+independent runs: the language model with the better validation loss produces
+the more repetitive text, mean pooling beats max pooling as a sentiment
+baseline by 3.6 points, and the CycleGAN identity weight trades style fidelity
+against cycle reconstruction with each member winning the side their own weight
+favoured. All reported numbers are traceable to committed files.
+:::
+
+::: keywords
+**Index Terms**---transformer, causal self attention, character level language
+model, sentiment classification, recurrent networks, generative adversarial
+networks, unpaired image translation, cycle consistency, reproducibility.
+:::
+
+# TEAM OWNERSHIP STATEMENT
 
 Both members independently designed, coded, trained and evaluated their own
 models for all three tasks. Every number in this report therefore exists twice,
@@ -26,11 +49,9 @@ once per member, produced by two separate runs on two different machines.
 - The comparison tables, the joint analyses and this report were written
   together from both sets of results.
 
----
+# I. TASK 1: CHARACTER LEVEL LANGUAGE MODEL
 
-# Part 1. Task 1, character level language model from scratch
-
-## 1.1 Objective
+## A. Objective
 
 Build a GPT style autoregressive language model from scratch on TinyStories,
 train it for at least ten epochs, report the full metric list, and analyse
@@ -41,9 +62,9 @@ Both members wrote multi head causal self attention with explicit matrix
 multiplications and verified numerically that no position can attend to a
 future position.
 
-## 1.2 Anees Saheba Guddi, Task 1
+## B. Member 1: Anees Saheba Guddi
 
-### 1.2.1 Architecture
+### 1) Architecture
 
 | Component | Value |
 |---|---|
@@ -69,7 +90,7 @@ Parameter breakdown, which reconciles exactly:
 - Language model head: 23,296
 - **Total: 3,238,912**
 
-### 1.2.2 Hyperparameters and reasons
+### 2) Hyperparameters and reasons
 
 - **Seed 5330**, the last four digits of his student ID, so initialisation, the
   train and validation split and the shuffling are his own.
@@ -81,7 +102,7 @@ Parameter breakdown, which reconciles exactly:
   was doing real work.
 - **Batch size 64**, ten epochs, 15,620 optimiser steps in total.
 
-### 1.2.3 Data preprocessing
+### 3) Data preprocessing
 
 The source text contained mojibake, UTF-8 that had been decoded as cp1252. He
 found and repaired it with an explicit byte sequence map.
@@ -94,7 +115,7 @@ found and repaired it with an explicit byte sequence map.
   function returned the text unchanged. The bug was caught because the
   vocabulary size did not drop.
 
-### 1.2.4 Results
+### 4) Results
 
 | Metric | Value |
 |---|---|
@@ -135,7 +156,7 @@ Decoding comparison across his own samples:
 | Temperature 0.8 | 0.132 | 0.763 |
 | Temperature 1.2 | 0.117 | 0.791 |
 
-### 1.2.5 Failure analysis
+### 5) Failure analysis
 
 **Case 1, repetition.** Prompt "One day, Tom", greedy decoding.
 
@@ -192,9 +213,9 @@ temperature 1.2.
   earlier than roughly two sentences back. Increasing context length is the
   first change he would test.
 
-## 1.3 Yashashree Shinde, Task 1
+## C. Member 2: Yashashree Shinde
 
-### 1.3.1 Architecture
+### 1) Architecture
 
 | Component | Value |
 |---|---|
@@ -211,7 +232,7 @@ temperature 1.2.
 | Vocabulary | 101 characters |
 | Parameters | 2,757,605 |
 
-### 1.3.2 Hyperparameters and reasons
+### 2) Hyperparameters and reasons
 
 - **Seed 4349**, the last four digits of her student ID, used for weight
   initialisation and for independently shuffling the train and validation
@@ -223,7 +244,7 @@ temperature 1.2.
 - Deliberately narrower and deeper than her teammate's model, with twice the
   context length, so that the two runs differ along a meaningful axis.
 
-### 1.3.3 Data preprocessing
+### 3) Data preprocessing
 
 - Dataset: TinyStories, character level tokenisation.
 - Training sequences: 100,000. Validation sequences: 10,000.
@@ -232,7 +253,7 @@ temperature 1.2.
 - The mojibake present in the source text was not repaired, so her vocabulary
   of 101 includes the corrupted sequences as if they were real characters.
 
-### 1.3.4 Results
+### 4) Results
 
 | Metric | Value |
 |---|---|
@@ -264,7 +285,7 @@ Generation diversity at temperature 0.8:
 | Distinct 3 | 0.6663 |
 | Repeated 4gram rate | 0.2310 |
 
-### 1.3.5 Failure analysis
+### 5) Failure analysis
 
 **Case 1, broken grammar and semantic inconsistency.**
 
@@ -307,7 +328,7 @@ Generation diversity at temperature 0.8:
 - Possible improvements to test: more training data, more model capacity,
   better context quality, longer training.
 
-## 1.4 Task 1 comparison table
+## D. Side by Side Comparison
 
 | | Anees | Yashashree |
 |---|---|---|
@@ -343,7 +364,7 @@ Generation diversity at temperature 0.8:
 | Total training time | 3,557 s | 435 s |
 | Hardware | Apple M4 MPS | RTX 4090 |
 
-## 1.5 Task 1 joint analysis
+## E. Joint Analysis
 
 **Strengths.**
 
@@ -398,20 +419,19 @@ Generation diversity at temperature 0.8:
 - A longer run at the better of the two configurations.
 - Measuring repetition at matched perplexity rather than matched temperature.
 
----
 
-# Part 2. Task 2, Yelp Polarity sentiment classification
+# II. TASK 2: YELP POLARITY SENTIMENT CLASSIFICATION
 
-## 2.1 Objective
+## A. Objective
 
 Train three sentiment classifiers per member on Yelp Polarity, with no
 pretrained embeddings and no pretrained language model, report the full metric
 list per model, and manually review twenty of each member's own errors in four
 fixed categories.
 
-## 2.2 Anees Saheba Guddi, Task 2
+## B. Member 1: Anees Saheba Guddi
 
-### 2.2.1 Models
+### 1) Models
 
 | | Baseline | Experiment A | Experiment B |
 |---|---|---|---|
@@ -428,7 +448,7 @@ fixed categories.
 - All three mask padding. The notebook asserts that adding padding does not
   change the baseline prediction, and the measured difference is exactly 0.0.
 
-### 2.2.2 Preprocessing and hyperparameters
+### 2) Preprocessing and hyperparameters
 
 - **Seed 5330.**
 - Lowercase, regex word split, stopwords removed, **except negation words**:
@@ -442,7 +462,7 @@ fixed categories.
 - Split: 504,000 train, 56,000 validation, 38,000 test, all balanced 50 percent
   positive.
 
-### 2.2.3 Results
+### 3) Results
 
 | Metric | baseline_max_pool | experiment_lstm | experiment_attention_pool |
 |---|---|---|---|
@@ -477,7 +497,7 @@ Error rate by slice, lower is better:
 | experiment_lstm | 0.0511 | 0.0473 | 0.0508 | 0.0476 |
 | experiment_attention_pool | 0.0687 | 0.0634 | 0.0655 | 0.0579 |
 
-### 2.2.4 Error review, twenty errors
+### 4) Error review, twenty errors
 
 Reviewed model: experiment_lstm, 1,891 errors in 38,000 test reviews.
 
@@ -515,9 +535,9 @@ Representative cases:
   lower error rate than the long slice for all three of his models, so raising
   the length limit is the obvious fix and the wrong one.
 
-## 2.3 Yashashree Shinde, Task 2
+## C. Member 2: Yashashree Shinde
 
-### 2.3.1 Models
+### 1) Models
 
 | | Baseline | Experiment A | Experiment B |
 |---|---|---|---|
@@ -532,7 +552,7 @@ Representative cases:
 - The bidirectional GRU reads the review in both directions, so it can
   represent word order and carry negation scope across a span.
 
-### 2.3.2 Preprocessing and hyperparameters
+### 2) Preprocessing and hyperparameters
 
 - **Seed 4349.**
 - Lowercase, word split, stopwords removed except negation words.
@@ -544,7 +564,7 @@ Representative cases:
   clip 1.0.
 - Validation fraction 0.10, bootstrap samples 1,000.
 
-### 2.3.3 Results
+### 3) Results
 
 | Metric | baseline_mean_pool | experiment_cnn | experiment_bigru |
 |---|---|---|---|
@@ -598,7 +618,7 @@ Error rate by slice:
 | experiment_cnn | 0.0723 | 0.0689 | 0.0743 | 0.0704 |
 | experiment_bigru | 0.0549 | 0.0492 | 0.0565 | 0.0532 |
 
-### 2.3.4 Error review, twenty errors
+### 4) Error review, twenty errors
 
 Reviewed model: experiment_bigru, about 2,019 errors in 38,000 test reviews.
 
@@ -642,7 +662,7 @@ Representative cases:
   against 0.0492 for medium, and all five of her sampled long review failures
   sit at exactly her 256 token limit.
 
-## 2.4 Task 2 comparison table
+## D. Side by Side Comparison
 
 | | Anees baseline | Anees exp A | Anees exp B | Yash baseline | Yash exp A | Yash exp B |
 |---|---|---|---|---|---|---|
@@ -665,7 +685,7 @@ Representative cases:
 | Peak memory | 1.05 GB | 1.26 GB | 1.27 GB | 0.16 GB | 0.45 GB | 1.80 GB |
 | Hardware | M4 MPS | M4 MPS | M4 MPS | RTX 4090 | RTX 4090 | RTX 4090 |
 
-## 2.5 Task 2 joint analysis
+## E. Joint Analysis
 
 **Strengths.**
 
@@ -738,11 +758,10 @@ disagreement resolves.**
 - Recomputing Yashashree's calibration, most likely taking confidence as the
   maximum of p and 1 minus p rather than p of the positive class.
 
----
 
-# Part 3. Task 3, CycleGAN Monet and photo style transfer
+# III. TASK 3: CYCLEGAN MONET AND PHOTO STYLE TRANSFER
 
-## 3.1 Objective
+## A. Objective
 
 Train a CycleGAN from scratch to translate in both directions between Monet
 paintings and photographs, report the full metric list in both directions,
@@ -752,9 +771,9 @@ Kaggle class competition.
 The data is unpaired, so no photograph is the same scene as any painting and
 there is no target image to compare an output against.
 
-## 3.2 Anees Saheba Guddi, Task 3
+## B. Member 1: Anees Saheba Guddi
 
-### 3.2.1 Architecture
+### 1) Architecture
 
 | Component | Value |
 |---|---|
@@ -785,7 +804,7 @@ Reasons for the choices:
   local texture to look painterly instead of only the global colour being
   right.
 
-### 3.2.2 Hyperparameters
+### 2) Hyperparameters
 
 | Hyperparameter | Value |
 |---|---|
@@ -808,7 +827,7 @@ Reasons for the choices:
   how repainted the output looks, so a strong identity term works against the
   measurement. Lowering it frees the generator to repaint.
 
-### 3.2.3 Results
+### 3) Results
 
 | Metric | Monet to photo | Photo to Monet |
 |---|---|---|
@@ -849,7 +868,7 @@ Kaggle submission:
 - Per direction under the scorer: photo to Monet FID 95.4884, Monet to photo
   FID 115.0328, each on 300 pairs
 
-### 3.2.4 Failure analysis
+### 4) Failure analysis
 
 **Case 1, hallucinated signature.** File validation_B2A/0000.png.
 
@@ -910,9 +929,9 @@ validation_cycle_A/0000.png.
   that track quality are the cycle losses, which fall throughout, and FID and
   KID from the final checkpoint.
 
-## 3.3 Yashashree Shinde, Task 3
+## C. Member 2: Yashashree Shinde
 
-### 3.3.1 Architecture
+### 1) Architecture
 
 | Component | Value |
 |---|---|
@@ -934,7 +953,7 @@ Reasons for the choices:
   Monet task. She wanted the reference architecture as her starting point.
 - The remaining components match the reference implementation.
 
-### 3.3.2 Hyperparameters
+### 2) Hyperparameters
 
 | Hyperparameter | Value |
 |---|---|
@@ -953,7 +972,7 @@ Reasons for the choices:
   Identity loss holds the colour palette steady, which is why the CycleGAN
   paper adds it for the painting task.
 
-### 3.3.3 Results
+### 3) Results
 
 | Metric | Monet to photo | Photo to Monet |
 |---|---|---|
@@ -991,7 +1010,7 @@ Kaggle submission:
 - Public leaderboard score **-54.6990**
 - Submitted FID 108.9811, MiFID 0.4171
 
-### 3.3.4 Failure analysis
+### 4) Failure analysis
 
 **Case 1, under stylisation.** File validation_B2A/0000.png.
 
@@ -1055,7 +1074,7 @@ monet_jpg/bc4b364a44.jpg, reconstruction validation_cycle_A/0000.png.
 - Validation generator loss rises from 6.89 to 7.66 while training loss falls
   from 7.72 to 3.55, for the same reason given in her teammate's section.
 
-## 3.4 Task 3 comparison table
+## D. Side by Side Comparison
 
 | | Anees | Yashashree |
 |---|---|---|
@@ -1103,7 +1122,7 @@ Monets against all generated images with its own Inception preprocessing, while
 the scorer subsamples both sides to 300, sorts by filename and resizes
 differently. Only the scorer's version is comparable across the class.
 
-## 3.5 Task 3 joint analysis
+## E. Joint Analysis
 
 **Strengths.**
 
@@ -1167,9 +1186,8 @@ differently. Only the scorer's version is comparable across the class.
 - Generating more images in the Monet to photo direction so that its FID and
   coverage become reliable.
 
----
 
-# Part 4. Evidence trail
+# IV. EVIDENCE TRAIL
 
 Every number in this report is traceable to a committed file in the repository.
 
@@ -1211,7 +1229,7 @@ Notes on the evidence:
   and taking a softmax is zero divided by zero. The fix and a one second check
   that catches it are in the notebook, and the failed log is kept as evidence.
 
-# Part 5. Known gaps
+# V. KNOWN GAPS
 
 Stated rather than hidden.
 
@@ -1233,17 +1251,44 @@ Stated rather than hidden.
 - **Neither member ran the clean identity weight ablation** that Task 3 needs
   for a proper attribution, because it did not fit the booked GPU time.
 
-# Part 6. References
 
-1. Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez,
+# CONTENTS
+
+| Section | Title |
+|---|---|
+| I | Task 1: Character Level Language Model |
+| I.A | Objective |
+| I.B | Member 1: Anees Saheba Guddi |
+| I.C | Member 2: Yashashree Shinde |
+| I.D | Side by Side Comparison |
+| I.E | Joint Analysis |
+| II | Task 2: Yelp Polarity Sentiment Classification |
+| II.A | Objective |
+| II.B | Member 1: Anees Saheba Guddi |
+| II.C | Member 2: Yashashree Shinde |
+| II.D | Side by Side Comparison |
+| II.E | Joint Analysis |
+| III | Task 3: CycleGAN Monet and Photo Style Transfer |
+| III.A | Objective |
+| III.B | Member 1: Anees Saheba Guddi |
+| III.C | Member 2: Yashashree Shinde |
+| III.D | Side by Side Comparison |
+| III.E | Joint Analysis |
+| IV | Evidence Trail |
+| V | Known Gaps |
+| | References |
+
+# REFERENCES
+
+[1] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez,
    A. N., Kaiser, L. and Polosukhin, I. (2017). Attention Is All You Need.
    Advances in Neural Information Processing Systems 30.
-2. Eldan, R. and Li, Y. (2023). TinyStories: How Small Can Language Models Be
+[2] Eldan, R. and Li, Y. (2023). TinyStories: How Small Can Language Models Be
    and Still Speak Coherent English? arXiv:2305.07759.
-3. Zhu, J.-Y., Park, T., Isola, P. and Efros, A. A. (2017). Unpaired Image to
+[3] Zhu, J.-Y., Park, T., Isola, P. and Efros, A. A. (2017). Unpaired Image to
    Image Translation using Cycle Consistent Adversarial Networks. IEEE
    International Conference on Computer Vision.
-4. Naeem, M. F., Oh, S. J., Uh, Y., Choi, Y. and Yoo, J. (2020). Reliable
+[4] Naeem, M. F., Oh, S. J., Uh, Y., Choi, Y. and Yoo, J. (2020). Reliable
    Fidelity and Diversity Metrics for Generative Models. International
    Conference on Machine Learning. Source of the density and coverage metrics
    used in Task 3.
