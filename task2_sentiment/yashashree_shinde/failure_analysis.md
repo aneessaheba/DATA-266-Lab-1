@@ -72,22 +72,51 @@ scattered, they all sit at the truncation boundary.
 | Temporal or structural reversal | 2 | The review contradicts its own earlier half. |
 | Too little signal | 1 | Short factual reviews with almost no sentiment vocabulary. |
 
-**16 of the 20 errors are in a slice flagged as containing negation**, against
-a much lower rate across the test set as a whole. That is the strongest signal
-in this review and the first thing I would investigate.
+**16 of the 20 errors are in a slice flagged as containing negation.** That
+looks alarming until it is checked against the base rate, which is the point of
+having slice metrics.
+
+### The negation finding does not survive checking
+
+My first reading of this sample was that negation was the main problem. My own
+slice metrics in `task2_slice_metrics.json` say otherwise:
+
+| Slice | Reviews | Macro F1 | Error rate |
+|---|---|---|---|
+| contains_negation | 23,262 | 0.9430 | 0.0532 |
+| short_reviews | 12,899 | 0.9434 | 0.0549 |
+| medium_reviews | 14,843 | 0.9508 | 0.0492 |
+| long_reviews | 10,258 | 0.9413 | 0.0565 |
+| whole test set | 38,000 | 0.9469 | 0.0531 |
+
+Reviews containing negation fail at 0.0532 against 0.0531 for the test set as a
+whole. There is no effect at all. The reason 16 of my 20 sampled errors contain
+negation is that **61.2 percent of all test reviews contain negation**, so at
+the base rate about 12 of 20 would be expected anyway. A binomial test on 16 of
+20 against a base rate of 0.612 gives p = 0.063, which is not significant at
+n = 20.
+
+This is worth recording rather than quietly dropping. A hand inspection of 20
+errors is a good way to generate hypotheses and a bad way to test them, because
+an error sample tells you nothing about the base rate it was drawn from.
+
+### What the slice metrics actually show
+
+**Long reviews are the worst slice**, 0.0565 against 0.0492 for medium, a 15
+percent relative increase in error rate. That matches section D, where all five
+sampled long review failures sit at exactly 256 tokens, my maximum length.
 
 ### What I would try first
 
-**Measure the negation slice properly.** Compare accuracy on reviews containing
-negation against those without. If the gap is large, the fix is to give the
-model a way to represent negation scope rather than just the presence of a
-negation token. A bidirectional GRU should in principle handle this, so a large
-gap would say the signal is not surviving preprocessing.
+**Raise the maximum length to 512.** This is the one hypothesis that both the
+slice metrics and the error sample support. Long reviews fail more often, and
+every long review failure I sampled is at the truncation boundary. Rerunning at
+512 and comparing the error rate on reviews over 256 tokens settles it.
 
-**Raise the maximum length to 512 second.** All five long review failures sit
-exactly at the 256 cap, which is suggestive but not conclusive, because reviews
-long enough to be truncated may also be harder for other reasons. Rerunning at
-512 and comparing accuracy on that same subset settles it.
+**Test mixed and aspect split reviews second.** Five of the twenty are reviews
+that praise one aspect and condemn another. A subset built from reviews
+containing both strong positive and strong negative terms would measure
+whether this is a real weakness or another base rate illusion.
 
 **Report sarcasm as a limit rather than a bug.** Three of the twenty are
 sarcastic, and no feature available to a model of this kind would catch them.
