@@ -1,34 +1,114 @@
-# Manifest — yashashree_shinde — task1_llm
-# Brief Section 5: package/library versions, environment file, and which
+# Manifest for yashashree_shinde, Task 1
+# Brief section 5: package and library versions, environment file, and which
 # checkpoint maps to which result in the report.
-# Fill this in AFTER the run, from the run itself — do not guess.
+# Filled in from the run itself, using outputs/task1_manifest.json and
+# metrics_report.csv.
 
 member: yashashree_shinde
 task: task1_llm
 
 hardware:
-  machine: ""          # e.g. "SJSU GPU Lab, node XX"
-  cpu: ""
-  gpu: ""
-  gpu_memory_gb: ""
-  ram_gb: ""
-  os: ""
-  cuda_version: ""
-  driver_version: ""
+  machine: "GPU lab node"
+  cpu: "not recorded by the notebook"
+  gpu: "NVIDIA GeForce RTX 4090"
+  gpu_memory_gb: "peak allocated during the run was 1.971"
+  ram_gb: "not recorded"
+  os: "not recorded"
+  cuda_version: "12.2, from the torch build 2.14.0+cu132"
+  driver_version: "not recorded"
 
 environment:
-  python: ""
+  python: "3.13.3"
   env_file: "environment/requirements.txt"
-  pip_freeze: ""       # path to the exact freeze captured at run time
-  random_seed: ""
+  pip_freeze: "not captured at run time"
+  key_versions:
+    torch: "2.14.0+cu132"
+  random_seed: "4349"
+  seeded: "python random, numpy, torch, and the data split"
+
+model:
+  transformer_blocks: 6
+  embedding_dimension: 192
+  attention_heads: 3
+  head_dimension: 64
+  feedforward_dimension: 768
+  activation: gelu
+  normalisation: pre_layer_norm
+  dropout: 0.15
+  positional_embedding: learned
+  context_length: 256
+  vocabulary_size: 101
+  parameter_count: 2757605
+  attention: "manual scaled dot product, no prebuilt transformer or attention modules"
+  causal_masking: "implemented and numerically verified"
+
+optimisation:
+  optimiser: adamw
+  learning_rate: 3.0e-4
+  weight_decay: 0.01
+  warmup_steps: 1000
+  schedule: "linear warm up then cosine decay"
+  gradient_clip: 1.0
+  batch_size: 64
+  epochs: 10
+
+data:
+  dataset: "roneneldan/TinyStories"
+  tokenisation: "character level"
+  train_sequences: 100000
+  validation_sequences: 10000
+  split: "independently shuffled using seed 4349"
 
 runs:
-  - run_id: ""         # e.g. 20260914_143000
-    config: ""         # path to the YAML config used
-    command: ""        # the exact command you ran
-    raw_log: ""        # reproducibility/raw_logs/<file>
-    checkpoint: ""     # path under checkpoints/
-    maps_to_report_result: ""   # which table/figure in the report this produced
-    start_time: ""
-    end_time: ""
-    notes: ""
+  - run_id: "task1_run_seed4349"
+    status: "reported run, all numbers in results.md and metrics_report.csv come from this"
+    config: "recorded in src/task_1.ipynb and outputs/task1_manifest.json"
+    command: "src/task_1.ipynb, run end to end"
+    raw_log: "not captured at run time"
+    checkpoint: "task1_checkpoints/task1_best_model.pt, not yet committed"
+    maps_to_report_result: >
+      Every row of task1_llm/yashashree_shinde/metrics_report.csv, the results
+      tables in results.md, the curves in outputs/task1_loss_curves.svg, the
+      samples in outputs/task1_generated_samples.txt, and all three cases in
+      failure_analysis.md.
+    epochs_completed: 10
+    headline_metrics:
+      validation_cross_entropy_loss: 0.707674
+      validation_perplexity: 2.029266
+      validation_bits_per_character: 1.020958
+      validation_top1_accuracy: 0.775887
+      generalisation_gap: -0.000931
+      average_gradient_norm: 0.607040
+      maximum_gradient_norm: 5.447399
+      total_nan_count: 0
+      total_loss_spike_count: 0
+      parameter_count: 2757605
+      training_tokens_per_second: 610617.51
+      generation_tokens_per_second: 351.29
+      peak_gpu_memory_gb: 1.9707
+      total_training_time_sec: 435.48
+    generation:
+      temperature: 0.8
+      distinct_1: 0.097446
+      distinct_2: 0.422754
+      distinct_3: 0.666328
+      repeated_4gram_rate: 0.230967
+    notes: >
+      Six transformer blocks on an embedding width of 192 with a 256 character
+      context, deliberately narrower and deeper than my teammate's four blocks
+      on 256 with a 128 character context. No NaN and no loss spike across the
+      run. The generalisation gap is -0.000931, so validation loss sits very
+      slightly below training loss and there is no sign of overfitting.
+
+pending:
+  raw_log: >
+    No raw training log was captured for this run. The brief asks for logs to
+    be kept unedited as the evidence trail, so a rerun should write one.
+  checkpoint: >
+    task1_best_model.pt exists locally but is not yet committed to
+    task1_llm/yashashree_shinde/checkpoints/.
+
+reproduction:
+  one_command: "run src/task_1.ipynb end to end"
+  data_prerequisite: "bash scripts/download_data.sh task1"
+  expected_runtime: "about 7 minutes on an RTX 4090"
