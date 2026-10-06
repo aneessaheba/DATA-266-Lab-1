@@ -1,0 +1,63 @@
+PROMPT: 'Once upon a time' | greedy
+Once upon a time, there was a little girl named Lily. She loved to play outside in the park with her friends. One day, she went to the park with her mommy and daddy. They saw a big boy who was very sad and angry. They wanted to show her mommy how to be careful when they saw the boy was so happy to have a new friend
+
+PROMPT: 'The little girl' | greedy
+The little girl was so happy to have a new friend to play with. She had a big box of colorful things that she had been so brave and she was so happy to have a new friend.
+<|endofstory|>
+Once upon a time, there was a little girl named Lily. She loved to play outside in the park with her friends. One day, she went t
+
+PROMPT: 'One day, Tom' | greedy
+One day, Tom went to the park with his mom. He saw a big storm on the ground. He wanted to see what was inside. He wanted to see what was inside.
+
+"Hello, little boy," said the storm. "I want to go to the store to buy some food," said the storm.
+
+The storm smiled and said, "I want to share you with your friends
+
+PROMPT: 'Once upon a time' | temperature=0.5
+Once upon a time, there was a little girl named Lily. She loved to play outside in the sunshine and play in the garden. One day, she wanted to play with her toys to play with her toys. She took her doll and threw it into the box. She saw the toy car and was so happy. She thanked the doll and they both laughed and s
+
+PROMPT: 'Once upon a time' | temperature=0.8
+Once upon a time, there was a little girl named Lily. She loved to dream on a journal and play all day long. One day she was walking outside to see what a feather that was walking. She saw a big hill and a bowl of colorful blocks. She started to cry.
+
+"Mom, can I have a mouse to stop a very happy so you give them e
+
+PROMPT: 'Once upon a time' | temperature=1.2
+Once upon a time there was a girl named Clay. She loved playing outside and majwming running around. One day, Anna went to the park so much adventure. That day she was even surprised eating. Carefully, here no hourse.
+
+She enjoyed exploring the world. She saw her mom radious and ate the pastels. She had miles and n
+
+PROMPT: 'The little girl' | temperature=0.5
+The little girl was so happy to be brave and she started to cry. The little girl was so excited and she couldn't wait to stay away from the store. She talked about the same toy and said, "That's a good friend, Jack!"
+
+So Jack smiled and thanked the shopkeeper for his mom. Jack felt happy and content. He had a grea
+
+PROMPT: 'The little girl' | temperature=0.8
+The little girl felt very sad and angry.
+
+The little girl was so excited. She smiled and said, "Okay, it's okay." She had the little girl never took her off the tree again.
+<|endofstory|>
+Tom and Lily were playing in the park with their toys and books. They saw a big hole in the yard. The book was scared and wante
+
+PROMPT: 'The little girl' | temperature=1.2
+The little girl felt very upset and loved her mom and daddy. 
+
+The bear had fun with her comfortable yet. She hugged her and said she would do something she did. She searched back to a cembarrator ran home nervously.
+
+She enjoyed exploring the world. She saw her mom rainbow and said, "Okay, mom. You are hot and me
+
+PROMPT: 'One day, Tom' | temperature=0.5
+One day, Tom found a big box in his box. It was a small pot of different dress. 
+
+Tom was sad but he couldn't find it. He said he had to stop singing on the ground and walk around and his friends. They were so happy that he had learned that it's important to be careful and get to a very happy she could have hel
+
+PROMPT: 'One day, Tom' | temperature=0.8
+One day, Tom found a little boy named Tom who loved to play outside. One day, Tom was playing outside when he saw a big, scary dog with a lot of animals. Tom was very happy and said, "Wow, that is what your dog, Bob said, I must rest. We think they are still more red things to do a valuable little boy." 
+
+Zoe n
+
+PROMPT: 'One day, Tom' | temperature=1.2
+One day, Tom found a little boy named Tom who likes to build walls.
+
+One day, Tom and Tom saw some rainbow on the water. It was so big that their faces that the rabbit wanted to search. But Tom did not want to peek petter. He kept stitting in the mineral and making a hug. He said,
+ "Can we catch it?" Both asked
+

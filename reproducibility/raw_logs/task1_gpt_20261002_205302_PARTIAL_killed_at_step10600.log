@@ -1,0 +1,73 @@
+2026-10-02 20:53:02 run_id=20261002_205302 device=mps (Apple Silicon GPU (MPS)) seed=4350
+2026-10-02 20:53:02 layers=4 d_model=256 heads=4 d_ff=1024 block=128 dropout=0.1 lr=0.0003 batch=64 epochs=10 warmup=1000
+2026-10-02 20:53:02 vocab_size=91 repair_mojibake=True
+2026-10-02 20:53:03 train_sequences=100000 validation_sequences=10000 window=129 total_windows=141088
+2026-10-02 20:53:03 parameter_count=3238912
+2026-10-02 20:53:04 causal_mask_verified future_mass=0.0 earlier_logit_delta=0.0
+2026-10-02 20:53:04 TRAINING START total_steps=15620 parameters=3238912
+2026-10-02 20:53:04 step 0/15620 loss=4.6468 grad_norm=7.9975 lr=3.000e-07
+2026-10-02 20:53:32 step 200/15620 loss=2.5573 grad_norm=0.6385 lr=6.030e-05
+2026-10-02 20:54:01 step 400/15620 loss=2.2456 grad_norm=0.6578 lr=1.203e-04
+2026-10-02 20:54:29 step 600/15620 loss=1.9709 grad_norm=1.5053 lr=1.803e-04
+2026-10-02 20:54:57 step 800/15620 loss=1.6553 grad_norm=1.0797 lr=2.403e-04
+2026-10-02 20:55:26 step 1000/15620 loss=1.4630 grad_norm=1.0991 lr=3.000e-04
+2026-10-02 20:55:54 step 1200/15620 loss=1.3418 grad_norm=0.9529 lr=2.999e-04
+2026-10-02 20:56:22 step 1400/15620 loss=1.2350 grad_norm=0.9830 lr=2.995e-04
+2026-10-02 20:56:52 EPOCH 1/10 train_loss=1.9173 val_loss=1.1318 val_acc=0.6476 ppl=3.101 bpc=1.6329 gap=-0.7854 grad_mean=1.1476 seconds=221.0 tokens_per_sec=57910 peak_gb=1.104
+2026-10-02 20:56:52 CHECKPOINT best_model.pt at epoch 1 val_loss=1.1318
+2026-10-02 20:56:57 step 1600/15620 loss=1.2093 grad_norm=0.9513 lr=2.989e-04
+2026-10-02 20:57:27 step 1800/15620 loss=1.1689 grad_norm=0.8578 lr=2.980e-04
+2026-10-02 20:57:58 step 2000/15620 loss=1.0928 grad_norm=0.8544 lr=2.969e-04
+2026-10-02 20:58:29 step 2200/15620 loss=1.0916 grad_norm=0.8440 lr=2.955e-04
+2026-10-02 20:59:00 step 2400/15620 loss=1.0189 grad_norm=0.7730 lr=2.939e-04
+2026-10-02 20:59:32 step 2600/15620 loss=1.0452 grad_norm=0.7417 lr=2.921e-04
+2026-10-02 21:00:03 step 2800/15620 loss=0.9850 grad_norm=0.7672 lr=2.900e-04
+2026-10-02 21:00:35 step 3000/15620 loss=0.9985 grad_norm=0.7289 lr=2.877e-04
+2026-10-02 21:01:02 EPOCH 2/10 train_loss=1.0787 val_loss=0.9276 val_acc=0.7084 ppl=2.529 bpc=1.3383 gap=-0.1511 grad_mean=0.8157 seconds=243.0 tokens_per_sec=52656 peak_gb=1.104
+2026-10-02 21:01:02 CHECKPOINT best_model.pt at epoch 2 val_loss=0.9276
+2026-10-02 21:01:15 step 3200/15620 loss=0.9399 grad_norm=0.7278 lr=2.852e-04
+2026-10-02 21:01:47 step 3400/15620 loss=0.9724 grad_norm=0.6769 lr=2.824e-04
+2026-10-02 21:02:19 step 3600/15620 loss=0.9474 grad_norm=0.6818 lr=2.795e-04
+2026-10-02 21:02:51 step 3800/15620 loss=0.9820 grad_norm=0.6736 lr=2.763e-04
+2026-10-02 21:03:22 step 4000/15620 loss=0.9354 grad_norm=0.6464 lr=2.729e-04
+2026-10-02 21:03:55 step 4200/15620 loss=0.8833 grad_norm=0.6547 lr=2.693e-04
+2026-10-02 21:04:28 step 4400/15620 loss=0.9296 grad_norm=0.6618 lr=2.655e-04
+2026-10-02 21:05:01 step 4600/15620 loss=0.8976 grad_norm=0.6221 lr=2.616e-04
+2026-10-02 21:05:23 EPOCH 3/10 train_loss=0.9493 val_loss=0.8616 val_acc=0.7279 ppl=2.367 bpc=1.2430 gap=-0.0877 grad_mean=0.6734 seconds=253.0 tokens_per_sec=50575 peak_gb=1.104
+2026-10-02 21:05:23 CHECKPOINT best_model.pt at epoch 3 val_loss=0.8616
+2026-10-02 21:05:43 step 4800/15620 loss=0.9544 grad_norm=0.6686 lr=2.574e-04
+2026-10-02 21:06:15 step 5000/15620 loss=0.8880 grad_norm=0.6257 lr=2.531e-04
+2026-10-02 21:06:48 step 5200/15620 loss=0.9437 grad_norm=0.6166 lr=2.487e-04
+2026-10-02 21:07:21 step 5400/15620 loss=0.8892 grad_norm=0.6124 lr=2.440e-04
+2026-10-02 21:07:54 step 5600/15620 loss=0.8932 grad_norm=0.6053 lr=2.392e-04
+2026-10-02 21:08:28 step 5800/15620 loss=0.8889 grad_norm=0.5879 lr=2.343e-04
+2026-10-02 21:09:01 step 6000/15620 loss=0.8781 grad_norm=0.5908 lr=2.293e-04
+2026-10-02 21:09:35 step 6200/15620 loss=0.8216 grad_norm=0.5629 lr=2.241e-04
+2026-10-02 21:09:51 EPOCH 4/10 train_loss=0.8925 val_loss=0.8273 val_acc=0.7383 ppl=2.287 bpc=1.1936 gap=-0.0652 grad_mean=0.6109 seconds=259.7 tokens_per_sec=49281 peak_gb=1.104
+2026-10-02 21:09:51 CHECKPOINT best_model.pt at epoch 4 val_loss=0.8273
+2026-10-02 21:10:17 step 6400/15620 loss=0.8933 grad_norm=0.5718 lr=2.189e-04
+2026-10-02 21:10:51 step 6600/15620 loss=0.8477 grad_norm=0.5746 lr=2.135e-04
+2026-10-02 21:11:24 step 6800/15620 loss=0.8730 grad_norm=0.5877 lr=2.080e-04
+2026-10-02 21:11:58 step 7000/15620 loss=0.8760 grad_norm=0.5672 lr=2.025e-04
+2026-10-02 21:12:32 step 7200/15620 loss=0.8698 grad_norm=0.6024 lr=1.969e-04
+2026-10-02 21:13:08 step 7400/15620 loss=0.8611 grad_norm=0.5688 lr=1.912e-04
+2026-10-02 21:13:43 step 7600/15620 loss=0.8446 grad_norm=0.5689 lr=1.855e-04
+2026-10-02 21:14:20 step 7800/15620 loss=0.8578 grad_norm=0.5684 lr=1.798e-04
+2026-10-02 21:14:30 EPOCH 5/10 train_loss=0.8567 val_loss=0.8006 val_acc=0.7458 ppl=2.227 bpc=1.1550 gap=-0.0561 grad_mean=0.5806 seconds=269.9 tokens_per_sec=47413 peak_gb=1.104
+2026-10-02 21:14:30 CHECKPOINT best_model.pt at epoch 5 val_loss=0.8006
+2026-10-02 21:15:05 step 8000/15620 loss=0.8714 grad_norm=0.5856 lr=1.740e-04
+2026-10-02 21:15:42 step 8200/15620 loss=0.8114 grad_norm=0.5645 lr=1.682e-04
+2026-10-02 21:16:18 step 8400/15620 loss=0.8234 grad_norm=0.5806 lr=1.624e-04
+2026-10-02 21:16:54 step 8600/15620 loss=0.8519 grad_norm=0.5658 lr=1.566e-04
+2026-10-02 21:17:30 step 8800/15620 loss=0.8229 grad_norm=0.5484 lr=1.508e-04
+2026-10-02 21:18:07 step 9000/15620 loss=0.8195 grad_norm=0.5631 lr=1.451e-04
+2026-10-02 21:18:43 step 9200/15620 loss=0.8013 grad_norm=0.5598 lr=1.393e-04
+2026-10-02 21:19:23 EPOCH 6/10 train_loss=0.8317 val_loss=0.7839 val_acc=0.7510 ppl=2.190 bpc=1.1309 gap=-0.0478 grad_mean=0.5688 seconds=284.2 tokens_per_sec=45019 peak_gb=1.104
+2026-10-02 21:19:23 CHECKPOINT best_model.pt at epoch 6 val_loss=0.7839
+2026-10-02 21:19:28 step 9400/15620 loss=0.8161 grad_norm=0.5659 lr=1.337e-04
+2026-10-02 21:20:05 step 9600/15620 loss=0.8383 grad_norm=0.5828 lr=1.281e-04
+2026-10-02 21:20:39 step 9800/15620 loss=0.8420 grad_norm=0.5756 lr=1.225e-04
+2026-10-02 21:21:15 step 10000/15620 loss=0.7985 grad_norm=0.5643 lr=1.170e-04
+2026-10-02 21:21:48 step 10200/15620 loss=0.8344 grad_norm=0.5720 lr=1.117e-04
+2026-10-02 21:22:21 step 10400/15620 loss=0.8258 grad_norm=0.5623 lr=1.064e-04
+2026-10-02 21:22:54 step 10600/15620 loss=0.8189 grad_norm=0.5802 lr=1.012e-04

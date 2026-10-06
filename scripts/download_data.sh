@@ -14,37 +14,68 @@
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Interpreter used for the download helpers. Defaults to the repository virtual
+# environment when it exists, because the dataset libraries are installed there
+# and not in the system python. Override with PYTHON=/path/to/python
+if [[ -z "${PYTHON:-}" ]]; then
+  if [[ -x "${REPO_ROOT}/.venv/bin/python" ]]; then
+    PYTHON="${REPO_ROOT}/.venv/bin/python"
+  else
+    PYTHON="python3"
+  fi
+fi
 TARGET="${1:-all}"
 
 log() { printf '[download_data] %s\n' "$*"; }
 
 # --- Task 1: TinyStories ----------------------------------------------------
-# Pulled through the HuggingFace datasets library and written out as plain text
-# so the character-level tokenizer in Task 1 reads one simple file.
+# Streamed rather than fully downloaded: the complete dataset is several GB,
+# and a character-level model needs only a small slice of it. TINYSTORIES_N
+# controls how many stories are pulled (default 20000, roughly 20 MB), which
+# is far more than the 100K/10K character split the brief asks for.
+#
+#   TINYSTORIES_N=50000 bash scripts/download_data.sh task1
 download_task1() {
   local out_dir="$REPO_ROOT/task1_llm/data"
+  local n_stories="${TINYSTORIES_N:-20000}"
   mkdir -p "$out_dir"
-  if [[ -s "$out_dir/TinyStories-train.txt" ]]; then
-    log "Task 1: already present, skipping."
+  if [[ -s "$out_dir/TinyStories-sample.txt" ]]; then
+    log "Task 1: already present, skipping. Delete the file to re-download."
     return
   fi
-  log "Task 1: downloading TinyStories (roneneldan/TinyStories)..."
-  python3 - "$out_dir" <<'PY'
-import sys, pathlib
+  log "Task 1: streaming $n_stories TinyStories examples..."
+  "${PYTHON}" - "$out_dir" "$n_stories" <<'PYSTREAM'
+import sys, pathlib, itertools
 from datasets import load_dataset
 
 out_dir = pathlib.Path(sys.argv[1])
-ds = load_dataset("roneneldan/TinyStories")
-for split, filename in (("train", "TinyStories-train.txt"),
-                        ("validation", "TinyStories-valid.txt")):
-    if split not in ds:
-        continue
-    path = out_dir / filename
-    with path.open("w", encoding="utf-8") as fh:
-        for row in ds[split]:
-            fh.write(row["text"].strip() + "\n<|endofstory|>\n")
-    print(f"  wrote {path} ({path.stat().st_size / 1e6:.1f} MB)")
-PY
+n_stories = int(sys.argv[2])
+
+# streaming=True pulls examples one at a time over the network instead of
+# downloading the entire dataset to disk first.
+stream = load_dataset("roneneldan/TinyStories", split="train", streaming=True)
+
+path = out_dir / "TinyStories-sample.txt"
+n_chars = 0
+with path.open("w", encoding="utf-8") as fh:
+    for row in itertools.islice(stream, n_stories):
+        text = row["text"].strip()
+        fh.write(text + "\n<|endofstory|>\n")
+        n_chars += len(text)
+
+print(f"  wrote {path}")
+print(f"  {n_stories} stories, {n_chars:,} characters, {path.stat().st_size / 1e6:.1f} MB")
+
+# The streaming reader leaves worker processes and a shared memory manager
+# behind that do not always terminate, which leaves this script hanging
+# indefinitely after the file is already complete. The file is closed and
+# flushed by this point, so exit immediately rather than waiting on cleanup
+# that may never finish.
+import sys, os
+sys.stdout.flush()
+os._exit(0)
+PYSTREAM
 }
 
 # --- Task 2: Yelp Polarity --------------------------------------------------
@@ -57,7 +88,7 @@ download_task2() {
     return
   fi
   log "Task 2: downloading Yelp Polarity (fancyzhx/yelp_polarity)..."
-  python3 - "$out_dir" <<'PY'
+  "${PYTHON}" - "$out_dir" <<'PY'
 import sys, pathlib
 from datasets import load_dataset
 

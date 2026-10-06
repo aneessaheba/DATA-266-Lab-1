@@ -1,0 +1,109 @@
+2026-10-04 21:25:29 run_id=20261004_212529 device=mps (Apple Silicon GPU (MPS)) seed=5330
+2026-10-04 21:25:29 layers=4 d_model=256 heads=4 d_ff=1024 block=128 dropout=0.1 lr=0.0003 batch=64 epochs=10 warmup=1000
+2026-10-04 21:25:29 vocab_size=91 repair_mojibake=True
+2026-10-04 21:25:30 train_sequences=100000 validation_sequences=10000 window=129 total_windows=141088
+2026-10-04 21:25:30 parameter_count=3238912
+2026-10-04 21:25:31 causal_mask_verified future_mass=0.0 earlier_logit_delta=0.0
+2026-10-04 21:25:31 TRAINING START total_steps=15620 parameters=3238912
+2026-10-04 21:25:31 step 0/15620 loss=4.4729 grad_norm=6.4744 lr=3.000e-07
+2026-10-04 21:25:59 step 200/15620 loss=2.5469 grad_norm=0.7618 lr=6.030e-05
+2026-10-04 21:26:25 step 400/15620 loss=2.2297 grad_norm=0.7002 lr=1.203e-04
+2026-10-04 21:26:54 step 600/15620 loss=1.9742 grad_norm=1.1952 lr=1.803e-04
+2026-10-04 21:27:23 step 800/15620 loss=1.7038 grad_norm=1.1149 lr=2.403e-04
+2026-10-04 21:27:55 step 1000/15620 loss=1.4332 grad_norm=1.1268 lr=3.000e-04
+2026-10-04 21:28:33 step 1200/15620 loss=1.3718 grad_norm=1.0177 lr=2.999e-04
+2026-10-04 21:29:16 step 1400/15620 loss=1.2697 grad_norm=0.9935 lr=2.995e-04
+2026-10-04 21:30:03 EPOCH 1/10 train_loss=1.9119 val_loss=1.1349 val_acc=0.6458 ppl=3.111 bpc=1.6374 gap=-0.7770 grad_mean=1.1256 seconds=260.8 tokens_per_sec=49066 peak_gb=1.104
+2026-10-04 21:30:03 CHECKPOINT best_model.pt at epoch 1 val_loss=1.1349
+2026-10-04 21:30:11 step 1600/15620 loss=1.1918 grad_norm=0.9098 lr=2.989e-04
+2026-10-04 21:30:54 step 1800/15620 loss=1.1989 grad_norm=0.8936 lr=2.980e-04
+2026-10-04 21:31:36 step 2000/15620 loss=1.1304 grad_norm=0.8694 lr=2.969e-04
+2026-10-04 21:32:18 step 2200/15620 loss=1.1173 grad_norm=0.8733 lr=2.955e-04
+2026-10-04 21:33:00 step 2400/15620 loss=1.0726 grad_norm=0.7802 lr=2.939e-04
+2026-10-04 21:33:46 step 2600/15620 loss=1.0369 grad_norm=0.7901 lr=2.921e-04
+2026-10-04 21:34:32 step 2800/15620 loss=1.0053 grad_norm=0.7446 lr=2.900e-04
+2026-10-04 21:35:16 step 3000/15620 loss=0.9990 grad_norm=0.6934 lr=2.877e-04
+2026-10-04 21:35:53 EPOCH 2/10 train_loss=1.0826 val_loss=0.9282 val_acc=0.7076 ppl=2.530 bpc=1.3391 gap=-0.1544 grad_mean=0.8178 seconds=340.0 tokens_per_sec=37640 peak_gb=1.104
+2026-10-04 21:35:53 CHECKPOINT best_model.pt at epoch 2 val_loss=0.9282
+2026-10-04 21:36:10 step 3200/15620 loss=0.9815 grad_norm=0.7019 lr=2.852e-04
+2026-10-04 21:36:54 step 3400/15620 loss=0.9808 grad_norm=0.7196 lr=2.824e-04
+2026-10-04 21:37:38 step 3600/15620 loss=0.9733 grad_norm=0.6826 lr=2.795e-04
+2026-10-04 21:38:22 step 3800/15620 loss=0.9081 grad_norm=0.6497 lr=2.763e-04
+2026-10-04 21:39:07 step 4000/15620 loss=0.9284 grad_norm=0.6607 lr=2.729e-04
+2026-10-04 21:39:54 step 4200/15620 loss=0.9504 grad_norm=0.6566 lr=2.693e-04
+2026-10-04 21:40:38 step 4400/15620 loss=0.9169 grad_norm=0.6769 lr=2.655e-04
+2026-10-04 21:41:25 step 4600/15620 loss=0.9168 grad_norm=0.6328 lr=2.616e-04
+2026-10-04 21:41:57 EPOCH 3/10 train_loss=0.9521 val_loss=0.8660 val_acc=0.7266 ppl=2.377 bpc=1.2494 gap=-0.0861 grad_mean=0.6773 seconds=352.4 tokens_per_sec=36315 peak_gb=1.104
+2026-10-04 21:41:57 CHECKPOINT best_model.pt at epoch 3 val_loss=0.8660
+2026-10-04 21:42:29 step 4800/15620 loss=0.9096 grad_norm=0.6425 lr=2.574e-04
+2026-10-04 21:43:18 step 5000/15620 loss=0.9209 grad_norm=0.6240 lr=2.531e-04
+2026-10-04 21:44:06 step 5200/15620 loss=0.8883 grad_norm=0.6189 lr=2.487e-04
+2026-10-04 21:44:54 step 5400/15620 loss=0.9112 grad_norm=0.6227 lr=2.440e-04
+2026-10-04 21:45:42 step 5600/15620 loss=0.8909 grad_norm=0.6203 lr=2.392e-04
+2026-10-04 21:46:30 step 5800/15620 loss=0.8685 grad_norm=0.5876 lr=2.343e-04
+2026-10-04 21:47:21 step 6000/15620 loss=0.9265 grad_norm=0.6039 lr=2.293e-04
+2026-10-04 21:48:10 step 6200/15620 loss=0.8741 grad_norm=0.5939 lr=2.241e-04
+2026-10-04 21:48:33 EPOCH 4/10 train_loss=0.8949 val_loss=0.8284 val_acc=0.7376 ppl=2.290 bpc=1.1951 gap=-0.0665 grad_mean=0.6112 seconds=384.2 tokens_per_sec=33302 peak_gb=1.104
+2026-10-04 21:48:33 CHECKPOINT best_model.pt at epoch 4 val_loss=0.8284
+2026-10-04 21:49:10 step 6400/15620 loss=0.8782 grad_norm=0.6016 lr=2.189e-04
+2026-10-04 21:49:57 step 6600/15620 loss=0.8611 grad_norm=0.5739 lr=2.135e-04
+2026-10-04 21:50:45 step 6800/15620 loss=0.8488 grad_norm=0.5598 lr=2.080e-04
+2026-10-04 21:51:36 step 7000/15620 loss=0.8719 grad_norm=0.5734 lr=2.025e-04
+2026-10-04 21:52:25 step 7200/15620 loss=0.8499 grad_norm=0.5792 lr=1.969e-04
+2026-10-04 21:53:15 step 7400/15620 loss=0.8319 grad_norm=0.5733 lr=1.912e-04
+2026-10-04 21:54:04 step 7600/15620 loss=0.8722 grad_norm=0.5839 lr=1.855e-04
+2026-10-04 21:54:52 step 7800/15620 loss=0.8475 grad_norm=0.5762 lr=1.798e-04
+2026-10-04 21:55:05 EPOCH 5/10 train_loss=0.8593 val_loss=0.8037 val_acc=0.7450 ppl=2.234 bpc=1.1595 gap=-0.0556 grad_mean=0.5813 seconds=380.5 tokens_per_sec=33629 peak_gb=1.104
+2026-10-04 21:55:05 CHECKPOINT best_model.pt at epoch 5 val_loss=0.8037
+2026-10-04 21:55:52 step 8000/15620 loss=0.8460 grad_norm=0.5754 lr=1.740e-04
+2026-10-04 21:56:41 step 8200/15620 loss=0.8298 grad_norm=0.5884 lr=1.682e-04
+2026-10-04 21:57:30 step 8400/15620 loss=0.8274 grad_norm=0.5604 lr=1.624e-04
+2026-10-04 21:58:19 step 8600/15620 loss=0.8175 grad_norm=0.5811 lr=1.566e-04
+2026-10-04 21:59:07 step 8800/15620 loss=0.8413 grad_norm=0.5582 lr=1.508e-04
+2026-10-04 21:59:54 step 9000/15620 loss=0.8242 grad_norm=0.5693 lr=1.451e-04
+2026-10-04 22:00:42 step 9200/15620 loss=0.8787 grad_norm=0.5848 lr=1.393e-04
+2026-10-04 22:01:34 EPOCH 6/10 train_loss=0.8341 val_loss=0.7867 val_acc=0.7505 ppl=2.196 bpc=1.1350 gap=-0.0474 grad_mean=0.5695 seconds=377.6 tokens_per_sec=33886 peak_gb=1.104
+2026-10-04 22:01:34 CHECKPOINT best_model.pt at epoch 6 val_loss=0.7867
+2026-10-04 22:01:41 step 9400/15620 loss=0.7775 grad_norm=0.5445 lr=1.337e-04
+2026-10-04 22:02:25 step 9600/15620 loss=0.7863 grad_norm=0.5613 lr=1.281e-04
+2026-10-04 22:03:09 step 9800/15620 loss=0.8147 grad_norm=0.5555 lr=1.225e-04
+2026-10-04 22:03:52 step 10000/15620 loss=0.7811 grad_norm=0.5547 lr=1.170e-04
+2026-10-04 22:04:34 step 10200/15620 loss=0.8353 grad_norm=0.5921 lr=1.117e-04
+2026-10-04 22:05:16 step 10400/15620 loss=0.8340 grad_norm=0.5706 lr=1.064e-04
+2026-10-04 22:05:58 step 10600/15620 loss=0.8334 grad_norm=0.5993 lr=1.012e-04
+2026-10-04 22:06:40 step 10800/15620 loss=0.8217 grad_norm=0.5625 lr=9.616e-05
+2026-10-04 22:07:18 EPOCH 7/10 train_loss=0.8149 val_loss=0.7721 val_acc=0.7546 ppl=2.164 bpc=1.1140 gap=-0.0427 grad_mean=0.5674 seconds=333.7 tokens_per_sec=38346 peak_gb=1.104
+2026-10-04 22:07:18 CHECKPOINT best_model.pt at epoch 7 val_loss=0.7721
+2026-10-04 22:07:32 step 11000/15620 loss=0.8224 grad_norm=0.5712 lr=9.124e-05
+2026-10-04 22:08:14 step 11200/15620 loss=0.8358 grad_norm=0.5842 lr=8.645e-05
+2026-10-04 22:08:57 step 11400/15620 loss=0.8303 grad_norm=0.5945 lr=8.180e-05
+2026-10-04 22:09:45 step 11600/15620 loss=0.7723 grad_norm=0.5647 lr=7.731e-05
+2026-10-04 22:10:28 step 11800/15620 loss=0.7814 grad_norm=0.5496 lr=7.298e-05
+2026-10-04 22:11:11 step 12000/15620 loss=0.7947 grad_norm=0.5552 lr=6.883e-05
+2026-10-04 22:11:54 step 12200/15620 loss=0.7906 grad_norm=0.5700 lr=6.484e-05
+2026-10-04 22:12:37 step 12400/15620 loss=0.7793 grad_norm=0.5591 lr=6.105e-05
+2026-10-04 22:13:08 EPOCH 8/10 train_loss=0.8006 val_loss=0.7635 val_acc=0.7577 ppl=2.146 bpc=1.1015 gap=-0.0371 grad_mean=0.5709 seconds=339.1 tokens_per_sec=37731 peak_gb=1.104
+2026-10-04 22:13:08 CHECKPOINT best_model.pt at epoch 8 val_loss=0.7635
+2026-10-04 22:13:30 step 12600/15620 loss=0.7759 grad_norm=0.5899 lr=5.744e-05
+2026-10-04 22:14:13 step 12800/15620 loss=0.7635 grad_norm=0.5610 lr=5.404e-05
+2026-10-04 22:14:57 step 13000/15620 loss=0.7634 grad_norm=0.5777 lr=5.084e-05
+2026-10-04 22:15:45 step 13200/15620 loss=0.7682 grad_norm=0.5446 lr=4.785e-05
+2026-10-04 22:16:30 step 13400/15620 loss=0.8025 grad_norm=0.5824 lr=4.507e-05
+2026-10-04 22:17:13 step 13600/15620 loss=0.7721 grad_norm=0.5656 lr=4.252e-05
+2026-10-04 22:17:55 step 13800/15620 loss=0.7582 grad_norm=0.5675 lr=4.019e-05
+2026-10-04 22:18:39 step 14000/15620 loss=0.8244 grad_norm=0.6024 lr=3.810e-05
+2026-10-04 22:19:02 EPOCH 9/10 train_loss=0.7906 val_loss=0.7567 val_acc=0.7598 ppl=2.131 bpc=1.0918 gap=-0.0338 grad_mean=0.5763 seconds=343.2 tokens_per_sec=37280 peak_gb=1.104
+2026-10-04 22:19:02 CHECKPOINT best_model.pt at epoch 9 val_loss=0.7567
+2026-10-04 22:19:35 step 14200/15620 loss=0.8046 grad_norm=0.6470 lr=3.624e-05
+2026-10-04 22:20:19 step 14400/15620 loss=0.8021 grad_norm=0.5885 lr=3.461e-05
+2026-10-04 22:21:02 step 14600/15620 loss=0.7445 grad_norm=0.5597 lr=3.323e-05
+2026-10-04 22:21:43 step 14800/15620 loss=0.7465 grad_norm=0.5569 lr=3.209e-05
+2026-10-04 22:22:26 step 15000/15620 loss=0.7920 grad_norm=0.6005 lr=3.120e-05
+2026-10-04 22:23:09 step 15200/15620 loss=0.8235 grad_norm=0.6025 lr=3.055e-05
+2026-10-04 22:23:50 step 15400/15620 loss=0.7865 grad_norm=0.5855 lr=3.015e-05
+2026-10-04 22:24:33 step 15600/15620 loss=0.8015 grad_norm=0.5906 lr=3.000e-05
+2026-10-04 22:24:48 EPOCH 10/10 train_loss=0.7841 val_loss=0.7538 val_acc=0.7607 ppl=2.125 bpc=1.0875 gap=-0.0303 grad_mean=0.5816 seconds=336.0 tokens_per_sec=38086 peak_gb=1.104
+2026-10-04 22:24:48 CHECKPOINT best_model.pt at epoch 10 val_loss=0.7538
+2026-10-04 22:24:48 TRAINING COMPLETE seconds=3557.0 best_val_loss=0.7538 spikes=0 nan_steps=0
+2026-10-04 22:25:04 generation_chars_per_sec=233.30 samples=12
+2026-10-04 22:25:13 METRICS train_cross_entropy_loss=0.7841425398400438 val_cross_entropy_loss=0.7538263710441103 best_val_cross_entropy_loss=0.7538263710441103 perplexity=2.1251159615828326 bits_per_character=1.0875415671966617 generalization_gap=-0.030316168795933462 top1_next_char_accuracy=0.76067265625 distinct_1=0.04666666666666667 distinct_2=0.27030033370411566 distinct_3=0.5412026726057907 repeated_4gram_rate=0.29431438127090304 repeated_4gram_rate_greedy=0.4782608695652174 grad_norm_mean=0.6678972461502928 grad_norm_max=6.486785411834717 grad_norm_median=0.5886402428150177 loss_spike_count=0 nan_count=0 parameter_count=3238912 vocab_size=91 train_tokens_per_sec=37528.11718886613 gen_tokens_per_sec=233.30018109091864 peak_memory_gb=1.1042938232421875 total_training_time_sec=3556.9609855830204 epochs=10 seed=5330
