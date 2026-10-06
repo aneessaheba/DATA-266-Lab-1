@@ -1,34 +1,134 @@
-# Manifest — yashashree_shinde — task2_sentiment
-# Brief Section 5: package/library versions, environment file, and which
+# Manifest for yashashree_shinde, Task 2
+# Brief section 5: package and library versions, environment file, and which
 # checkpoint maps to which result in the report.
-# Fill this in AFTER the run, from the run itself — do not guess.
+# Filled in from the run itself, using task2_model_configuration.json,
+# task2_metrics_report.json and metrics_report.csv.
 
 member: yashashree_shinde
 task: task2_sentiment
 
 hardware:
-  machine: ""          # e.g. "SJSU GPU Lab, node XX"
-  cpu: ""
-  gpu: ""
-  gpu_memory_gb: ""
-  ram_gb: ""
-  os: ""
-  cuda_version: ""
-  driver_version: ""
+  machine: "personal workstation"
+  cpu: "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD"
+  gpu: "NVIDIA GeForce RTX 4090"
+  gpu_memory_gb: "peak allocated was 1.80 during the bidirectional GRU"
+  ram_gb: "not recorded"
+  os: "Windows 11, build 10.0.26200"
+  cuda_version: "13.2"
+  driver_version: "not recorded"
 
 environment:
-  python: ""
+  python: "not recorded"
   env_file: "environment/requirements.txt"
-  pip_freeze: ""       # path to the exact freeze captured at run time
-  random_seed: ""
+  pip_freeze: "not captured at run time"
+  random_seed: "4349"
+  seeded: "python random, numpy, torch, and the data split"
+
+data:
+  dataset: yelp_polarity
+  validation_fraction: 0.10
+  vocab_size: 30000
+  min_frequency: 2
+  max_length: 256
+  test_examples: 38000
+  class_balance: "50 percent positive"
+  preprocessing: >
+    lowercased, word split, stopwords removed except the negation words, which
+    are kept because removing them makes "not good" and "good" identical.
+
+models:
+  baseline_mean_pool:
+    pooling: masked mean pooling over learned embeddings
+    parameters: 3856770
+    checkpoint: task2_sentiment/yashashree_shinde/checkpoints/baseline_mean_pool.pt
+  experiment_cnn:
+    encoder: convolutions at several widths
+    parameters: 5181890
+    checkpoint: task2_sentiment/yashashree_shinde/checkpoints/experiment_cnn.pt
+  experiment_bigru:
+    encoder: bidirectional GRU
+    parameters: 6057026
+    checkpoint: task2_sentiment/yashashree_shinde/checkpoints/experiment_bigru.pt
+
+optimisation:
+  learning_rate: 3.0e-4
+  weight_decay: 1.0e-4
+  gradient_clip: 1.0
+  batch_size: 256
+  epochs: 5
+  model_selection: lowest validation loss
+  bootstrap_samples: 1000
 
 runs:
-  - run_id: ""         # e.g. 20260914_143000
-    config: ""         # path to the YAML config used
-    command: ""        # the exact command you ran
-    raw_log: ""        # reproducibility/raw_logs/<file>
-    checkpoint: ""     # path under checkpoints/
-    maps_to_report_result: ""   # which table/figure in the report this produced
-    start_time: ""
-    end_time: ""
-    notes: ""
+  - run_id: "task2_run_seed4349"
+    status: "reported run, all numbers in results.md and metrics_report.csv come from this"
+    config: "task2_sentiment/yashashree_shinde/task2_model_configuration.json"
+    command: "src/code.ipynb, run end to end"
+    raw_log: "not captured at run time"
+    checkpoint: >
+      Three, one per model, each the best epoch by validation loss. The
+      optimiser state was removed before committing, which took the set from
+      174.5 MB to 59.3 MB. Parameter counts were verified against the reported
+      values after stripping.
+    maps_to_report_result: >
+      Every row of task2_sentiment/yashashree_shinde/metrics_report.csv, the
+      results and comparison tables in sections 5 and 6 of results.md, the slice
+      table from task2_slice_metrics.json, the significance tests from
+      task2_mcnemar_results.json, and all twenty cases in failure_analysis.md.
+    epochs_completed: "5 per model, 15 in total"
+    headline_metrics:
+      baseline_mean_pool:
+        test_accuracy: 0.9348
+        macro_f1: 0.9348
+        roc_auc: 0.9822
+        mcc: 0.8696
+        brier: 0.0482
+        parameters: 3856770
+        training_time_sec: 255.83
+      experiment_cnn:
+        test_accuracy: 0.9285
+        macro_f1: 0.9285
+        roc_auc: 0.9818
+        mcc: 0.8579
+        brier: 0.0533
+        parameters: 5181890
+        training_time_sec: 292.50
+      experiment_bigru:
+        test_accuracy: 0.9469
+        macro_f1: 0.9469
+        roc_auc: 0.9869
+        mcc: 0.8938
+        brier: 0.0412
+        parameters: 6057026
+        training_time_sec: 290.14
+    notes: >
+      The bidirectional GRU is the best of the three and the only one that reads
+      word order. The convolutional model is significantly worse than my own
+      mean pooling baseline: McNemar gives chi square 22.74 at p = 1.9e-06, but
+      the counts run against it, with the baseline right and the CNN wrong on
+      1,376 reviews against 1,136 the other way.
+
+known_issues:
+  expected_calibration_error: >
+    The reported values of 0.4364, 0.4525 and 0.4629 cannot be correct alongside
+    the Brier scores of 0.0482, 0.0533 and 0.0412. For a balanced test set the
+    Brier decomposition gives Brier at least equal to reliability, and
+    reliability is at least the square of the calibration error, so an error of
+    0.4629 would require a Brier of at least 0.214. All three models break that
+    bound, so the calculation is wrong rather than the models being badly
+    calibrated. The Brier scores themselves are sound. The column is kept in
+    metrics_report.csv for transparency but should not be quoted until it is
+    recomputed.
+
+pending:
+  raw_log: >
+    No raw training log was captured for this run. The brief asks for logs to be
+    kept unedited as the evidence trail, so a rerun should write one.
+  outputs: >
+    No loss curves or confusion matrices were saved, so the outputs folder is
+    empty and the training behaviour cannot be inspected visually.
+
+reproduction:
+  one_command: "run src/code.ipynb end to end"
+  data_prerequisite: "bash scripts/download_data.sh task2"
+  expected_runtime: "about 14 minutes for all three models on an RTX 4090"
