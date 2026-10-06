@@ -1088,7 +1088,72 @@ monet_jpg/bc4b364a44.jpg, reconstruction validation_cycle_A/0000.png.
 - Validation generator loss rises from 6.89 to 7.66 while training loss falls
   from 7.72 to 3.55, for the same reason given in her teammate's section.
 
-## D. Side by Side Comparison
+## D. Human Audit
+
+The brief asks for a blinded audit of 30 fixed samples on style, content and
+artifacts, scored by two raters, with inter rater agreement reported.
+
+**Status: not completed.** Both
+`outputs/metrics/human_audit_30_samples.csv` files are 30 row templates with
+empty rater columns. The notebook deliberately does not generate ratings, and
+no substitute for two human raters was used. The automated preparation is in
+the repository and is described below, so the audit can be completed without
+rerunning anything.
+
+### 1) What was prepared
+
+- Contact sheets in `task3_gan/audit_sheets/` place all 30 samples per member
+  per direction on a single labelled image, so a rater views one picture
+  rather than opening thirty files.
+- The audit files originally pointed at `/app/task3_gan_output/...`, paths
+  inside the GPU lab container that do not exist in the repository. They are
+  now repository relative.
+- `scripts/score_human_audit.py` reads whatever two raters enter and computes
+  per criterion means, exact agreement, agreement within one point, and
+  Cohen's kappa with quadratic weights. Quadratic weighting is the appropriate
+  statistic for an ordinal five point scale because it corrects for chance
+  agreement and penalises a two point disagreement four times as heavily as a
+  one point one. The implementation was checked against identical, one point
+  apart, random and realistic rating pairs, returning 1.000, 0.000, 0.143 and
+  0.898 respectively.
+
+### 2) Why this component matters more than its mark weight
+
+Every automatic metric in this task is computed from Inception features or
+pixel distances. None of them penalise a plausible but fabricated detail. The
+clearest example is in both members' outputs.
+
+Both generators paint imitation artist signatures into the lower part of the
+frame, because real Monet paintings are signed and the discriminator therefore
+treats a corner mark as evidence of authenticity. Measured by comparing
+gradient energy in the bottom strip of each image against the rest of it, the
+artifact appears in 7 of 30 of Anees's validation translations and 16 of 30 of
+Yashashree's, with ratios up to 1.55 and 2.73.
+
+A signature of this kind very likely *improves* FID, since it moves the output
+closer to the real Monet distribution in feature space. It is also obviously
+wrong to any person who looks at the image. Both members' Kaggle submissions
+contain it. This is exactly the class of defect a human audit exists to catch,
+and the reason its absence is a real gap rather than a missing formality.
+
+### 3) What the audit would have been expected to show
+
+The automatic metrics give a clear prediction, which is what makes the missing
+audit measurable in principle rather than merely absent.
+
+| Criterion | Expected ordering | Supporting metric |
+|---|---|---|
+| Style | Anees ahead | photo to Monet FID 86.59 against 92.39 |
+| Content | Yashashree ahead | cycle reconstruction L1 0.1411 against 0.1647 |
+| Artifacts | Anees ahead | signature artifact in 7 of 30 against 16 of 30 |
+
+An audit that reproduced this ordering would corroborate the automatic
+metrics. An audit that contradicted it would be the more interesting result,
+because it would indicate that FID and KID are rewarding something human
+raters do not value, which the signature artifact already suggests is
+happening to some degree.
+
+## E. Side by Side Comparison
 
 | | Anees | Yashashree |
 |---|---|---|
@@ -1136,7 +1201,7 @@ Monets against all generated images with its own Inception preprocessing, while
 the scorer subsamples both sides to 300, sorts by filename and resizes
 differently. Only the scorer's version is comparable across the class.
 
-## E. Joint Analysis
+## F. Joint Analysis
 
 **Strengths.**
 
@@ -1294,8 +1359,9 @@ Stated rather than hidden.
 | III.A | Objective |
 | III.B | Member 1: Anees Saheba Guddi |
 | III.C | Member 2: Yashashree Shinde |
-| III.D | Side by Side Comparison |
-| III.E | Joint Analysis |
+| III.D | Human Audit |
+| III.E | Side by Side Comparison |
+| III.F | Joint Analysis |
 | IV | Evidence Trail |
 | V | Known Gaps |
 | | References |
