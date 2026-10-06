@@ -1,0 +1,63 @@
+# Task 3 CycleGAN, configuration for my run.
+# Mirrors the configuration cells in src/cyclegan_monet_photo.ipynb.
+# Written before the run. The numbers filled in under results are added
+# afterwards from the raw log, so this file is also the record of what was
+# planned against what happened.
+
+run:
+  member: anees_saheba
+  seed: 5330                  # last four digits of my student ID
+  device_preference: [cuda, mps, cpu]
+
+data:
+  domain_a: task3_gan/data/monet_jpg     # 300 Monet paintings
+  domain_b: task3_gan/data/photo_jpg     # 7038 photographs
+  pairing: unpaired
+  image_size: 256             # the size the Kaggle submission is scored at
+  batch_size: 1
+  augmentation: random horizontal flip, probability 0.5
+  normalisation: mean 0.5, standard deviation 0.5, per channel
+
+model:
+  generator: resnet
+  residual_blocks: 6          # my teammate uses 9
+  base_filters: 80            # my teammate uses 64
+  generator_parameters: 12239363
+  discriminator: patchgan
+  discriminator_parameters: 2764737
+  receptive_field_patches: 16  # 16 by 16 patch grid at 256 input
+  normalisation: instance
+  total_parameters: 30008200   # two generators and two discriminators
+
+optimisation:
+  optimiser: adam
+  learning_rate: 2.0e-4
+  betas: [0.5, 0.999]
+  schedule: constant for the first half, then linear decay to zero
+  decay_starts_at_epoch: 25
+  epochs: 50
+  gradient_clip: 1.0
+  adversarial_loss: least squares
+  lambda_cycle: 10.0
+  lambda_identity: 2.5        # my teammate uses 5.0
+
+differences_from_teammate:
+  # Both runs sit at roughly the same parameter budget, 30.0 million against
+  # 28.3 million, so the comparison is about where the capacity sits and how
+  # the objective is weighted, not about size.
+  seed: "5330 against 4349, so initialisation and shuffling are independent"
+  generator_shape: "six blocks on 80 filters against nine blocks on 64"
+  identity_weight: "2.5 against 5.0, so my generator is freer to repaint colour"
+
+outputs:
+  checkpoints: task3_gan/anees_saheba/checkpoints/
+  translations: task3_gan/anees_saheba/outputs/pred_A2B, pred_B2A
+  figures: task3_gan/anees_saheba/outputs/figures/
+  metrics: task3_gan/anees_saheba/metrics_report.csv
+  raw_log: reproducibility/raw_logs/
+
+environment_overrides:
+  # Read by the notebook, so a run can be changed without editing code.
+  DATA266_NUM_EPOCHS: "number of epochs, defaults to 50"
+  DATA266_IMAGE_SIZE: "training resolution, defaults to 256"
+  DATA266_CHECKPOINT_EVERY: "milestone checkpoint interval, defaults to 10"

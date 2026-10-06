@@ -57,3 +57,8 @@ TASK3 By yashsharee/
 # the raw log under reproducibility/raw_logs/, which the notebook writes and
 # flushes itself.
 *_console.log
+
+# Raw output folder copied back from the GPU lab. It holds the dataset, every
+# milestone checkpoint and the full image dump. Only the files we submit are
+# copied into task3_gan/anees_saheba/ and the rest stays out.
+ipynb_checkpoints/
