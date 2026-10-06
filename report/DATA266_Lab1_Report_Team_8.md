@@ -1,7 +1,7 @@
 # DATA266 Lab 1: Language Modelling, Sentiment Classification and Unpaired Image Translation
 
 ::: authors
-Anees Saheba Guddi (SID4 5330) and Yashashree Shinde (SID4 4349)
+Anees Saheba Guddi (SJSU ID 018205330) and Yashashree Shinde (SJSU ID 019134349)
 
 Team 8, DATA266, San Jose State University
 
@@ -116,6 +116,8 @@ found and repaired it with an explicit byte sequence map.
   vocabulary size did not drop.
 
 ### 4) Results
+
+![Fig. 1. Training and validation loss curves over ten epochs, Anees. Validation loss sits at or below training loss throughout, giving a generalisation gap of -0.0303.](figures/fig1_t1_anees_loss.png)
 
 | Metric | Value |
 |---|---|
@@ -254,6 +256,8 @@ temperature 1.2.
   of 101 includes the corrupted sequences as if they were real characters.
 
 ### 4) Results
+
+![Fig. 2. Training and validation loss curves over ten epochs, Yashashree. The two curves stay together, giving a generalisation gap of -0.0009.](figures/fig2_t1_yash_loss.svg)
 
 | Metric | Value |
 |---|---|
@@ -463,6 +467,12 @@ fixed categories.
   positive.
 
 ### 3) Results
+
+![Fig. 3. Class balance and review length distribution for the Yelp Polarity split used by Anees. Both classes are exactly balanced and the 320 token limit keeps 92.65 percent of reviews whole.](figures/fig5_t2_data.png)
+
+![Fig. 4. ROC, precision recall and calibration curves for all three of Anees's classifiers. Attention pooling sits closest to the diagonal on the calibration panel, which is its expected calibration error of 0.0024.](figures/fig3_t2_anees_roc.png)
+
+![Fig. 5. Confusion matrices for the three classifiers, Anees. The LSTM reduces both false positives and false negatives relative to the max pooling baseline.](figures/fig4_t2_anees_cm.png)
 
 | Metric | baseline_max_pool | experiment_lstm | experiment_attention_pool |
 |---|---|---|---|
@@ -829,6 +839,8 @@ Reasons for the choices:
 
 ### 3) Results
 
+![Fig. 6. CycleGAN training curves over 50 epochs, Anees. Generator and discriminator losses, cycle losses, identity losses and gradient norms. No loss spikes and no non finite steps.](figures/fig6_t3_anees_curves.png)
+
 | Metric | Monet to photo | Photo to Monet |
 |---|---|---|
 | FID | 178.94 | **86.59** |
@@ -973,6 +985,8 @@ Reasons for the choices:
   paper adds it for the painting task.
 
 ### 3) Results
+
+![Fig. 7. CycleGAN training curves over 50 epochs, Yashashree. The same stability pattern, with gradient norms falling from 43 to 17.](figures/fig7_t3_yash_curves.png)
 
 | Metric | Monet to photo | Photo to Monet |
 |---|---|---|
@@ -1134,6 +1148,14 @@ differently. Only the scorer's version is comparable across the class.
 - Both reconstruct the round trip closely enough to confirm cycle consistency
   is holding, which is the assumption the whole method rests on.
 - Both members submitted successfully to the Kaggle competition.
+
+![Fig. 8. The same input photograph translated to Monet by each model. Left, Anees at identity weight 2.5, repainted. Right, Yashashree at identity weight 5.0, still reading as a photograph with brush texture applied.](figures/fig8_t3_b2a_compare.png)
+
+![Fig. 9. Cycle reconstruction, Anees. Left, the original Monet. Right, the reconstruction after a round trip through the photo domain. Structure returns, the palette shifts from warm to cool, which is the measured L1 of 0.1647.](figures/fig9_t3_cycle_anees.png)
+
+![Fig. 10. Cycle reconstruction, Yashashree. Left, the original Monet. Right, the reconstruction. Both structure and palette return, which is the measured L1 of 0.1411.](figures/fig10_t3_cycle_yash.png)
+
+![Fig. 11. Artifacts in flat regions. Left, Anees, repeated blob texture and colour banding across the sky. Right, Yashashree, a saturated checkerboard block on the left of the frame. Both come from the transposed convolution kernel and stride mismatch.](figures/fig11_t3_artifacts.png)
 
 **The comparison separates cleanly along one hyperparameter.**
 
