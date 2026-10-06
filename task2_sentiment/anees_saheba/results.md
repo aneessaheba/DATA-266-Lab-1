@@ -149,9 +149,76 @@ degradation is a property of max pooling and not of long reviews.
 
 ## 6. How my model differs from my teammate's
 
-To be completed once both runs are compared as a team. Yashashree's
-configuration differs in vocabulary size, minimum frequency, maximum length,
-learning rate and epoch count, and her seed is 4349 against my 5330.
+Her run is in the repository now, so this is against her numbers.
+
+We chose different model families on purpose. My three are max pooling, an LSTM
+and learned attention pooling. Hers are mean pooling, a convolutional network
+and a bidirectional GRU. Only the pooling baselines are close relatives, and
+even those differ: she averages over positions where I take a maximum.
+
+| | Mine | Yashashree |
+|---|---|---|
+| Baseline | masked max pooling | masked mean pooling |
+| Experiment A | two layer LSTM | multi width CNN |
+| Experiment B | learned attention pooling | bidirectional GRU |
+| Seed | 5330 | 4349 |
+| Vocabulary | 25,000 | 30,000 |
+| Minimum frequency | 3 | 2 |
+| Maximum length | 320 | 256 |
+| Learning rate | 2e-4 | 3e-4 |
+| Epochs | 8 | 5 |
+
+### Results side by side
+
+| | Accuracy | Macro F1 | ROC AUC | MCC | Brier | Parameters |
+|---|---|---|---|---|---|---|
+| my baseline_max_pool | 0.8991 | 0.8991 | 0.9643 | 0.7981 | 0.0756 | 2,412,545 |
+| her baseline_mean_pool | 0.9348 | 0.9348 | 0.9822 | 0.8696 | 0.0482 | 3,856,770 |
+| my experiment_lstm | **0.9502** | **0.9502** | **0.9896** | **0.9005** | **0.0375** | 4,297,217 |
+| her experiment_bigru | 0.9469 | 0.9469 | 0.9869 | 0.8938 | 0.0412 | 6,057,026 |
+| my experiment_attention_pool | 0.9341 | 0.9341 | 0.9819 | 0.8683 | 0.0490 | 3,224,962 |
+| her experiment_cnn | 0.9285 | 0.9285 | 0.9818 | 0.8579 | 0.0533 | 5,181,890 |
+
+**My best model edges hers**, 95.02 percent against 94.69, on every headline
+metric and with 29 percent fewer parameters. Both of our best models are
+recurrent, which is the clearest shared result: on this dataset, reading word
+order beats any order free pooling we tried.
+
+**Her baseline is much better than mine, and that is the most useful thing in
+this comparison.** Mean pooling reaches 93.48 percent where my max pooling
+reaches 89.91, a gap of 3.6 points between two models that differ only in how
+they collapse positions into one vector. Max pooling takes the single most
+extreme activation per dimension, so one strong word can decide the review.
+Mean pooling accumulates evidence across every token, which suits sentiment
+because a long review usually contains many mild signals rather than one
+decisive word. My own error review supports that reading: eight of my twenty
+errors involve a contrast or a concession, which is exactly the case where one
+extreme token wins over the balance of the text. If I ran this again I would
+make mean pooling the baseline.
+
+**Her baseline beats my attention pooling too**, 93.48 against 93.41, which is
+within the margin of a single run. Attention pooling is a learned weighted
+average, so it contains mean pooling as a special case and should be at least
+as good. The likely explanation is budget rather than architecture: my
+attention model was still improving at its final epoch, as noted in section 5.
+
+**A caution on her calibration numbers.** Her reported expected calibration
+error is 0.4364, 0.4525 and 0.4629 for the three models. Those cannot be right
+alongside her Brier scores. For a balanced test set the Brier decomposition
+gives Brier greater than or equal to reliability, and reliability is at least
+the square of the expected calibration error, so an error of 0.4629 requires a
+Brier of at least 0.214. Her reported Brier is 0.0412. All three of her models
+break that bound, so the calibration figure is being computed wrongly rather
+than describing badly calibrated models. Her Brier scores are reasonable and
+comparable to mine, which is the better evidence that her probabilities are
+fine. I have left expected calibration error out of the table above for that
+reason, and she should check how it is computed before the report goes in.
+
+**Hardware is not comparable.** She trained on an RTX 4090 and I trained on
+Apple M4 through MPS, so her 255 to 292 seconds per model against my 408 to
+9,685 reflects the machines. The one timing claim that does survive is internal
+to my own run: my LSTM took 22 times longer than my pooling models on the same
+device.
 
 ## 7. Hardware disclosure
 
