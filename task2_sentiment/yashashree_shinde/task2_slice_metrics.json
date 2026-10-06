@@ -1,0 +1,68 @@
+{
+  "baseline_mean_pool": {
+    "short_reviews": {
+      "count": 12899,
+      "macro_f1": 0.9331418324908021,
+      "error_rate": 0.06481122567640907
+    },
+    "medium_reviews": {
+      "count": 14843,
+      "macro_f1": 0.9367838430164313,
+      "error_rate": 0.06319477194637202
+    },
+    "long_reviews": {
+      "count": 10258,
+      "macro_f1": 0.9289396157887138,
+      "error_rate": 0.06853187755897838
+    },
+    "contains_negation": {
+      "count": 23262,
+      "macro_f1": 0.927841191594811,
+      "error_rate": 0.0674060699853839
+    }
+  },
+  "experiment_cnn": {
+    "short_reviews": {
+      "count": 12899,
+      "macro_f1": 0.9257907905876877,
+      "error_rate": 0.07233118846422204
+    },
+    "medium_reviews": {
+      "count": 14843,
+      "macro_f1": 0.9310236975292885,
+      "error_rate": 0.0688540052550024
+    },
+    "long_reviews": {
+      "count": 10258,
+      "macro_f1": 0.9218631694104438,
+      "error_rate": 0.07428348605966073
+    },
+    "contains_negation": {
+      "count": 23262,
+      "macro_f1": 0.9235130924140972,
+      "error_rate": 0.0704152695383028
+    }
+  },
+  "experiment_bigru": {
+    "short_reviews": {
+      "count": 12899,
+      "macro_f1": 0.9434194238608475,
+      "error_rate": 0.05488797581207849
+    },
+    "medium_reviews": {
+      "count": 14843,
+      "macro_f1": 0.9507972439528969,
+      "error_rate": 0.04918143232500172
+    },
+    "long_reviews": {
+      "count": 10258,
+      "macro_f1": 0.941266106893861,
+      "error_rate": 0.056541236108403226
+    },
+    "contains_negation": {
+      "count": 23262,
+      "macro_f1": 0.9430345783453951,
+      "error_rate": 0.05317685495658153
+    }
+  }
+}

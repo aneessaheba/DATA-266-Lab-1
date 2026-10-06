@@ -1,0 +1,14 @@
+{
+  "experiment_cnn": {
+    "baseline_only_correct_b": 1376,
+    "experimental_only_correct_c": 1136,
+    "chi_square_with_continuity_correction": 22.739251592356688,
+    "p_value": 1.8553900208668925e-06
+  },
+  "experiment_bigru": {
+    "baseline_only_correct_b": 725,
+    "experimental_only_correct_c": 1184,
+    "chi_square_with_continuity_correction": 109.88161341016239,
+    "p_value": 1.0402125956168595e-25
+  }
+}
